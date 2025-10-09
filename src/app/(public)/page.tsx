@@ -1,6 +1,8 @@
 
-export const Page = () => {
+export default function PublicPage() {
     return (
-        <p>page</p>
-    )
+        <main>
+            <h1>Esta es la página pública principal</h1>
+        </main>
+    );
 }
