@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "61ababa0eb36b62128ce7b7b"
+  },
+  "titleOficce": "Margarita Olivo Lara",
+  "phoneNumbers": [
+    "2282107188",
+    "2288372786",
+    "2288262433",
+    "2281550849"
+  ],
+  "emailAddress": "civsa@grupovasquez.com.mx",
+  "address": "Carretera Xalapa-Veracruz s/n, El Lencero, C.P. 91640, Emiliano Zapata, Veracruz, México.",
+  "time": "Lunes a Viernes de 08:00 hrs. a 20:30 hrs. Sábados de 08:00 hrs. a 17:00 hrs."
+}]

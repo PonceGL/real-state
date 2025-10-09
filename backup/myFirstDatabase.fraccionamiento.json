@@ -1,0 +1,266 @@
+[{
+  "_id": {
+    "$oid": "61c377063b886a7285c2a692"
+  },
+  "name": "OJO DE AGUA",
+  "slogan": "LLEGÓ EL MOMENTO, ELEVA TU ESTILO DE VIDA",
+  "pricem2": "",
+  "address": "AMPLIACIÓN SEMBRADORES, COL. AMPLIACIÓN MIGUEL ALEMÁN",
+  "location": {
+    "lat": "19.496418",
+    "lng": "-96.875518"
+  },
+  "description": "FRACCIONAMIENTO OJO DE AGUA, VENTA DE CASAS CON ALTA PLUSVALÍA, ACABADOS DE PRIMERA CALIDAD, DETALLES QUE TE SORPRENDERAN.",
+  "moreInformation": "VENTA DE CASA HABITACIÓN CON DIVERSOS MODELOS Y GUSTOS.",
+  "logo": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1640199727/propiedades/vdrkqnhlgdbnnjwwirq9.png",
+    "width": 480,
+    "height": 295,
+    "public_id": "propiedades/vdrkqnhlgdbnnjwwirq9",
+    "alt": "LOGO OJO DE AGUA"
+  },
+  "cover": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1640199934/propiedades/ojtmltxfwq77r7uzeotb.jpg",
+    "width": 1032,
+    "height": 581,
+    "public_id": "propiedades/ojtmltxfwq77r7uzeotb",
+    "alt": "PORTON OJO DE AGUA"
+  },
+  "morePictures": [],
+  "showOnweb": true,
+  "registrationDate": "2021-12-22T19:05:38.106Z"
+},
+{
+  "_id": {
+    "$oid": "61ccc2f312d3c371db5d46dc"
+  },
+  "name": "LA MOLIENDA",
+  "slogan": "VIVE TUS SUEÑOS",
+  "pricem2": "5400",
+  "address": "CARRETERA FED XALAPA - VERACRUZ KM. 5.5, LOC. 3 PASOS, EMILIANO ZAPATA",
+  "location": {
+    "lat": "19.504291",
+    "lng": "-96.848834"
+  },
+  "description": "TERRENOS RESIDENCIALES EN VENTA, A 5 MIN. DE PLAZA LAS AMERICAS, XALAPA, VERACRUZ, OPCIONES DE FINANCIAMIENTO.",
+  "moreInformation": "EN FRACCIONAMIENTO RESIDENCIAL \"LA MOLIENDA\" TENEMOS EL TERRENO IDEAL PARA CONSTRUIR ESE PROYECTO QUE TANTO ANHELAS CONSTRUIR, DESDE $5,400 M2 Y CON OPCIONES DE FINANCIAMIENTO, CONTÁCTANOS EN BREVE",
+  "logo": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1640808600/propiedades/gaym42ovz6nuqykzzsyd.jpg",
+    "width": 1280,
+    "height": 696,
+    "public_id": "propiedades/gaym42ovz6nuqykzzsyd",
+    "alt": "logo la molienda"
+  },
+  "cover": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1640809137/propiedades/kpzjwvl7ndqdwmk9ovzv.jpg",
+    "width": 2560,
+    "height": 1440,
+    "public_id": "propiedades/kpzjwvl7ndqdwmk9ovzv",
+    "alt": "20200928_105644"
+  },
+  "morePictures": [
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640809185/propiedades/bhnnj2ix4jo8gcyrhgj9.jpg",
+      "width": 2560,
+      "height": 1440,
+      "public_id": "propiedades/bhnnj2ix4jo8gcyrhgj9",
+      "alt": "20200928_105417"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640809186/propiedades/k1ojjrlubimfbkvvd7at.jpg",
+      "width": 2560,
+      "height": 1440,
+      "public_id": "propiedades/k1ojjrlubimfbkvvd7at",
+      "alt": "20200928_104452"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640809186/propiedades/zgsuddhtiipruffhgkak.jpg",
+      "width": 2560,
+      "height": 1440,
+      "public_id": "propiedades/zgsuddhtiipruffhgkak",
+      "alt": "20200928_105502"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1643482129/propiedades/xlikzrsdwys5uxkjwqpy.jpg",
+      "width": 1280,
+      "height": 720,
+      "public_id": "propiedades/xlikzrsdwys5uxkjwqpy",
+      "alt": "LOTE 126 MZNA G"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1643482137/propiedades/kyuyqjj3wwo1qik3wx2m.jpg",
+      "width": 1280,
+      "height": 720,
+      "public_id": "propiedades/kyuyqjj3wwo1qik3wx2m",
+      "alt": "LOTE 127 MZNA G"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1648925458/propiedades/ugvdrbf6yldmcqnqfa7g.jpg",
+      "width": 1280,
+      "height": 720,
+      "public_id": "propiedades/ugvdrbf6yldmcqnqfa7g",
+      "alt": "LOTE 76 MZNA D"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1648925598/propiedades/qskxhtxqw2od8tyoyvwh.png",
+      "width": 640,
+      "height": 360,
+      "public_id": "propiedades/qskxhtxqw2od8tyoyvwh",
+      "alt": "LOTE 71 MZNA D 2"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1648925628/propiedades/nojp9rew7a6anfcennvi.jpg",
+      "width": 1280,
+      "height": 720,
+      "public_id": "propiedades/nojp9rew7a6anfcennvi",
+      "alt": "LOTE 72 MZNA D"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1648925635/propiedades/yy9bx15yu35vkaizjoim.jpg",
+      "width": 1280,
+      "height": 720,
+      "public_id": "propiedades/yy9bx15yu35vkaizjoim",
+      "alt": "LOTE 73 MZNA D"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1648925644/propiedades/mftsp9ga4kyt2jokzjuk.jpg",
+      "width": 1280,
+      "height": 720,
+      "public_id": "propiedades/mftsp9ga4kyt2jokzjuk",
+      "alt": "LOTE 74 MZNA D"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1648925651/propiedades/in9drhobymp8hylu91eh.jpg",
+      "width": 1280,
+      "height": 720,
+      "public_id": "propiedades/in9drhobymp8hylu91eh",
+      "alt": "LOTE 75 MZNA D"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1648925660/propiedades/ovulxnxtwp8ia6knue6a.jpg",
+      "width": 1280,
+      "height": 720,
+      "public_id": "propiedades/ovulxnxtwp8ia6knue6a",
+      "alt": "LOTE 76 MZNA D"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1648925673/propiedades/eugv0dhxyi6ywwl9djwi.jpg",
+      "width": 1280,
+      "height": 720,
+      "public_id": "propiedades/eugv0dhxyi6ywwl9djwi",
+      "alt": "LOTE 77 MZNA D"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1648926438/propiedades/jkhc2d3iqjaww0chjupd.jpg",
+      "width": 825,
+      "height": 638,
+      "public_id": "propiedades/jkhc2d3iqjaww0chjupd",
+      "alt": "MANZANA D_001"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1648938438/propiedades/xx6o1nvph6k3mqvhn664.jpg",
+      "width": 1280,
+      "height": 720,
+      "public_id": "propiedades/xx6o1nvph6k3mqvhn664",
+      "alt": "LOTE 80 MZNA D"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1648938446/propiedades/vcx8tg4wmqgjdt6rmceo.jpg",
+      "width": 1280,
+      "height": 720,
+      "public_id": "propiedades/vcx8tg4wmqgjdt6rmceo",
+      "alt": "LOTE 81 MZNA D"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1648938453/propiedades/nvadml4ykdxoetxwpxmh.jpg",
+      "width": 1280,
+      "height": 720,
+      "public_id": "propiedades/nvadml4ykdxoetxwpxmh",
+      "alt": "LOTE 82 MZNA D"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1648938461/propiedades/e5ojidcyydi888v1qbsf.jpg",
+      "width": 1280,
+      "height": 720,
+      "public_id": "propiedades/e5ojidcyydi888v1qbsf",
+      "alt": "LOTE 83 MZNA D"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1648938469/propiedades/keukc0wehzzfadve6dml.jpg",
+      "width": 1280,
+      "height": 720,
+      "public_id": "propiedades/keukc0wehzzfadve6dml",
+      "alt": "LOTE 84 MZNA D"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1648938477/propiedades/x2rdrvtypvunm3ijtc6p.jpg",
+      "width": 1280,
+      "height": 720,
+      "public_id": "propiedades/x2rdrvtypvunm3ijtc6p",
+      "alt": "LOTE 85 MZNA D"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1648938483/propiedades/dkxdn4codeabewbxnxgv.jpg",
+      "width": 1280,
+      "height": 720,
+      "public_id": "propiedades/dkxdn4codeabewbxnxgv",
+      "alt": "LOTE 86 MZNA D"
+    }
+  ],
+  "showOnweb": true,
+  "registrationDate": "2021-12-29T20:20:01.601Z"
+},
+{
+  "_id": {
+    "$oid": "61dc8b002811546e832d5ec8"
+  },
+  "name": "PEDREGAL DE LA MARQUESA",
+  "slogan": "MÁS QUE UN HOGAR, TU COMODIDAD",
+  "pricem2": "7000",
+  "address": "AV. PASEO DEL PEDREGAL, TULIPANES DE LAS ANIMAS, CP 91190",
+  "location": {
+    "lat": "19.504253",
+    "lng": "-96.848917"
+  },
+  "description": "TERRENOS RESIDENCIALES EN VENTA EN ZONA DE LAS ANIMAS, XALAPA, ALTA PLUSVALIA, TODOS LOS SERVICIOS.",
+  "moreInformation": "TERRENOS RESIDENCIALES EN VENTA DESDE $7,000 M2, CONTACTANOS, CON GUSTO TE ATENDEREMOS.",
+  "logo": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1641843354/propiedades/hfvtesab02vsa4y2ngng.jpg",
+    "width": 1369,
+    "height": 1369,
+    "public_id": "propiedades/hfvtesab02vsa4y2ngng",
+    "alt": "pedregal logo"
+  },
+  "cover": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1641843379/propiedades/uvrrr2aogblofa5whubx.jpg",
+    "width": 3264,
+    "height": 1836,
+    "public_id": "propiedades/uvrrr2aogblofa5whubx",
+    "alt": "IMG-20191018-WA0232"
+  },
+  "morePictures": [
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1641843391/propiedades/uv1ulxan0mmd3cd3a56b.jpg",
+      "width": 3264,
+      "height": 1836,
+      "public_id": "propiedades/uv1ulxan0mmd3cd3a56b",
+      "alt": "IMG-20191007-WA0048"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1641843391/propiedades/v0hesk7gipzme8q49cjo.jpg",
+      "width": 3264,
+      "height": 1836,
+      "public_id": "propiedades/v0hesk7gipzme8q49cjo",
+      "alt": "IMG-20191012-WA0132"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1641843392/propiedades/u3pptqrpfzxijb6sgbov.jpg",
+      "width": 3264,
+      "height": 1836,
+      "public_id": "propiedades/u3pptqrpfzxijb6sgbov",
+      "alt": "IMG-20191018-WA0205"
+    }
+  ],
+  "showOnweb": true,
+  "registrationDate": "2022-01-10T19:37:35.464Z"
+}]

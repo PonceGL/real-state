@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "61aa61eb7a20056882e6bf5f"
+  },
+  "value": "Casa"
+},
+{
+  "_id": {
+    "$oid": "61aa61eb7a20056882e6bf60"
+  },
+  "value": "Terreno"
+},
+{
+  "_id": {
+    "$oid": "61aa61eb7a20056882e6bf61"
+  },
+  "value": "Departamento"
+},
+{
+  "_id": {
+    "$oid": "621bb7510938813dc3494c64"
+  },
+  "value": "Preventa"
+}]

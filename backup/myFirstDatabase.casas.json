@@ -1,0 +1,785 @@
+[{
+  "_id": {
+    "$oid": "61c3860a4798b1ce1ed6acbe"
+  },
+  "typeOfProperty": "casa",
+  "title": "PARMA 4A",
+  "price": 1850000,
+  "currency": "MXN",
+  "pricem2": 0,
+  "typeOfTransaction": "Venta",
+  "address": "ARROYO NO. 13, LOTE 7 MANZANA 7",
+  "location": {
+    "lat": "19.497098",
+    "lng": "-96.874741"
+  },
+  "terrainSize": 76,
+  "constructionSize": 164,
+  "subdivision": "OJO DE AGUA",
+  "description": "VENTA DE CASA CON 3 RECAMARAS CON CLOSET, 3 1/2 BAÑOS, 3 PLANTAS, COCHERA, PATIO DE SERVICIO, SALA, COMEDOR, COCINA, JARDINERA, ACCESO A AZOTEA, DOMOS, BASE PARA TINACO.",
+  "mainPhotography": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1640203597/propiedades/vqjprn7pr8d8opxafr1r.jpg",
+    "width": 581,
+    "height": 1032,
+    "public_id": "propiedades/vqjprn7pr8d8opxafr1r",
+    "alt": "IMG-20200515-WA0087"
+  },
+  "morePictures": [
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640203680/propiedades/dosgqdxriajzlosfpvnw.jpg",
+      "width": 581,
+      "height": 1032,
+      "public_id": "propiedades/dosgqdxriajzlosfpvnw",
+      "alt": "IMG-20200515-WA0089"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640203709/propiedades/ag9fd4ynp11b3xujc2ul.jpg",
+      "width": 581,
+      "height": 1032,
+      "public_id": "propiedades/ag9fd4ynp11b3xujc2ul",
+      "alt": "IMG-20200515-WA0113"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640203714/propiedades/gzyn59yvqgutiektr5ml.jpg",
+      "width": 581,
+      "height": 1032,
+      "public_id": "propiedades/gzyn59yvqgutiektr5ml",
+      "alt": "IMG-20200515-WA0110"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640203721/propiedades/jmgvqdohy4rhas160hqk.jpg",
+      "width": 581,
+      "height": 1032,
+      "public_id": "propiedades/jmgvqdohy4rhas160hqk",
+      "alt": "IMG-20200515-WA0106"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640203728/propiedades/vczyc3hox828qfwfwaoj.jpg",
+      "width": 581,
+      "height": 1032,
+      "public_id": "propiedades/vczyc3hox828qfwfwaoj",
+      "alt": "IMG-20200515-WA0094"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640203742/propiedades/qloawipy95j0ns5rw8tk.jpg",
+      "width": 581,
+      "height": 1032,
+      "public_id": "propiedades/qloawipy95j0ns5rw8tk",
+      "alt": "IMG-20200515-WA0123"
+    }
+  ],
+  "services": [
+    "JARDINERA",
+    "PATIO DE SERVICIO",
+    "COCHERA",
+    "VIGILANCIA"
+  ],
+  "sold": false,
+  "showOnweb": true,
+  "registrationDate": "2021-12-22T20:09:41.393Z",
+  "rooms": 3,
+  "bathrooms": 3,
+  "parking": 1,
+  "frontMeasurement": 5,
+  "bottomMeasurement": 15,
+  "preservation": "MUY BUENO",
+  "levelsConstructed": 3,
+  "age": 2
+},
+{
+  "_id": {
+    "$oid": "61cc6c45d48eeae668b25474"
+  },
+  "typeOfProperty": "casa",
+  "title": "TREBIA 5",
+  "price": 1850000,
+  "currency": "MXN",
+  "pricem2": 0,
+  "typeOfTransaction": "Venta",
+  "address": "CASCADA 6, LOTE 3 MANZANA 6",
+  "location": {
+    "lat": "19.496486",
+    "lng": "-96.874803"
+  },
+  "terrainSize": 91.76,
+  "constructionSize": 191.2,
+  "subdivision": "OJO DE AGUA",
+  "description": "CASA EN VENTA, 3 RECAMARAS, 2 1/2 BAÑOS, COCHERA, AREA DE GUARDA, SALA, COMEDOR, COCINA.",
+  "mainPhotography": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1640786979/propiedades/w0clpug7q5xcpv6oa0ph.jpg",
+    "width": 581,
+    "height": 1032,
+    "public_id": "propiedades/w0clpug7q5xcpv6oa0ph",
+    "alt": "IMG-20200515-WA0324"
+  },
+  "morePictures": [
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640786979/propiedades/n2x0emv7edwqjtpak3vz.jpg",
+      "width": 1032,
+      "height": 581,
+      "public_id": "propiedades/n2x0emv7edwqjtpak3vz",
+      "alt": "IMG-20200515-WA0352"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640786979/propiedades/aoatqacp6qix4bvsq8t4.jpg",
+      "width": 581,
+      "height": 1032,
+      "public_id": "propiedades/aoatqacp6qix4bvsq8t4",
+      "alt": "IMG-20200515-WA0355"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640786979/propiedades/wr32k5b6w8ejdgtqmwyr.jpg",
+      "width": 1032,
+      "height": 581,
+      "public_id": "propiedades/wr32k5b6w8ejdgtqmwyr",
+      "alt": "IMG-20200515-WA0344"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640786979/propiedades/tyyhog3nnb648hpgcvc8.jpg",
+      "width": 581,
+      "height": 1032,
+      "public_id": "propiedades/tyyhog3nnb648hpgcvc8",
+      "alt": "IMG-20200515-WA0348"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640786979/propiedades/vptru3delndhrwrpmwt5.jpg",
+      "width": 581,
+      "height": 1032,
+      "public_id": "propiedades/vptru3delndhrwrpmwt5",
+      "alt": "IMG-20200515-WA0334"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640786979/propiedades/jn4ggndxdeekg6wxhzyg.jpg",
+      "width": 581,
+      "height": 1032,
+      "public_id": "propiedades/jn4ggndxdeekg6wxhzyg",
+      "alt": "IMG-20200515-WA0341"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640787002/propiedades/kn0egrtaguwbsobdbr6s.jpg",
+      "width": 581,
+      "height": 1032,
+      "public_id": "propiedades/kn0egrtaguwbsobdbr6s",
+      "alt": "IMG-20200515-WA0353"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640787002/propiedades/mzwzzp0vtekpxqorjxml.jpg",
+      "width": 581,
+      "height": 1032,
+      "public_id": "propiedades/mzwzzp0vtekpxqorjxml",
+      "alt": "IMG-20200515-WA0349"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640787002/propiedades/l61bu7cpikepamybghch.jpg",
+      "width": 1032,
+      "height": 581,
+      "public_id": "propiedades/l61bu7cpikepamybghch",
+      "alt": "IMG-20200515-WA0351"
+    }
+  ],
+  "services": [
+    "JARDINERA",
+    "PATIO DE SERVICIO",
+    "VIGILANCIA",
+    "ACCESO AZOTEA",
+    "BASE DE TINACO",
+    "DOMOS"
+  ],
+  "sold": false,
+  "showOnweb": true,
+  "registrationDate": "2021-12-29T14:10:11.369Z",
+  "rooms": 3,
+  "bathrooms": "2 1/2",
+  "parking": 1,
+  "frontMeasurement": 5,
+  "bottomMeasurement": 18.41,
+  "preservation": "MUY BUENO",
+  "levelsConstructed": "2",
+  "age": 2
+},
+{
+  "_id": {
+    "$oid": "61ccc54212d3c371db5d46dd"
+  },
+  "typeOfProperty": "terreno",
+  "title": "RESIDENCIAL LA MOLIENDA (A-185)",
+  "price": 767816,
+  "currency": null,
+  "pricem2": 5600,
+  "typeOfTransaction": "Venta",
+  "address": "CARRETERA FED XALAPA - VERACRUZ KM. 5.5, LOC. 3 PASOS, EMILIANO ZAPATA",
+  "location": {
+    "lat": "19.504845",
+    "lng": "-96.847377"
+  },
+  "terrainSize": 137.11,
+  "constructionSize": 0,
+  "subdivision": "LA MOLIENDA",
+  "description": "EXCELENTE TERRENO RESIDENCIAL, MUY BUENA UBICACIÓN, TRANQUILIDAD, PLUSVALÍA, TODOS LOS SERVICIOS.",
+  "mainPhotography": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1640809513/propiedades/sz5u7j3lqztsx6asq920.jpg",
+    "width": 4128,
+    "height": 2322,
+    "public_id": "propiedades/sz5u7j3lqztsx6asq920",
+    "alt": "20200928_105030"
+  },
+  "morePictures": [
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640809513/propiedades/fkmwd90ktvsx1noj82dj.jpg",
+      "width": 2560,
+      "height": 1440,
+      "public_id": "propiedades/fkmwd90ktvsx1noj82dj",
+      "alt": "20200928_105405"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640809513/propiedades/yum2s1k7kwhdrb0fdkwz.jpg",
+      "width": 2560,
+      "height": 1440,
+      "public_id": "propiedades/yum2s1k7kwhdrb0fdkwz",
+      "alt": "20200928_105724"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1640809513/propiedades/ouo4xkp2o1yuoe7cizmt.jpg",
+      "width": 2560,
+      "height": 1440,
+      "public_id": "propiedades/ouo4xkp2o1yuoe7cizmt",
+      "alt": "20200928_104449"
+    }
+  ],
+  "services": [
+    "ÁREAS VERDES",
+    "VIGILANCIA"
+  ],
+  "sold": false,
+  "showOnweb": true,
+  "registrationDate": "2021-12-29T20:29:53.669Z"
+},
+{
+  "_id": {
+    "$oid": "61f57596a9530ed646a82076"
+  },
+  "typeOfProperty": "terreno",
+  "title": "RESIDENCIAL LA MOLIENDA (G-127)",
+  "price": 832464,
+  "currency": null,
+  "pricem2": 5400,
+  "typeOfTransaction": "Venta",
+  "address": "LOTE 127 MZNA G",
+  "location": {
+    "lat": "19.506619",
+    "lng": "-96.846997"
+  },
+  "terrainSize": 154.16,
+  "constructionSize": 0,
+  "subdivision": "LA MOLIENDA",
+  "description": "LOTE 127 MZNA G",
+  "mainPhotography": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1643481386/propiedades/kqqzxmm6u7xcnhkkdayi.jpg",
+    "width": 1280,
+    "height": 720,
+    "public_id": "propiedades/kqqzxmm6u7xcnhkkdayi",
+    "alt": "LOTE 127 MZNA G"
+  },
+  "morePictures": [
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1643480683/propiedades/dpobitgtqbqh5jbhrwa9.jpg",
+      "width": 1280,
+      "height": 720,
+      "public_id": "propiedades/dpobitgtqbqh5jbhrwa9",
+      "alt": "general"
+    },
+    {
+      "url": "https://res.cloudinary.com/civsa/image/upload/v1643482129/propiedades/xlikzrsdwys5uxkjwqpy.jpg",
+      "width": 1280,
+      "height": 720,
+      "public_id": "propiedades/xlikzrsdwys5uxkjwqpy",
+      "alt": "general"
+    }
+  ],
+  "services": [],
+  "sold": false,
+  "showOnweb": true,
+  "registrationDate": "2022-01-29T17:12:53.323Z"
+},
+{
+  "_id": {
+    "$oid": "61f58a7b1ebbfece1daa0e69"
+  },
+  "typeOfProperty": "terreno",
+  "title": "RESIDENCIAL LA MOLIENDA (G-126)",
+  "price": 833274,
+  "currency": null,
+  "pricem2": 54,
+  "typeOfTransaction": "Venta",
+  "address": "LOTE 126 MZNA G",
+  "location": {
+    "lat": "19.506225",
+    "lng": "-96.847141"
+  },
+  "terrainSize": 154.31,
+  "constructionSize": 0,
+  "subdivision": "LA MOLIENDA",
+  "description": "LOTE 126 MANZANA G ",
+  "mainPhotography": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1643481714/propiedades/ptrokj8pwni7msvzndae.jpg",
+    "width": 1280,
+    "height": 720,
+    "public_id": "propiedades/ptrokj8pwni7msvzndae",
+    "alt": "LOTE 126 MZNA G"
+  },
+  "morePictures": [],
+  "services": [],
+  "sold": false,
+  "showOnweb": true,
+  "registrationDate": "2022-01-29T18:42:01.964Z"
+},
+{
+  "_id": {
+    "$oid": "624748ed072da0f7040b2235"
+  },
+  "typeOfProperty": "casa",
+  "title": "RESIDENCIAL LA MOLIENDA (D-71)",
+  "price": 813186,
+  "currency": null,
+  "pricem2": 5400,
+  "typeOfTransaction": "Venta",
+  "address": "CARRET. FED. XAL-VER KM 5.5 ",
+  "location": {
+    "lat": "19.504159",
+    "lng": "-96.848527"
+  },
+  "terrainSize": 150.59,
+  "constructionSize": 0,
+  "subdivision": "Otro",
+  "description": "Lote 71 manzana D con 150.59 m2",
+  "mainPhotography": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1648836679/propiedades/mpate3wnrzlj0z3nej7z.png",
+    "width": 640,
+    "height": 360,
+    "public_id": "propiedades/mpate3wnrzlj0z3nej7z",
+    "alt": "LOTE 71 MZNA D 2"
+  },
+  "morePictures": [],
+  "services": [
+    "Fraccionamiento Cerrado, Areas Verdes, Vigilancia"
+  ],
+  "sold": false,
+  "showOnweb": true,
+  "registrationDate": "2022-04-01T18:48:12.452Z"
+},
+{
+  "_id": {
+    "$oid": "62489d8780496d8bf8641ed9"
+  },
+  "typeOfProperty": "terreno",
+  "title": "RESIDENCIAL LA MOLIENDA (D-72)",
+  "price": 812970,
+  "currency": null,
+  "pricem2": 5400,
+  "typeOfTransaction": "Venta",
+  "address": "CARRET. FED. XAL-VER KM 5.5 ",
+  "location": {
+    "lat": "19.504273",
+    "lng": "-96.848957"
+  },
+  "terrainSize": 150.55,
+  "constructionSize": 0,
+  "subdivision": "LA MOLIENDA",
+  "description": "LOTE 172 MANZANA D",
+  "mainPhotography": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1648925915/propiedades/xewbsdhcinxhlhoqciba.jpg",
+    "width": 1280,
+    "height": 720,
+    "public_id": "propiedades/xewbsdhcinxhlhoqciba",
+    "alt": "LOTE 72 MZNA D"
+  },
+  "morePictures": [],
+  "services": [],
+  "sold": false,
+  "showOnweb": true,
+  "registrationDate": "2022-04-02T19:01:26.920Z"
+},
+{
+  "_id": {
+    "$oid": "62489f7bd68f053d7a79da78"
+  },
+  "typeOfProperty": "terreno",
+  "title": "RESIDENCIAL LA MOLIENDA (D-73)",
+  "price": 813186,
+  "currency": null,
+  "pricem2": 5400,
+  "typeOfTransaction": "Venta",
+  "address": "CARRET. FED. XAL-VER KM 5.5 ",
+  "location": {
+    "lat": "19.504261",
+    "lng": "-96.848930"
+  },
+  "terrainSize": 150.59,
+  "constructionSize": 0,
+  "subdivision": "LA MOLIENDA",
+  "description": "LOTE 73 MANZANA D",
+  "mainPhotography": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1648926580/propiedades/isltjca6zl7pfzzmbgi9.jpg",
+    "width": 1280,
+    "height": 720,
+    "public_id": "propiedades/isltjca6zl7pfzzmbgi9",
+    "alt": "LOTE 73 MZNA D"
+  },
+  "morePictures": [],
+  "services": [],
+  "sold": false,
+  "showOnweb": true,
+  "registrationDate": "2022-04-02T19:09:46.509Z"
+},
+{
+  "_id": {
+    "$oid": "62489fbf3c1a4d024357e864"
+  },
+  "typeOfProperty": "terreno",
+  "title": "RESIDENCIAL LA MOLIENDA (D-74)",
+  "price": 813240,
+  "currency": null,
+  "pricem2": 5400,
+  "typeOfTransaction": "Venta",
+  "address": "CARRET. FED. XAL-VER KM 5.5 ",
+  "location": {
+    "lat": "19.504245",
+    "lng": "-96.848928"
+  },
+  "terrainSize": 150.6,
+  "constructionSize": 0,
+  "subdivision": "LA MOLIENDA",
+  "description": "LOTE 74 MANZANA D",
+  "mainPhotography": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1648926649/propiedades/knvgiavnj2lsp8wbjzzi.jpg",
+    "width": 1280,
+    "height": 720,
+    "public_id": "propiedades/knvgiavnj2lsp8wbjzzi",
+    "alt": "LOTE 74 MZNA D"
+  },
+  "morePictures": [],
+  "services": [],
+  "sold": false,
+  "showOnweb": true,
+  "registrationDate": "2022-04-02T19:10:54.776Z"
+},
+{
+  "_id": {
+    "$oid": "6248b395f5f43e834b1430d7"
+  },
+  "typeOfProperty": "terreno",
+  "title": "RESIDENCIAL LA MOLIENDA (D-75)",
+  "price": 813024,
+  "currency": null,
+  "pricem2": 5400,
+  "typeOfTransaction": "Venta",
+  "address": "CARRET. FED. XAL-VER KM 5.5 ",
+  "location": {
+    "lat": "19.504254",
+    "lng": "-96.848935"
+  },
+  "terrainSize": 150.56,
+  "constructionSize": 0,
+  "subdivision": "LA MOLIENDA",
+  "description": "LOTE 75 MANZANA D",
+  "mainPhotography": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1648931725/propiedades/ptewj8ki0qxkzu5hi0gl.jpg",
+    "width": 1280,
+    "height": 720,
+    "public_id": "propiedades/ptewj8ki0qxkzu5hi0gl",
+    "alt": "LOTE 75 MZNA D"
+  },
+  "morePictures": [],
+  "services": [],
+  "sold": false,
+  "showOnweb": true,
+  "registrationDate": "2022-04-02T20:35:31.638Z"
+},
+{
+  "_id": {
+    "$oid": "6248b3f8b615a61d134a1d87"
+  },
+  "typeOfProperty": "terreno",
+  "title": "RESIDENCIAL LA MOLIENDA (D-76)",
+  "price": 811566,
+  "currency": null,
+  "pricem2": 5400,
+  "typeOfTransaction": "Venta",
+  "address": "CARRET. FED. XAL-VER KM 5.5 ",
+  "location": {
+    "lat": "19.504306",
+    "lng": "-96.848934"
+  },
+  "terrainSize": 150.29,
+  "constructionSize": 0,
+  "subdivision": "LA MOLIENDA",
+  "description": "LOTE 76 MANZANA D",
+  "mainPhotography": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1648931826/propiedades/gwzkaxdb4s0gwdi2r3gw.jpg",
+    "width": 1280,
+    "height": 720,
+    "public_id": "propiedades/gwzkaxdb4s0gwdi2r3gw",
+    "alt": "LOTE 76 MZNA D"
+  },
+  "morePictures": [],
+  "services": [],
+  "sold": false,
+  "showOnweb": true,
+  "registrationDate": "2022-04-02T20:37:12.217Z"
+},
+{
+  "_id": {
+    "$oid": "6248b43ef59d5fc03c62bcaf"
+  },
+  "typeOfProperty": "terreno",
+  "title": "RESIDENCIAL LA MOLIENDA (D-77)",
+  "price": 810486,
+  "currency": null,
+  "pricem2": 5400,
+  "typeOfTransaction": "Venta",
+  "address": "CARRET. FED. XAL-VER KM 5.5 ",
+  "location": {
+    "lat": "19.504269",
+    "lng": "-96.848913"
+  },
+  "terrainSize": 150.09,
+  "constructionSize": 0,
+  "subdivision": "LA MOLIENDA",
+  "description": "LOTE 77 MANZANA D",
+  "mainPhotography": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1648931896/propiedades/hufbevgd6aer9eth1dv0.jpg",
+    "width": 1280,
+    "height": 720,
+    "public_id": "propiedades/hufbevgd6aer9eth1dv0",
+    "alt": "LOTE 77 MZNA D"
+  },
+  "morePictures": [],
+  "services": [],
+  "sold": false,
+  "showOnweb": true,
+  "registrationDate": "2022-04-02T20:38:21.596Z"
+},
+{
+  "_id": {
+    "$oid": "6248ce83a7291feeddb66c97"
+  },
+  "typeOfProperty": "terreno",
+  "title": "RESIDENCIAL LA MOLIENDA (D-81)",
+  "price": 841176,
+  "currency": null,
+  "pricem2": 5600,
+  "typeOfTransaction": "Venta",
+  "address": "CARRET. FED. XAL-VER KM 5.5 ",
+  "location": {
+    "lat": "19.504246",
+    "lng": "-96.848911"
+  },
+  "terrainSize": 150.21,
+  "constructionSize": 0,
+  "subdivision": "LA MOLIENDA",
+  "description": "LOTE 81 MANZANA D",
+  "mainPhotography": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1648938617/propiedades/bbjw67fj93x7pvleys0l.jpg",
+    "width": 1280,
+    "height": 720,
+    "public_id": "propiedades/bbjw67fj93x7pvleys0l",
+    "alt": "LOTE 81 MZNA D"
+  },
+  "morePictures": [],
+  "services": [],
+  "sold": false,
+  "showOnweb": true,
+  "registrationDate": "2022-04-02T22:30:26.784Z"
+},
+{
+  "_id": {
+    "$oid": "6248cecda606473ab8f8a47a"
+  },
+  "typeOfProperty": "terreno",
+  "title": "RESIDENCIAL LA MOLIENDA (D-80)",
+  "price": 830592,
+  "currency": null,
+  "pricem2": 5600,
+  "typeOfTransaction": "Venta",
+  "address": "CARRET. FED. XAL-VER KM 5.5 ",
+  "location": {
+    "lat": "19.504255",
+    "lng": "-96.848937"
+  },
+  "terrainSize": 148.32,
+  "constructionSize": 0,
+  "subdivision": "LA MOLIENDA",
+  "description": "LOTE 80 MANZANA D",
+  "mainPhotography": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1648938695/propiedades/qwnia08sifmczyjb5pdt.jpg",
+    "width": 1280,
+    "height": 720,
+    "public_id": "propiedades/qwnia08sifmczyjb5pdt",
+    "alt": "LOTE 80 MZNA D"
+  },
+  "morePictures": [],
+  "services": [],
+  "sold": false,
+  "showOnweb": true,
+  "registrationDate": "2022-04-02T22:31:41.121Z"
+},
+{
+  "_id": {
+    "$oid": "6248cf57a606473ab8f8a47b"
+  },
+  "typeOfProperty": "terreno",
+  "title": "RESIDENCIAL LA MOLIENDA (D-82)",
+  "price": 836248,
+  "currency": null,
+  "pricem2": 5600,
+  "typeOfTransaction": "Venta",
+  "address": "CARRET. FED. XAL-VER KM 5.5 ",
+  "location": {
+    "lat": "19.504237",
+    "lng": "-96.848932"
+  },
+  "terrainSize": 149.33,
+  "constructionSize": 0,
+  "subdivision": "LA MOLIENDA",
+  "description": "LOTE 82 MANZANA D",
+  "mainPhotography": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1648938832/propiedades/xvjtfxwvgbyea5spson1.jpg",
+    "width": 1280,
+    "height": 720,
+    "public_id": "propiedades/xvjtfxwvgbyea5spson1",
+    "alt": "LOTE 82 MZNA D"
+  },
+  "morePictures": [],
+  "services": [],
+  "sold": false,
+  "showOnweb": true,
+  "registrationDate": "2022-04-02T22:33:58.416Z"
+},
+{
+  "_id": {
+    "$oid": "6248cf9db5ee00e8f599c7ed"
+  },
+  "typeOfProperty": "terreno",
+  "title": "RESIDENCIAL LA MOLIENDA (D-83)",
+  "price": 832272,
+  "currency": null,
+  "pricem2": 5600,
+  "typeOfTransaction": "Venta",
+  "address": "CARRET. FED. XAL-VER KM 5.5 ",
+  "location": {
+    "lat": "19.504257",
+    "lng": "-96.848948"
+  },
+  "terrainSize": 148.62,
+  "constructionSize": 0,
+  "subdivision": "LA MOLIENDA",
+  "description": "LOTE 83 MANZANA D",
+  "mainPhotography": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1648938904/propiedades/keqpu1j9hx5vnvpknqmy.jpg",
+    "width": 1280,
+    "height": 720,
+    "public_id": "propiedades/keqpu1j9hx5vnvpknqmy",
+    "alt": "LOTE 83 MZNA D"
+  },
+  "morePictures": [],
+  "services": [],
+  "sold": false,
+  "showOnweb": true,
+  "registrationDate": "2022-04-02T22:35:08.722Z"
+},
+{
+  "_id": {
+    "$oid": "6248cfdea7291feeddb66c98"
+  },
+  "typeOfProperty": "terreno",
+  "title": "RESIDENCIAL LA MOLIENDA (D-84)",
+  "price": 827512,
+  "currency": null,
+  "pricem2": 5600,
+  "typeOfTransaction": "Venta",
+  "address": "CARRET. FED. XAL-VER KM 5.5 ",
+  "location": {
+    "lat": "19.504250",
+    "lng": "-96.848950"
+  },
+  "terrainSize": 147.77,
+  "constructionSize": 0,
+  "subdivision": "LA MOLIENDA",
+  "description": "LOTE 84 MANZANA D",
+  "mainPhotography": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1648938967/propiedades/pfeinsszzvzdgqk4shmc.jpg",
+    "width": 1280,
+    "height": 720,
+    "public_id": "propiedades/pfeinsszzvzdgqk4shmc",
+    "alt": "LOTE 84 MZNA D"
+  },
+  "morePictures": [],
+  "services": [],
+  "sold": false,
+  "showOnweb": true,
+  "registrationDate": "2022-04-02T22:36:13.991Z"
+},
+{
+  "_id": {
+    "$oid": "6248d023b6682e39eb1d6712"
+  },
+  "typeOfProperty": "terreno",
+  "title": "RESIDENCIAL LA MOLIENDA (D-85)",
+  "price": 821520,
+  "currency": null,
+  "pricem2": 5600,
+  "typeOfTransaction": "Venta",
+  "address": "CARRET. FED. XAL-VER KM 5.5 ",
+  "location": {
+    "lat": "19.504281",
+    "lng": "-96.848959"
+  },
+  "terrainSize": 146.7,
+  "constructionSize": 0,
+  "subdivision": "LA MOLIENDA",
+  "description": "LOTE 85 MANZANA D",
+  "mainPhotography": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1648939037/propiedades/yt7isjcsjp7fzcb8y7ns.jpg",
+    "width": 1280,
+    "height": 720,
+    "public_id": "propiedades/yt7isjcsjp7fzcb8y7ns",
+    "alt": "LOTE 85 MZNA D"
+  },
+  "morePictures": [],
+  "services": [],
+  "sold": false,
+  "showOnweb": true,
+  "registrationDate": "2022-04-02T22:37:22.504Z"
+},
+{
+  "_id": {
+    "$oid": "6248d07ab6682e39eb1d6713"
+  },
+  "typeOfProperty": "terreno",
+  "title": "RESIDENCIAL LA MOLIENDA (D-86)",
+  "price": 816088,
+  "currency": null,
+  "pricem2": 5600,
+  "typeOfTransaction": "Venta",
+  "address": "CARRET. FED. XAL-VER KM 5.5 ",
+  "location": {
+    "lat": "19.504309",
+    "lng": "-96.848913"
+  },
+  "terrainSize": 145.73,
+  "constructionSize": 0,
+  "subdivision": "LA MOLIENDA",
+  "description": "LOTE 86 MANZANA D",
+  "mainPhotography": {
+    "url": "https://res.cloudinary.com/civsa/image/upload/v1648939108/propiedades/xv3wnfqob9xlylvytldh.jpg",
+    "width": 1280,
+    "height": 720,
+    "public_id": "propiedades/xv3wnfqob9xlylvytldh",
+    "alt": "LOTE 86 MZNA D"
+  },
+  "morePictures": [],
+  "services": [],
+  "sold": false,
+  "showOnweb": true,
+  "registrationDate": "2022-04-02T22:38:49.596Z"
+}]
