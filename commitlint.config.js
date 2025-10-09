@@ -5,7 +5,7 @@ export default {
         'type-enum': [
           2,
           'always',
-          ['build', 'ci', 'docs', 'feat', 'fix', 'perf', 'refactor', 'test'],
+          ['build', 'ci', 'docs', 'feat', 'fix', 'perf', 'refactor', 'test', 'chore'],
         ],
         'scope-empty': [2, 'never'],
       },
