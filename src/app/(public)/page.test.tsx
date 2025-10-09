@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
-import Home from "@/app/page";
+import Home from "@/app/(public)/page";
 
 describe("Página de Inicio", () => {
   it("debería renderizar el encabezado principal", () => {
