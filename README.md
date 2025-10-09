@@ -33,7 +33,10 @@
 
    ```bash
    # Iniciar MongoDB, PostgreSQL y N8N
-   docker-compose up -d
+   # QA 
+   yarn qa:services:up
+   # Dev
+   yarn dev:services:up
    ```
 
 5. **Ejecutar la aplicación**:
