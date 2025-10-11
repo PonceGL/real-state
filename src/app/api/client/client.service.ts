@@ -11,6 +11,7 @@ import {
   UpdateClientDto,
   updateClientDto,
 } from "@/app/api/client/dtos/client.dto";
+import { propertyService } from "@/app/api/property/property.service";
 import { IS_DEV } from "@/constants/enviroment";
 import {
   BadRequestError,
@@ -20,13 +21,11 @@ import {
 } from "@/lib/httpErrors";
 import { dbConnect } from "@/lib/mongodb";
 
-import { propertyService } from "../property/property.service";
-
 class ClientService {
   public async getAll(): Promise<IClient[]> {
     try {
       await dbConnect();
-      const clients = await Client.find({}).select("-__v").lean();
+      const clients = await Client.find({}).select("-__v");
       return clients;
     } catch (error) {
       throw this.handleServiceError(error, {
@@ -38,7 +37,7 @@ class ClientService {
   public async getById(id: string): Promise<IClient> {
     try {
       await dbConnect();
-      const client = await Client.findById(id);
+      const client = await Client.findById(id).select("-__v");
       if (!client) {
         throw new NotFoundException(
           `El cliente no se encontró${IS_DEV ? ` id: ${id}` : "."}`
@@ -56,7 +55,9 @@ class ClientService {
     try {
       const validatedData = findClientByEmailDto.parse(clientData);
       await dbConnect();
-      const client = await Client.findOne({ email: validatedData.email });
+      const client = await Client.findOne({
+        email: validatedData.email,
+      }).select("-__v");
       if (!client) {
         throw new NotFoundException(
           `El cliente no se encontró${
@@ -79,7 +80,7 @@ class ClientService {
       await dbConnect();
       const existingClient = await Client.findOne({
         email: validatedData.email,
-      });
+      }).select("-__v");
       if (existingClient) {
         throw new BadRequestError(
           `El cliente ya existe${
@@ -103,6 +104,7 @@ class ClientService {
     try {
       const validatedData = updateClientDto.parse(clientData);
       await this.getById(id);
+      await this.validateRelatedEntities(validatedData);
       await dbConnect();
       const updatedClient = await Client.findByIdAndUpdate(id, validatedData, {
         new: true,
