@@ -4,25 +4,19 @@
 
 import { ErrorDescription, MongoServerError } from "mongodb";
 import { MongooseError, Query } from "mongoose";
-import { unknown, ZodError } from "zod";
+import { ZodError } from "zod";
 
 import { Client, IClient } from "@/app/api/client/client.entity";
 import { clientService } from "@/app/api/client/client.service";
 import {
   CreateClientDto,
   createClientDto,
-  FindClientByEmailDto,
   findClientByEmailDto,
   UpdateClientDto,
   updateClientDto,
 } from "@/app/api/client/dtos/client.dto";
 import { propertyService } from "@/app/api/property/property.service";
-import {
-  BadRequestError,
-  HttpError,
-  InternalServerErrorException,
-  NotFoundException,
-} from "@/lib/httpErrors";
+import { BadRequestError, NotFoundException } from "@/lib/httpErrors";
 
 jest.mock("@/lib/mongodb");
 
@@ -412,9 +406,9 @@ describe("ClientService update", () => {
       mockedClientModel.findById("68e9ad6f86561f3d9cb4b297").select as jest.Mock
     ).mockRejectedValue(mongooseError);
 
-    await expect(clientService.getById("68e9ad6f86561f3d9cb4b297")).rejects.toThrow(
-      BadRequestError
-    );
+    await expect(
+      clientService.getById("68e9ad6f86561f3d9cb4b297")
+    ).rejects.toThrow(BadRequestError);
 
     await expect(
       clientService.delete("68e9ad6f86561f3d9cb4b297")
