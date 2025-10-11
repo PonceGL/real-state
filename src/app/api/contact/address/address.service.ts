@@ -21,7 +21,7 @@ class AddressService {
   async getAll(): Promise<IAddress[]> {
     try {
       await dbConnect();
-      const addresses = await Address.find().select("-__v").lean();
+      const addresses = await Address.find({}).select("-__v").lean();
       return addresses;
     } catch (error) {
       throw this.handleServiceError(error, {
