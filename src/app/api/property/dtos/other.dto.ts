@@ -5,7 +5,7 @@ import { basePropertyDto, updateBasePropertyDto } from "./base.dto";
 export const otherPropertyDto = basePropertyDto
   .extend({
     propertyType: z.literal("otro"),
-    features: z
+    additionalFeatures: z
       .array(
         z.object({
           key: z.string(),
@@ -13,6 +13,7 @@ export const otherPropertyDto = basePropertyDto
         })
       )
       .optional(),
+    features: z.array(z.string()).default([]),
     frontageMeters: z.number().positive().optional(),
     depthMeters: z.number().positive().optional(),
     topography: z
@@ -30,7 +31,7 @@ export const updateOtherPropertyDto = updateBasePropertyDto
   .partial()
   .extend({
     propertyType: z.literal("otro"),
-    features: z
+    additionalFeatures: z
       .array(
         z.object({
           key: z.string(),
@@ -38,6 +39,7 @@ export const updateOtherPropertyDto = updateBasePropertyDto
         })
       )
       .optional(),
+    features: z.array(z.string()).optional(),
     frontageMeters: z.number().positive().optional(),
     depthMeters: z.number().positive().optional(),
     topography: z
