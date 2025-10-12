@@ -3,7 +3,7 @@ import mongoose, { Model } from "mongoose";
 import { IProperty, Property } from "@/app/api/property/models/property.entity";
 
 export interface IOtherProperty extends IProperty {
-  additionalFeatures: {
+  additionalFeatures?: {
     key: string;
     value: string;
   }[];

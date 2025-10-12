@@ -39,7 +39,7 @@ export const updateOtherPropertyDto = updateBasePropertyDto
         })
       )
       .optional(),
-    features: z.array(z.string()).default([]).optional(),
+    features: z.array(z.string()).optional(),
     frontageMeters: z.number().positive().optional(),
     depthMeters: z.number().positive().optional(),
     topography: z
