@@ -3,10 +3,11 @@ import mongoose, { Model } from "mongoose";
 import { IProperty, Property } from "@/app/api/property/models/property.entity";
 
 export interface IOtherProperty extends IProperty {
-  features: {
+  additionalFeatures: {
     key: string;
     value: string;
   }[];
+  features: string[];
   frontageMeters?: number;
   depthMeters?: number;
   topography?: "plano" | "ascendente" | "descendente" | "irregular";
@@ -15,13 +16,22 @@ export interface IOtherProperty extends IProperty {
 }
 
 const otherSchema = new mongoose.Schema<IOtherProperty>({
-  features: [
+  additionalFeatures: [
     {
       _id: false,
       key: { type: String, required: true },
       value: { type: String, required: true },
     },
   ],
+  features: [{ type: String }],
+  frontageMeters: { type: Number },
+  depthMeters: { type: Number },
+  topography: {
+    type: String,
+    enum: ["plano", "ascendente", "descendente", "irregular"],
+  },
+  hasServices: { type: Boolean },
+  plotSize: { type: Number },
 });
 
 export const OtherProperty: Model<IOtherProperty> =
