@@ -2,7 +2,7 @@
 
 import Button from "@/components/Button";
 
-export const PruebaButton = () => {
+export default function PruebaButton() {
     return (
         <>
             <Button buttonClick={() => { console.log('en llamada...') }} text={"Llama"} />
