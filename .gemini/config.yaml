@@ -1,0 +1,26 @@
+language: es
+
+summaries:
+  # 'list' -> Resumen con viñetas (fácil de escanear).
+  # 'prose' -> Resumen en un párrafo.
+  summaryStyle: list
+
+codeReview:
+  # 'changed_lines' -> Revisa solo las líneas modificadas (recomendado).
+  # 'whole_file' -> Revisa el archivo completo.
+  scope: changed_lines
+
+  # 'conventional' -> Comentarios estructurados (ej. suggestion: ...).
+  # 'conversational' -> Tono más informal.
+  reviewStyle: conventional
+
+  fileFilters:
+    exclude:
+      - '**/package-lock.json'
+      - '**/yarn.lock'
+      - '**/pnpm-lock.yaml'
+      - '**/*.snap'
+      - 'dist/**'
+      - 'coverage/**'
+      - 'backup/**'
+      - 'docs/**'

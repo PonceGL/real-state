@@ -1,0 +1,36 @@
+coverage:
+  status:
+    patch:
+    
+      main:
+        target: 80%
+        threshold: 1%
+        
+      develop:
+        target: 80%
+        threshold: 1%
+
+      default:
+        target: off 
+        
+    project:
+      default:
+        target: auto
+        threshold: 2%
+
+comment:
+  layout: "header, reach, diff, flags, tree, footer"
+  behavior: default
+  require_changes: false
+
+  header: |
+    ### ✨ Resumen de Cobertura de Pruebas (Codecov) ✨
+    ¡Hola! Aquí está el análisis de la cobertura de pruebas para los cambios en este Pull Request. A continuación se detalla:
+    - **Coverage Diff:** La cobertura del código **nuevo o modificado**.
+    - **Project Coverage:** Muestra si la cobertura **total** del proyecto ha subido o bajado.
+
+  footer: |
+    ---
+    *Este es un reporte automático generado por Codecov.*
+    
+    > **Nota**: El requisito de cobertura (`target`) para el código nuevo en Pull Requests hacia `main` y `develop` es del **80%**.
