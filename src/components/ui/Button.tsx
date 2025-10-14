@@ -1,9 +1,14 @@
 'use client'
+
+import { ReactNode } from "react";
+
 interface ButtonProps {
     text: string,
     buttonClick: () => void,
     stylePreset?: string,
     styleText?: string,
+    icon?: ReactNode,
+    iconPosition?: 'left' | 'right',
 }
 
 
