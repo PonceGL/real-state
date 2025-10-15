@@ -53,7 +53,7 @@ class UserService {
     }
   }
 
-  public async getByEmail(userData: FindUserByEmailDto) {
+  public async getByEmail(userData: FindUserByEmailDto): Promise<IUser> {
     try {
       const validatedData = findUserByEmailDto.parse(userData);
       await dbConnect();
@@ -78,7 +78,7 @@ class UserService {
         "+password"
       );
       if (!user) {
-        throw new BadRequestError("Credenciales inválidas");
+        throw new BadRequestError("Datos inválidos");
       }
       return user;
     } catch (error) {

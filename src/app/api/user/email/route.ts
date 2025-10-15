@@ -4,6 +4,7 @@ import { userService } from "@/app/api/user/user.service";
 import { isAuthenticated } from "@/lib/auth";
 import { handleHttpError } from "@/lib/errorResponse";
 import { AuthorizationError } from "@/lib/httpErrors";
+import { GetUserByEmailResponse } from "@/types/http";
 import { USER_ROLES } from "@/types/users";
 
 export async function POST(request: NextRequest) {
@@ -14,14 +15,12 @@ export async function POST(request: NextRequest) {
     }
     const body = await request.json();
     const user = await userService.getByEmail(body);
-    return NextResponse.json(
-      {
-        success: true,
-        message: "User successfully obtained",
-        data: user,
-      },
-      { status: 200 }
-    );
+    const response: GetUserByEmailResponse = {
+      success: true,
+      message: "User successfully obtained",
+      data: user,
+    };
+    return NextResponse.json(response, { status: 200 });
   } catch (error) {
     return handleHttpError(error);
   }
