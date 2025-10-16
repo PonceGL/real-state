@@ -1,33 +1,36 @@
 'use client'
 
-import Button from "@/components/ui/Button";
+import { Button } from "@/components/ui/button"
+
+
 
 export default function PruebaButton() {
     return (
         <>
-            {/* //Button Azul para llamaada */}
             <Button
-                stylePreset=" bg-[#1062C6] m-2"
-                styleText="text-white"
-                buttonClick={() => { console.log('Llamando') }}
-                text={"Llamar (228) 210-7188"}
-            />
-
-            {/* //Button Blanco con borde azul */}
+                variant="default"
+                size="movile"
+            >
+                Llamar (228) 210-7188
+            </Button>
             <Button
-                stylePreset=" bg-white border-2 border-[#1062C6] m-2 "
-                styleText="text-[#1062C6]"
-                buttonClick={() => { console.log('Ver Todas las Propiedades') }}
-                text={"Ver Todas las Propiedades"}
-            />
-
-            {/* //Button WhatsApp */}
+                variant="whatsapp"
+                size="movile"
+            >
+                whatsApp
+            </Button>
             <Button
-                stylePreset=" bg-[#198754] m-2"
-                styleText="text-white"
-                buttonClick={() => { console.log('WhatsApp') }}
-                text={"WhatsApp"}
-            />
+                variant="secondary"
+                size="movile"
+            >
+                Ver Propiedades
+            </Button>
+            <Button
+                variant="outline"
+                size="movile"
+            >
+                Ver Todas Las Propiedades
+            </Button>
         </>
     )
 }
