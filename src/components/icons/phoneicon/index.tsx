@@ -1,5 +1,3 @@
-// src/components/ui/icons/PhoneIcon.tsx
-
 interface PhoneIconProps {
     size?: number;
     color?: string;
