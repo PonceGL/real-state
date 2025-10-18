@@ -1,6 +1,8 @@
 import { FlatCompat } from "@eslint/eslintrc";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import validateFileName from "eslint-plugin-validate-filename";
+import reactHooks from "eslint-plugin-react-hooks";
+import jsxA11y from "eslint-plugin-jsx-a11y";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -18,12 +20,22 @@ const eslintConfig = [
     plugins: {
       "simple-import-sort": simpleImportSort,
       "validate-filename": validateFileName,
+      "react-hooks": reactHooks,
+      "jsx-a11y": jsxA11y,
     },
     rules: {
       "@next/next/no-html-link-for-pages": "warn",
       "@next/next/no-img-element": "warn",
       "simple-import-sort/imports": "warn",
       "simple-import-sort/exports": "warn",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "jsx-a11y/alt-text": "warn",
+      "jsx-a11y/anchor-is-valid": "warn",
+      "jsx-a11y/click-events-have-key-events": "warn",
+      "jsx-a11y/no-static-element-interactions": "warn",
+      "no-console": "warn",
+      "eqeqeq": ["error", "always"],
       "validate-filename/naming-rules": [
         "error",
         {
