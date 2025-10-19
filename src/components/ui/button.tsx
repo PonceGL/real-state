@@ -9,6 +9,7 @@ type ButtonVariant =
   | "default"
   | "outline"
   | "inverted"
+  | "outlineInverted"
   | "whatsapp"
   | "warning"
   | "danger";
@@ -34,6 +35,8 @@ const buttonVariants = cva(
           "border-brand-primary-500 text-brand-primary-500 hover:border-brand-primary-400 active:border-brand-primary-250 active:text-brand-primary-250",
         inverted:
           "bg-neutral-base-50 border-neutral-base-50 text-brand-primary-500 active:bg-brand-primary-100 active:border-brand-primary-100",
+        outlineInverted:
+          "border-neutral-base-200 text-neutral-base-200 hover:border-neutral-base-200 active:border-neutral-base-600 active:text-neutral-base-600",
         whatsapp:
           "bg-semantic-success-500 border-semantic-success-500 text-white hover:bg-semantic-success-400 hover:border-semantic-success-400 active:bg-semantic-success-250 active:border-semantic-success-250",
         warning:
