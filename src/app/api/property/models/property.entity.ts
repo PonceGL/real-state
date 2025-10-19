@@ -17,6 +17,7 @@ export interface IProperty extends Document {
   transactionType: "venta" | "renta";
   location: {
     type: "Point";
+    // eslint-disable-next-line no-inline-comments
     coordinates: [number, number]; // [longitud, latitud]
     address: string;
     city: string;
@@ -30,8 +31,8 @@ export interface IProperty extends Document {
   status: "active" | "process" | "sold";
   draft: boolean;
   hidePrice: boolean;
-  // subdivision: Types.ObjectId | Subdivision;
-  // interested: Types.ObjectId[] | Contact[];
+  // TODO: add subdivision: Types.ObjectId | Subdivision;
+  // TODO: add interested: Types.ObjectId[] | Contact[];
 }
 
 const basePropertySchema = new mongoose.Schema(
@@ -44,9 +45,9 @@ const basePropertySchema = new mongoose.Schema(
     slug: {
       type: String,
       required: true,
-      unique: true, // <--- MUY IMPORTANTE
+      unique: true,
       lowercase: true,
-      index: true, // Ayuda a que las búsquedas por slug sean más rápidas
+      index: true,
     },
     description: {
       type: String,
@@ -72,7 +73,6 @@ const basePropertySchema = new mongoose.Schema(
       required: true,
     },
     location: {
-      // GeoJSON para poder hacer búsquedas por geolocalización en el futuro
       type: {
         type: String,
         enum: ["Point"],
@@ -80,7 +80,7 @@ const basePropertySchema = new mongoose.Schema(
         select: false,
       },
       coordinates: {
-        type: [Number], // [longitud, latitud]
+        type: [Number],
         required: [true, "Las coordenadas son obligatorias."],
         validate: {
           validator: function (value: number[]) {
@@ -146,7 +146,6 @@ const basePropertySchema = new mongoose.Schema(
   }
 );
 
-// Creamos un índice geoespacial
 basePropertySchema.index({ location: "2dsphere" });
 
 export const Property: Model<IProperty> =

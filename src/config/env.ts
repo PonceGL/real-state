@@ -1,7 +1,6 @@
 import { z } from "zod";
 
 const envSchema = z.object({
-  // Variables del Servidor (no expuestas al cliente)
   NODE_ENV: z
     .enum(["development", "production", "test"])
     .default("development"),
@@ -27,7 +26,6 @@ const envSchema = z.object({
   CLOUDINARY_FOLDER: z.string().min(3),
   CLOUDINARY_PRESET: z.string().min(3),
 
-  // Variables Públicas (expuestas al cliente)
   NEXT_PUBLIC_GA_ID: z.string().startsWith("G-"),
   NEXT_PUBLIC_APP_URL: z.string().min(1),
 });
@@ -35,10 +33,6 @@ const envSchema = z.object({
 const parsedEnv = envSchema.safeParse(process.env);
 
 if (!parsedEnv.success) {
-  console.error(
-    "❌ Invalid environment variables:",
-    parsedEnv.error.flatten().fieldErrors
-  );
   throw new Error("Invalid environment variables.");
 }
 export const env = parsedEnv.data;

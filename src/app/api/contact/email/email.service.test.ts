@@ -15,9 +15,16 @@ import {
   createContactEmailDto,
   updateContactEmailDto,
 } from "@/app/api/contact/email/dtos/email.dto";
-import { ContactEmail, IContactEmail } from "@/app/api/contact/email/email.entity";
+import {
+  ContactEmail,
+  IContactEmail,
+} from "@/app/api/contact/email/email.entity";
 import { contactEmailService } from "@/app/api/contact/email/email.service";
-import { BadRequestError, InternalServerErrorException, NotFoundException } from "@/lib/httpErrors";
+import {
+  BadRequestError,
+  InternalServerErrorException,
+  NotFoundException,
+} from "@/lib/httpErrors";
 
 jest.mock("@/lib/mongodb");
 jest.mock("@/app/api/contact/email/email.entity", () => ({
@@ -83,7 +90,7 @@ describe("ContactEmailService getById", () => {
 
   it("should return an email by id", async () => {
     mockedEmailModel.findById.mockReturnValue(
-  createMockQuery(mockEmail as unknown as IContactEmail)
+      createMockQuery(mockEmail as unknown as IContactEmail)
     );
 
     const email = await contactEmailService.getById(mockEmail._id);
@@ -131,7 +138,7 @@ describe("ContactEmailService create", () => {
         code: "unrecognized_keys",
         keys: ["color"],
         path: [],
-        message: 'Unrecognized key: "color"',
+        message: "Unrecognized key: color",
       },
     ]);
 
@@ -206,7 +213,7 @@ describe("ContactEmailService update", () => {
         code: "unrecognized_keys",
         keys: ["color"],
         path: [],
-        message: 'Unrecognized key: "color"',
+        message: "Unrecognized key: color",
       },
     ]);
 
@@ -215,7 +222,7 @@ describe("ContactEmailService update", () => {
     });
 
     mockedEmailModel.findById.mockReturnValue(
-  createMockQuery(mockEmail as unknown as IContactEmail)
+      createMockQuery(mockEmail as unknown as IContactEmail)
     );
 
     try {
@@ -236,11 +243,11 @@ describe("ContactEmailService delete", () => {
 
   it("should delete the email and return a success message", async () => {
     mockedEmailModel.findById.mockReturnValue(
-  createMockQuery(mockEmail as unknown as IContactEmail)
+      createMockQuery(mockEmail as unknown as IContactEmail)
     );
 
     mockedEmailModel.findByIdAndDelete.mockReturnValue(
-  createMockQuery(mockEmail as unknown as IContactEmail) as never
+      createMockQuery(mockEmail as unknown as IContactEmail) as never
     );
 
     const response = await contactEmailService.delete(mockEmail._id);
@@ -253,16 +260,18 @@ describe("ContactEmailService delete", () => {
   it("should throw NotFoundError if email to delete not found", async () => {
     mockedEmailModel.findById.mockReturnValue(null as never);
 
-    await expect(
-      contactEmailService.delete(mockEmail._id)
-    ).rejects.toThrow(NotFoundException);
+    await expect(contactEmailService.delete(mockEmail._id)).rejects.toThrow(
+      NotFoundException
+    );
   });
 
   it("should throw InternalServerErrorException if cant delete email", async () => {
-    (mockedEmailModel.findById as jest.Mock).mockRejectedValue(new Error("Database error"));
+    (mockedEmailModel.findById as jest.Mock).mockRejectedValue(
+      new Error("Database error")
+    );
 
-    await expect(
-      contactEmailService.delete(mockEmail._id)
-    ).rejects.toThrow(InternalServerErrorException);
+    await expect(contactEmailService.delete(mockEmail._id)).rejects.toThrow(
+      InternalServerErrorException
+    );
   });
 });

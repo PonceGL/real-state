@@ -51,24 +51,24 @@ async function generateKey(password: string): Promise<CryptoKey> {
   const salt = crypto.getRandomValues(new Uint8Array(16));
   
   const keyMaterial = await crypto.subtle.importKey(
-    'raw',
+    "raw",
     passwordBuffer,
-    'PBKDF2',
+    "PBKDF2",
     false,
-    ['deriveBits', 'deriveKey']
+    ["deriveBits", "deriveKey"]
   );
 
   return crypto.subtle.deriveKey(
       {
-      name: 'PBKDF2',
+      name: "PBKDF2",
       salt,
       iterations: 100000,
-      hash: 'SHA-256'
+      hash: "SHA-256"
     },
     keyMaterial,
-    { name: 'AES-GCM', length: 256 },
+    { name: "AES-GCM", length: 256 },
     false,
-    ['encrypt', 'decrypt']
+    ["encrypt", "decrypt"]
   );
 }
 
@@ -98,7 +98,7 @@ export async function encryptString(text: string, password: string): Promise<str
   const textBuffer = new TextEncoder().encode(text);
   
   const encryptedContent = await crypto.subtle.encrypt(
-    { name: 'AES-GCM', iv: iv },
+    { name: "AES-GCM", iv: iv },
     key,
     textBuffer
   );
@@ -106,7 +106,7 @@ export async function encryptString(text: string, password: string): Promise<str
   const encryptedArray = new Uint8Array(iv.length + encryptedContent.byteLength);
   encryptedArray.set(iv);
   encryptedArray.set(new Uint8Array(encryptedContent), iv.length);
-  return Buffer.from(encryptedArray).toString('base64');
+  return Buffer.from(encryptedArray).toString("base64");
 }
 
 /**
@@ -132,19 +132,19 @@ export async function encryptString(text: string, password: string): Promise<str
 export async function decryptString(encryptedText: string, password: string): Promise<string> {
   const key = await generateKey(password);
 
-  const encryptedArray = new Uint8Array(Buffer.from(encryptedText, 'base64'));
+  const encryptedArray = new Uint8Array(Buffer.from(encryptedText, "base64"));
   
   const iv = encryptedArray.slice(0, 12);
   const content = encryptedArray.slice(12);
 
   try {
     const decryptedContent = await crypto.subtle.decrypt(
-      { name: 'AES-GCM', iv: iv },
+      { name: "AES-GCM", iv: iv },
       key,
       content
     );
     return new TextDecoder().decode(decryptedContent);
   } catch {
-    throw new Error('Error al desencriptar: contraseña incorrecta o datos corruptos');
+    throw new Error("Error al desencriptar: contraseña incorrecta o datos corruptos");
   }
 }

@@ -15,19 +15,19 @@ const ImageSchema = new mongoose.Schema<IImage>(
     url: {
       type: String,
       required: true,
-      unique: true, // <--- MUY IMPORTANTE
+      unique: true,
       index: true,
     },
     asset_id: {
       type: String,
       required: true,
-      unique: true, // <--- MUY IMPORTANTE
+      unique: true,
       index: true,
     },
     public_id: {
       type: String,
       required: true,
-      unique: true, // <--- MUY IMPORTANTE
+      unique: true,
       index: true,
     },
     folder: {

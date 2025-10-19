@@ -20,6 +20,7 @@ export interface INeighborhood extends Document {
   };
   location: {
     type: "Point";
+    // eslint-disable-next-line no-inline-comments
     coordinates: [number, number]; // [longitud, latitud]
     address: string;
     city: string;
@@ -32,9 +33,9 @@ export interface INeighborhood extends Document {
   agent: Types.ObjectId | IUser;
   properties: Types.ObjectId[] | IProperty[];
   neighborhoodType: string;
-  sizeLandsRange: [number, number]; // [min, max]
+  sizeLandsRange: [number, number];
   availableLands: number;
-  priceRange: [number, number]; // [min, max]
+  priceRange: [number, number];
   features?: string[];
   services?: string[];
   benefits?: string[];
@@ -51,9 +52,9 @@ const neighborhoodSchema = new mongoose.Schema<INeighborhood>({
   slug: {
     type: String,
     required: true,
-    unique: true, // <--- MUY IMPORTANTE
+    unique: true,
     lowercase: true,
-    index: true, // Ayuda a que las búsquedas por slug sean más rápidas
+    index: true,
   },
   slogan: {
     type: String,
@@ -80,7 +81,6 @@ const neighborhoodSchema = new mongoose.Schema<INeighborhood>({
     },
   },
   location: {
-    // GeoJSON para poder hacer búsquedas por geolocalización en el futuro
     type: {
       type: String,
       enum: ["Point"],
@@ -187,7 +187,7 @@ const neighborhoodSchema = new mongoose.Schema<INeighborhood>({
   },
 });
 
-neighborhoodSchema.index({ location: "2dsphere" }); // Índice geoespacial para consultas por ubicación
+neighborhoodSchema.index({ location: "2dsphere" });
 
 export const Neighborhood: Model<INeighborhood> =
   mongoose.models.Neighborhood ||

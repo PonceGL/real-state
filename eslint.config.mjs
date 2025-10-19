@@ -35,40 +35,63 @@ const eslintConfig = [
       "jsx-a11y/click-events-have-key-events": "warn",
       "jsx-a11y/no-static-element-interactions": "warn",
       "no-console": "warn",
-      "eqeqeq": ["error", "always"],
+      "eqeqeq": ["warn", "always"],
+      "quotes": ["error", "double"],
+      "prefer-const": ["warn", { ignoreReadBeforeAssign: true }],
+      "no-inline-comments": [
+        "error", { 
+          "ignorePattern": "TODO",
+         }
+        ],
+      "line-comment-position": [
+        "error", { 
+          "position": "beside",
+          "ignorePattern": "TODO",
+         }
+      ],
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          "args": "after-used",
+          "argsIgnorePattern": "^_",
+          "varsIgnorePattern": "^_",
+          "caughtErrorsIgnorePattern": "^_"
+        }
+      ],
+      "import/no-anonymous-default-export": "off",
       "validate-filename/naming-rules": [
         "error",
         {
           rules: [
             {
-              case: 'kebab',
+              case: "kebab",
               target: "**/app/**",
-              excludes: ['dtos'],
+              excludes: ["dtos"],
             },
             {
-              case: 'camel',
+              case: "camel",
               target: "**/components/**",
             },
             {
-              case: 'camel',
+              case: "camel",
               target: "**/config/**",
             },
             {
-              case: 'camel',
+              case: "camel",
               target: "**/constants/**",
             },
             {
-              case: 'camel',
+              case: "camel",
               target: "**/lib/**",
             },
             {
-              case: 'camel',
+              case: "camel",
               target: "**/types/**",
             },
             {
-              case: 'camel',
+              case: "camel",
               target: "**/hooks/**",
-              patterns: '^use',
+              patterns: "^use",
             }
           ],
         },
@@ -79,27 +102,27 @@ const eslintConfig = [
           rules: [
             {
               target: "**/app/**",
-              extensions: ['.ts', '.tsx'],
+              extensions: [".ts", ".tsx"],
             },
             {
               target: "**/hooks/**",
-              extensions: ['.ts'],
+              extensions: [".ts"],
             },
             {
               target: "**/config/**",
-              extensions: ['.ts'],
+              extensions: [".ts"],
             },
             {
               target: "**/constants/**",
-              extensions: ['.ts'],
+              extensions: [".ts"],
             },
             {
               target: "**/lib/**",
-              extensions: ['.ts'],
+              extensions: [".ts"],
             },
             {
               target: "**/types/**",
-              extensions: ['.ts'],
+              extensions: [".ts"],
             },
           ],
         },

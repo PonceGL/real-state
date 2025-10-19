@@ -40,7 +40,6 @@ async function dbConnect(): Promise<Mongoose> {
     cached.conn = await cached.promise;
   } catch (e) {
     cached.promise = null;
-    console.error("Failed to connect to MongoDB:", e);
     throw e;
   }
 

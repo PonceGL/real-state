@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from "next/server";
 
 import { loginService } from "@/app/api/auth/login.service";
 import { handleHttpError } from "@/lib/errorResponse";
@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         success: true,
-        message: 'Login successful',
+        message: "Login successful",
         data: token,
       },
       { status: 200 }

@@ -97,7 +97,7 @@ export const mockZodError = [
     code: "invalid_value" as const,
     values: ["venta", "renta"],
     path: ["transactionType"],
-    message: 'Invalid option: expected one of "venta"|"renta"',
+    message: "Invalid option: expected one of venta | renta",
   },
   {
     expected: "object" as const,
@@ -127,7 +127,7 @@ export const mockZodError = [
     code: "invalid_value" as const,
     values: ["active", "process", "sold"],
     path: ["status"],
-    message: 'Invalid option: expected one of "active"|"process"|"sold"',
+    message: "Invalid option: expected one of active | process | sold",
   },
   {
     expected: "number" as const,
