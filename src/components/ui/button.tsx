@@ -18,10 +18,12 @@ type ButtonSize = "default" | "fit";
 
 interface ButtonProps {
   text: string;
+  type?: "submit" | "reset" | "button";
   variant?: ButtonVariant;
   size?: ButtonSize;
   link?: Url;
-  onAction?: () => void;
+  onClick?: () => void;
+  disabled?: boolean;
 }
 
 const buttonVariants = cva(
@@ -56,13 +58,25 @@ const buttonVariants = cva(
   }
 );
 
-function Button({ text, onAction, link, variant, size }: ButtonProps) {
+function Button({
+  text,
+  type,
+  onClick,
+  link,
+  variant,
+  size,
+  disabled,
+}: ButtonProps) {
   return (
     <>
       {!link ? (
         <button
-          className={cn(buttonVariants({ variant, size }))}
-          onClick={onAction}
+          type={type}
+          className={`${cn(buttonVariants({ variant, size }))} ${
+            disabled ? "opacity-50 cursor-not-allowed" : ""
+          }`}
+          onClick={onClick}
+          disabled={disabled}
         >
           <p className="font-bold">L</p> {/*  TODO: aqui van los iconos */}
           {text}
