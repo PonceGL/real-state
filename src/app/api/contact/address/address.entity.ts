@@ -14,6 +14,7 @@ export interface IAddress extends Document {
   googleMapsUrl?: string;
   location: {
     type: "Point";
+    // eslint-disable-next-line no-inline-comments
     coordinates: [number, number]; // [longitude, latitude]
   };
   isMain: boolean;
@@ -67,7 +68,6 @@ const AddressSchema = new mongoose.Schema<IAddress>(
     references: { type: String, trim: true },
     googleMapsUrl: { type: String, trim: true },
 
-    // Estructura GeoJSON para la ubicación
     location: {
       type: {
         type: String,
@@ -76,7 +76,7 @@ const AddressSchema = new mongoose.Schema<IAddress>(
         select: false,
       },
       coordinates: {
-        type: [Number], // [longitud, latitud]
+        type: [Number],
         required: true,
       },
     },

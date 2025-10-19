@@ -16,9 +16,16 @@ import {
   createContactNumberDto,
   updateContactNumberDto,
 } from "@/app/api/contact/number/dtos/number.dto";
-import { ContactNumber, IContactNumber } from "@/app/api/contact/number/number.entity";
+import {
+  ContactNumber,
+  IContactNumber,
+} from "@/app/api/contact/number/number.entity";
 import { contactNumberService } from "@/app/api/contact/number/number.service";
-import { BadRequestError, InternalServerErrorException, NotFoundException } from "@/lib/httpErrors";
+import {
+  BadRequestError,
+  InternalServerErrorException,
+  NotFoundException,
+} from "@/lib/httpErrors";
 
 jest.mock("@/lib/mongodb");
 jest.mock("@/app/api/contact/number/number.entity", () => ({
@@ -55,7 +62,11 @@ describe("ContactNumberService getAll", () => {
   it("should return a list of contact numbers", async () => {
     mockedNumberModel.find.mockReturnValue(
       createMockQuery({
-        lean: jest.fn().mockReturnValue(mockContactNumberList as unknown as IContactNumber[]),
+        lean: jest
+          .fn()
+          .mockReturnValue(
+            mockContactNumberList as unknown as IContactNumber[]
+          ),
       } as never)
     );
 
@@ -73,7 +84,9 @@ describe("ContactNumberService getAll", () => {
       } as never)
     );
 
-    await expect(contactNumberService.getAll()).rejects.toThrow(BadRequestError);
+    await expect(contactNumberService.getAll()).rejects.toThrow(
+      BadRequestError
+    );
   });
 });
 
@@ -104,9 +117,9 @@ describe("ContactNumberService getById", () => {
 
     (mockedNumberModel.findById as jest.Mock).mockRejectedValue(mongooseError);
 
-    await expect(contactNumberService.getById(mockContactNumber._id)).rejects.toThrow(
-      BadRequestError
-    );
+    await expect(
+      contactNumberService.getById(mockContactNumber._id)
+    ).rejects.toThrow(BadRequestError);
   });
 });
 
@@ -122,7 +135,9 @@ describe("ContactNumberService create", () => {
 
     mockedNumberModel.create.mockReturnValue(mockContactNumber as never);
 
-    const number = await contactNumberService.create(mockCreateContactNumber as never);
+    const number = await contactNumberService.create(
+      mockCreateContactNumber as never
+    );
     expect(number).toBeDefined();
   });
 
@@ -132,7 +147,7 @@ describe("ContactNumberService create", () => {
         code: "unrecognized_keys",
         keys: ["color"],
         path: [],
-        message: 'Unrecognized key: "color"',
+        message: "Unrecognized key: color",
       },
     ]);
 
@@ -207,7 +222,7 @@ describe("ContactNumberService update", () => {
         code: "unrecognized_keys",
         keys: ["color"],
         path: [],
-        message: 'Unrecognized key: "color"',
+        message: "Unrecognized key: color",
       },
     ]);
 
@@ -260,7 +275,9 @@ describe("ContactNumberService delete", () => {
   });
 
   it("should throw InternalServerErrorException if cant delete contact number", async () => {
-    (mockedNumberModel.findById as jest.Mock).mockRejectedValue(new Error("Database error"));
+    (mockedNumberModel.findById as jest.Mock).mockRejectedValue(
+      new Error("Database error")
+    );
 
     await expect(
       contactNumberService.delete(mockContactNumber._id)

@@ -10,7 +10,7 @@ export const basePropertyDto = z
     }),
     transactionType: z.enum(["venta", "renta"]),
     location: z.object({
-      coordinates: z.tuple([z.number(), z.number()]), // [longitud, latitud]
+      coordinates: z.tuple([z.number(), z.number()]),
       address: z.string().min(1, "La dirección es obligatoria."),
       city: z.string().min(1, "La ciudad es obligatoria."),
       state: z.string().min(1, "El estado es obligatorio."),
@@ -29,5 +29,5 @@ export const updateBasePropertyDto = basePropertyDto
   .partial()
   .omit({ location: true })
   .extend({
-    location: basePropertyDto.shape.location.partial().optional()
+    location: basePropertyDto.shape.location.partial().optional(),
   });

@@ -36,21 +36,21 @@ const eslintConfig = [
       "jsx-a11y/no-static-element-interactions": "warn",
       "no-console": "warn",
       "eqeqeq": ["warn", "always"],
-      "quotes": ["warn", "double"],
+      "quotes": ["error", "double"],
       "prefer-const": ["warn", { ignoreReadBeforeAssign: true }],
       "no-inline-comments": [
-        "warn", { 
+        "error", { 
           "ignorePattern": "TODO",
          }
         ],
       "line-comment-position": [
-        "warn", { 
+        "error", { 
           "position": "beside",
           "ignorePattern": "TODO",
          }
       ],
       "@typescript-eslint/no-unused-vars": [
-        "warn",
+        "error",
         {
           "args": "after-used",
           "argsIgnorePattern": "^_",
@@ -58,6 +58,7 @@ const eslintConfig = [
           "caughtErrorsIgnorePattern": "^_"
         }
       ],
+      "import/no-anonymous-default-export": "off",
       "validate-filename/naming-rules": [
         "error",
         {
