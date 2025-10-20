@@ -26,18 +26,18 @@ type InputType =
 
 type InputSize = "default" | "fit";
 
-type HtmlInputPprops = DetailedHTMLProps<
+type HtmlInputProps = DetailedHTMLProps<
   InputHTMLAttributes<HTMLInputElement>,
   HTMLInputElement
 >;
 
-type InputProps = Omit<HtmlInputPprops, "type"> & {
+type InputProps = Omit<HtmlInputProps, "type"> & {
   type?: InputType;
   variant?: InputVariant;
   size?: InputSize;
 };
 
-const inputsVariants = cva(
+const inputVariants = cva(
   "px-2.5 py-3 flex justify-center items-center gap-1 whitespace-nowrap text-sm font-medium border-2 outline-none rounded-lg transition duration-300 hover:shadow focus:outline-none focus:shadow-md",
   {
     variants: {
@@ -69,7 +69,7 @@ function Input({ variant, size, type, ...props }: InputProps) {
   return (
     <input
       className={cn(
-        inputsVariants({
+        inputVariants({
           variant,
           size,
         })

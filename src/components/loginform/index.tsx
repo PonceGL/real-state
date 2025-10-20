@@ -15,19 +15,10 @@ import {
   Input,
 } from "@/components/ui";
 
-const formSchema = z.object({
+const FORM_SCHEMA = z.object({
   username: z.email({
     message: "Ingresa una dirección de correo electrónico válida.",
   }),
-  phone: z
-    .string()
-    .min(10, {
-      message: "El número de teléfono debe tener al menos 10 dígitos.",
-    })
-    .max(10, {
-      message: "El número de teléfono no puede tener más de 10 dígitos.",
-    })
-    .nonempty({ message: "El número de teléfono es obligatorio." }),
   password: z
     .string()
     .min(6, {
@@ -35,21 +26,19 @@ const formSchema = z.object({
     })
     .max(100, {
       message: "La contraseña no puede tener más de 100 caracteres.",
-    })
-    .nonempty({ message: "La contraseña es obligatoria." }),
+    }),
 });
 
 export function LoginForm() {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof FORM_SCHEMA>>({
+    resolver: zodResolver(FORM_SCHEMA),
     defaultValues: {
       username: "",
-      phone: "",
       password: "",
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(values: z.infer<typeof FORM_SCHEMA>) {
     console.log(values);
   }
 
@@ -64,29 +53,11 @@ export function LoginForm() {
           name="username"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Correo Electronico</FormLabel>
+              <FormLabel>Correo Electrónico</FormLabel>
               <FormControl>
                 <Input
                   type="email"
                   placeholder="tunombre@ejemplo.com"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage className="text-semantic-error-500" />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="phone"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Teléfono</FormLabel>
-              <FormControl>
-                <Input
-                  type="tel"
-                  placeholder="1234567890"
-                  maxLength={10}
                   {...field}
                 />
               </FormControl>
