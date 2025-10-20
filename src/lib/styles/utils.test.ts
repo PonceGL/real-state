@@ -1,5 +1,5 @@
 
-import { cn } from "./utils";
+import { cn } from "@/lib/styles/utils";
 
 describe("cn", () => {
 	it("debe combinar clases correctamente", () => {
