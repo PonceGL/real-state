@@ -1,7 +1,6 @@
 "use client";
 import { cva } from "class-variance-authority";
-import { Url } from "next/dist/shared/lib/router/router";
-import Link from "next/link";
+import Link, { LinkProps } from "next/link";
 
 import { cn } from "@/lib/utils";
 
@@ -21,7 +20,7 @@ interface ButtonProps {
   type?: "submit" | "reset" | "button";
   variant?: ButtonVariant;
   size?: ButtonSize;
-  link?: Url;
+  link?: LinkProps["href"];
   onClick?: () => void;
   disabled?: boolean;
 }
