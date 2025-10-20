@@ -15,12 +15,11 @@ const geistMono = Geist_Mono({
 
 export const metadata = defaultMetadata;
 
-export default function RootLayout({
+export default function PublicLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="es-MX">
       <body
