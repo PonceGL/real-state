@@ -34,6 +34,7 @@ export function ExampleInput() {
         id="avatar"
         name="avatar"
         accept="image/png, image/jpeg"
+        data-testid="avatar"
       />
       <Input
         type="number"
@@ -48,6 +49,7 @@ export function ExampleInput() {
         min="09:00"
         max="18:00"
         required
+        data-testid="appointment"
       />
     </>
   );
