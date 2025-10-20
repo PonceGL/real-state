@@ -2,7 +2,8 @@
 import { cva } from "class-variance-authority";
 import Link, { LinkProps } from "next/link";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/styles/utils";
+
 
 type ButtonVariant =
   | "default"

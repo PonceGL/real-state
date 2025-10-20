@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 
-import { ExampleButton } from "./example";
+import { ExampleButton } from "@/components/ui/button/example";
 
 describe("ExampleButton", () => {
   it("renders all button variants", () => {

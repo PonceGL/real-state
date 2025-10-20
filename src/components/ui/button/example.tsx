@@ -1,5 +1,6 @@
 "use client";
-import { Button } from ".";
+
+import { Button } from "@/components/ui/button";
 
 export function ExampleButton() {
 

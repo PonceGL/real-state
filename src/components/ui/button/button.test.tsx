@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
 
-import { Button } from "./index";
+import { Button } from "@/components/ui/button";
 
 jest.mock("next/link", () => {
   const MockLink = ({
