@@ -1,10 +1,6 @@
 import Link from "next/link";
 
-import { defaultMetadata } from "@/config/site";
-
-export const metadata = defaultMetadata;
-
-export default function PublicLayout({
+export default function DevLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
