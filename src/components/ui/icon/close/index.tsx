@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
 
-const ClockIcon = ({
+const CloseIcon = ({
     width = 24,
     height = 24,
     color = "#1C2434",
+    strokeWidth = 2,
     className = ""
 }) => {
     return (
@@ -16,14 +17,9 @@ const ClockIcon = ({
             className={className}
         >
             <path
-                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                d="M22 2L2 22M2 2L22 22"
                 stroke={color}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
-            <path
-                d="M12 6V12L16 14"
-                stroke={color}
+                strokeWidth={strokeWidth}
                 strokeLinecap="round"
                 strokeLinejoin="round"
             />
@@ -31,4 +27,4 @@ const ClockIcon = ({
     );
 };
 
-export default ClockIcon;
+export default CloseIcon;
