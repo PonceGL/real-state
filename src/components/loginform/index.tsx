@@ -4,26 +4,39 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import z from "zod";
 
-import { Button, Input } from "@/components/ui";
 import {
+  Button,
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+  Input,
+} from "@/components/ui";
 
 const formSchema = z.object({
   username: z.email({
     message: "Ingresa una dirección de correo electrónico válida.",
   }),
-  phone: z.string().min(10, {
-    message: "El número de teléfono debe tener al menos 10 dígitos.",
-  }).max(10, {
-    message: "El número de teléfono no puede tener más de 10 dígitos.",
-  }).nonempty({ message: "El número de teléfono es obligatorio." }), 
-  password: z.string().min(6).max(100).nonempty({ message: "La contraseña es obligatoria." }),
+  phone: z
+    .string()
+    .min(10, {
+      message: "El número de teléfono debe tener al menos 10 dígitos.",
+    })
+    .max(10, {
+      message: "El número de teléfono no puede tener más de 10 dígitos.",
+    })
+    .nonempty({ message: "El número de teléfono es obligatorio." }),
+  password: z
+    .string()
+    .min(6, {
+      message: "La contraseña debe tener al menos 6 caracteres.",
+    })
+    .max(100, {
+      message: "La contraseña no puede tener más de 100 caracteres.",
+    })
+    .nonempty({ message: "La contraseña es obligatoria." }),
 });
 
 export function LoginForm() {
@@ -42,7 +55,10 @@ export function LoginForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="w-full max-w-96 p-5 mx-auto space-y-8 gap-4 border-2 border-neutral-base-600 rounded-lg">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="w-full max-w-96 p-5 mx-auto space-y-8 gap-4 border-2 border-neutral-base-600 rounded-lg"
+      >
         <FormField
           control={form.control}
           name="username"
@@ -56,7 +72,7 @@ export function LoginForm() {
                   {...field}
                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="text-semantic-error-500" />
             </FormItem>
           )}
         />
@@ -74,7 +90,7 @@ export function LoginForm() {
                   {...field}
                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="text-semantic-error-500" />
             </FormItem>
           )}
         />
@@ -85,13 +101,9 @@ export function LoginForm() {
             <FormItem>
               <FormLabel>Contraseña</FormLabel>
               <FormControl>
-                <Input
-                  type="password"
-                  placeholder="********"
-                  {...field}
-                />
+                <Input type="password" placeholder="********" {...field} />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="text-semantic-error-500" />
             </FormItem>
           )}
         />
