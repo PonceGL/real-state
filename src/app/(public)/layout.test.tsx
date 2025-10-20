@@ -1,13 +1,15 @@
 import { render, screen } from "@testing-library/react";
 
-import RootLayout from "@/app/layout";
+import PublicLayout from "@/app/(public)/layout";
 
-describe("RootLayout", () => {
+
+
+describe("PublicLayout", () => {
   it("debería renderizar a sus hijos (children) correctamente", () => {
     const testId = "test-child";
     const TestChildComponent = <div data-testid={testId}>Hola Mundo</div>;
 
-    render(<RootLayout>{TestChildComponent}</RootLayout>);
+    render(<PublicLayout>{TestChildComponent}</PublicLayout>);
 
     const childElement = screen.getByTestId(testId);
 
