@@ -31,7 +31,7 @@ type HtmlInputProps = DetailedHTMLProps<
   HTMLInputElement
 >;
 
-type InputProps = Omit<HtmlInputProps, "type"> & {
+type InputProps = Omit<HtmlInputProps, "type" | "size"> & {
   type?: InputType;
   variant?: InputVariant;
   size?: InputSize;
@@ -65,7 +65,7 @@ const inputVariants = cva(
   }
 );
 
-function Input({ variant, size, type, ...props }: InputProps) {
+export function Input({ variant, size, type, ...props }: InputProps) {
   return (
     <input
       className={cn(
@@ -79,5 +79,3 @@ function Input({ variant, size, type, ...props }: InputProps) {
     />
   );
 }
-
-export { Input };
