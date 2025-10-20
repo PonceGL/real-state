@@ -65,6 +65,54 @@ const inputVariants = cva(
   }
 );
 
+/**
+ * Un componente de input estilizado que extiende las capacidades del elemento
+ * <input> nativo de HTML. Utiliza class-variance-authority (cva) para
+ * aplicar variantes visuales y tamaños de forma consistente.
+ *
+ * Este componente acepta todas las props estándar de un <input> de HTML
+ * (como `placeholder`, `value`, `onChange`, `disabled`, etc.) y las
+ * pasa directamente al elemento subyacente.
+ *
+ * @param {InputProps} props - Las propiedades para configurar el input.
+ * @param {InputType} [props.type="text"] - El tipo de input (ej. 'text', 'password', 'email').
+ * @param {InputVariant} [props.variant="default"] - Define el estilo visual del input (ej. 'default', 'danger').
+ * @param {InputSize} [props.size="default"] - Define el ancho del input ('default' para ancho completo, 'fit' para ajustarse al contenido).
+ * @param {...HtmlInputProps} props - Todas las demás props válidas para un elemento <input> de HTML son aceptadas y pasadas directamente.
+ *
+ * @example
+ * // Renderiza un input de texto básico con un placeholder.
+ * <Input
+ * name="username"
+ * placeholder="Nombre de usuario"
+ * />
+ *
+ * @example
+ * // Renderiza un input de contraseña con una variante de peligro.
+ * <Input
+ * type="password"
+ * name="password"
+ * variant="danger"
+ * placeholder="Contraseña"
+ * />
+ *
+ * @example
+ * // Renderiza un input controlado, común en formularios de React.
+ * const [value, setValue] = useState('');
+ * <Input
+ * value={value}
+ * onChange={(e) => setValue(e.target.value)}
+ * placeholder="Escribe algo..."
+ * />
+ *
+ * @example
+ * // Renderiza un input deshabilitado con un tamaño ajustado.
+ * <Input
+ * placeholder="No editable"
+ * size="fit"
+ * disabled
+ * />
+ */
 export function Input({ variant, size, type, ...props }: InputProps) {
   return (
     <input
