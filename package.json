@@ -20,7 +20,9 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^2.0.49",
     "@types/nodemailer": "^7.0.1",
+    "ai": "^5.0.68",
     "axios": "^1.12.2",
     "bcrypt": "^6.0.0",
     "jose": "^6.1.0",
