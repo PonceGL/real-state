@@ -78,9 +78,9 @@ function Button({
           onClick={onClick}
           disabled={disabled}
         >
-          <p className="font-bold">L</p> {/*  TODO: aqui van los iconos */}
+          {/*  TODO: aqui van los iconos */}
           {text}
-          <p className="font-bold">R</p> {/*  TODO: aqui van los iconos */}
+          {/*  TODO: aqui van los iconos */}
         </button>
       ) : (
         <Link href={link} className={cn(buttonVariants({ variant, size }))}>
