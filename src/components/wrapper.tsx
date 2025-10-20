@@ -10,9 +10,6 @@ export function Wrapper() {
     return; // TODO: implement
   };
   const changeValue = (value: string) => {
-    console.log("====================================");
-    console.log("value: ", value);
-    console.log("====================================");
     setEmail(value);
   };
   return (
