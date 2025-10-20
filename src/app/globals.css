@@ -3,6 +3,28 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --color-brand-primary-600: #0B5ED7;
+  --color-brand-primary-500: #1062C6;
+  --color-brand-primary-400: #1366CC;
+  --color-brand-primary-250: #5E9CE6;
+  --color-brand-primary-100: #E7F0FF;
+  --color-neutral-base-900: #1C2434;
+  --color-neutral-base-800: #343A40;
+  --color-neutral-base-600: #6C757D;
+  --color-neutral-base-200: #E9ECEF;
+  --color-neutral-base-50: #F8F9FA;
+  --color-semantic-success-500: #198754;
+  --color-semantic-success-400: #219D64;
+  --color-semantic-success-250: #39BF81;
+  --color-semantic-warning-500: #FFC107;
+  --color-semantic-warning-400: #FFD454;
+  --color-semantic-warning-100: #FFF3CD;
+  --color-semantic-error-500: #DC3545;
+  --color-semantic-error-400: #FA3649;
+  --color-semantic-error-250: #F45E6C;
+}
+
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;

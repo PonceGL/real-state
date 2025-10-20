@@ -188,7 +188,6 @@ describe("NeighborhoodService update", () => {
     jest
       .spyOn(updateNeighborhoodDto, "parse")
       .mockReturnValue(updateData as never);
-    // Mock getById to return a valid neighborhood
     mockedNeighborhoodModel.findById.mockReturnValue(
       createMockQuery(mockSingleNeighborhood)
     );
@@ -206,7 +205,6 @@ describe("NeighborhoodService update", () => {
     jest
       .spyOn(updateNeighborhoodDto, "parse")
       .mockReturnValue({ name: "Colonia Actualizada" } as never);
-    // Mock getById to return null (not found)
     mockedNeighborhoodModel.findById.mockReturnValue(createMockQuery(null));
     await expect(
       neighborhoodService.update("invalid-id", {

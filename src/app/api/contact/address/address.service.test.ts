@@ -17,7 +17,11 @@ import {
   createAddressDto,
   updateAddressDto,
 } from "@/app/api/contact/address/dtos/address.dto";
-import { BadRequestError, InternalServerErrorException, NotFoundException } from "@/lib/httpErrors";
+import {
+  BadRequestError,
+  InternalServerErrorException,
+  NotFoundException,
+} from "@/lib/httpErrors";
 
 jest.mock("@/lib/mongodb");
 jest.mock("@/app/api/contact/address/address.entity", () => ({
@@ -131,7 +135,7 @@ describe("AddressService create", () => {
         code: "unrecognized_keys",
         keys: ["color"],
         path: [],
-        message: 'Unrecognized key: "color"',
+        message: "Unrecognized key: color",
       },
     ]);
 
@@ -206,7 +210,7 @@ describe("AddressService update", () => {
         code: "unrecognized_keys",
         keys: ["color"],
         path: [],
-        message: 'Unrecognized key: "color"',
+        message: "Unrecognized key: color",
       },
     ]);
 
@@ -253,17 +257,18 @@ describe("AddressService delete", () => {
   it("should throw NotFoundError if address to delete not found", async () => {
     mockedAddressModel.findById.mockReturnValue(null as never);
 
-    await expect(
-      addressService.delete(mockAddress._id)
-    ).rejects.toThrow(NotFoundException);
+    await expect(addressService.delete(mockAddress._id)).rejects.toThrow(
+      NotFoundException
+    );
   });
 
   it("should throw InternalServerErrorException if cant delete address", async () => {
+    (mockedAddressModel.findById as jest.Mock).mockRejectedValue(
+      new Error("Database error")
+    );
 
-    (mockedAddressModel.findById as jest.Mock).mockRejectedValue(new Error("Database error"));
-
-    await expect(
-      addressService.delete(mockAddress._id)
-    ).rejects.toThrow(InternalServerErrorException);
+    await expect(addressService.delete(mockAddress._id)).rejects.toThrow(
+      InternalServerErrorException
+    );
   });
 });

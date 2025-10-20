@@ -41,8 +41,7 @@ class CloudinaryService {
         throw new Error("No resources found"); // TODO: handle
       }
       return resources;
-    } catch (error) {
-      console.log(error);
+    } catch {
       throw new Error("Error in getByFolder"); // TODO: handle
     }
   }
@@ -65,8 +64,7 @@ class CloudinaryService {
     try {
       const response = await axios.request<UploadImageSucces>(config);
       return response.data;
-    } catch (error) {
-      console.log(error);
+    } catch {
       throw new Error("Error in upload"); // TODO: handle
     }
   }
@@ -87,12 +85,10 @@ class CloudinaryService {
     try {
       const response = await axios.request(config);
       return response.data;
-    } catch (error) {
-      console.log(error);
+    } catch {
       throw new Error("Error in delete"); // TODO: handle
     }
   }
 }
 
 export const cloudinaryService = new CloudinaryService();
-

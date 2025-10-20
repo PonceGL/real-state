@@ -32,7 +32,7 @@ export const mockEnv = {
   NEXT_PUBLIC_APP_URL: "http://localhost:3000",
 };
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment, line-comment-position
 // @ts-ignore
 process.env = {
   ...process.env,
