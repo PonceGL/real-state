@@ -9,18 +9,14 @@ export function ExampleButton() {
     }
     
     return (
-        <>
+      <>
+        <Button onClick={() => printVariant("default")} text="default" />
         <Button
           onClick={() => printVariant("default")}
           size="fit"
-          text="Click me"
+          text="default fit"
         />
-        <Button onClick={() => printVariant("default")} text="Click me" />
-        <Button
-          onClick={() => printVariant("default")}
-          link="/about"
-          text="Is Link"
-        />
+        <Button link="/about" text="Is Link" />
         <Button
           variant="outline"
           onClick={() => printVariant("outline")}
@@ -51,6 +47,6 @@ export function ExampleButton() {
           onClick={() => printVariant("danger")}
           text="danger"
         />
-        </>
-    )
+      </>
+    );
 }
