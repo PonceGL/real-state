@@ -1,4 +1,5 @@
 import { ExampleButton } from "@/components/ui/button/example";
+import { ExampleInput } from "@/components/ui/input/example";
 import { Wrapper } from "@/components/wrapper";
 
 export default function ComponentsPage() {
@@ -11,6 +12,15 @@ export default function ComponentsPage() {
         </Wrapper>
         <Wrapper isDarkBackground>
           <ExampleButton />
+        </Wrapper>
+      </div>
+      <div className="w-full p-4 flex flex-col justify-center items-center gap-4">
+        <h3 className="w-full text-left text-3xl font-bold">Input Variants</h3>
+        <Wrapper>
+          <ExampleInput />
+        </Wrapper>
+        <Wrapper isDarkBackground>
+          <ExampleInput />
         </Wrapper>
       </div>
     </main>
