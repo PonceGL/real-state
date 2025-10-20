@@ -58,6 +58,51 @@ const buttonVariants = cva(
   }
 );
 
+/**
+ * Un componente de botón versátil y reutilizable que puede renderizarse
+ * como un <button> estándar de HTML o como un componente <Link> de Next.js.
+ * Soporta múltiples variantes visuales, tamaños y estados.
+ *
+ * @param {ButtonProps} props - Las propiedades para configurar el botón.
+ * @param {string} props.text - El texto que se mostrará dentro del botón. Es obligatorio.
+ * @param {"submit" | "reset" | "button"} [props.type="button"] - El atributo `type` nativo del botón. Se ignora si se proporciona la prop `link`.
+ * @param {ButtonVariant} [props.variant="default"] - Define el estilo visual del botón (ej. 'default', 'outline', 'danger').
+ * @param {ButtonSize} [props.size="default"] - Define el tamaño del botón ('default' para ancho completo, 'fit' para ajustarse al contenido).
+ * @param {Url} [props.link] - Si se proporciona una URL, el componente se renderizará como un `next/link` en lugar de un `button`.
+ * @param {() => void} [props.onClick] - La función que se ejecutará cuando el usuario haga clic en el botón. Se ignora si se proporciona la prop `link`.
+ * @param {boolean} [props.disabled=false] - Si es `true`, el botón se deshabilita y no se puede interactuar con él. Se ignora si se proporciona la prop `link`.
+ *
+ * @example
+ * // Renderiza un botón de acción estándar
+ * <Button
+ * text="Confirmar"
+ * onClick={() => alert('Confirmado!')}
+ * variant="whatsapp"
+ * />
+ *
+ * @example
+ * // Renderiza un enlace (<a>) con el estilo de un botón
+ * <Button
+ * text="Ir a la página de inicio"
+ * link="/"
+ * variant="outline"
+ * size="fit"
+ * />
+ *
+ * @example
+ * // Renderiza un botón de tipo "submit" para un formulario
+ * <Button
+ * text="Enviar Formulario"
+ * type="submit"
+ * />
+ *
+ * @example
+ * // Renderiza un botón deshabilitado
+ * <Button
+ * text="Acción no disponible"
+ * disabled={true}
+ * />
+ */
 function Button({
   text,
   type,
