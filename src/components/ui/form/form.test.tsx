@@ -87,7 +87,7 @@ const TestFormContainer = ({
 describe("Form Components Integration", () => {
   it("should display validation errors when submitting with empty fields", async () => {
     const onSubmitMock = jest.fn();
-    const { getByRole, findByText, debug } = render(
+    const { getByRole, findByText } = render(
       <TestFormContainer onSubmit={onSubmitMock} />
     );
     expect(await findByText("Obligatorio")).toBeInTheDocument();
@@ -98,7 +98,6 @@ describe("Form Components Integration", () => {
     expect(
       await findByText("La contraseña debe tener al menos 6 caracteres.")
     ).toBeInTheDocument();
-    debug();
     expect(onSubmitMock).not.toHaveBeenCalled();
   });
 
