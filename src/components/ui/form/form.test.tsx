@@ -59,7 +59,9 @@ const TestFormContainer = ({
               <FormControl>
                 <MockInput placeholder="test@example.com" {...field} />
               </FormControl>
-              <FormMessage />
+              <FormMessage>
+                <p>Obligatorio</p>
+              </FormMessage>
             </FormItem>
           )}
         />
@@ -85,22 +87,25 @@ const TestFormContainer = ({
 describe("Form Components Integration", () => {
   it("should display validation errors when submitting with empty fields", async () => {
     const onSubmitMock = jest.fn();
-    const { getByRole, findByText } = render(<TestFormContainer onSubmit={onSubmitMock} />);
+    const { getByRole, findByText, debug } = render(
+      <TestFormContainer onSubmit={onSubmitMock} />
+    );
+    expect(await findByText("Obligatorio")).toBeInTheDocument();
 
     fireEvent.click(getByRole("button", { name: /enviar/i }));
 
-    expect(
-      await findByText("El correo es obligatorio.")
-    ).toBeInTheDocument();
+    expect(await findByText("El correo es obligatorio.")).toBeInTheDocument();
     expect(
       await findByText("La contraseña debe tener al menos 6 caracteres.")
     ).toBeInTheDocument();
+    debug();
     expect(onSubmitMock).not.toHaveBeenCalled();
   });
 
   it("should display a format error for an invalid email", async () => {
     const onSubmitMock = jest.fn();
-    const { getByLabelText, getByRole, findByText, getByText, queryByText } = render(<TestFormContainer onSubmit={onSubmitMock} />);
+    const { getByLabelText, getByRole, findByText, getByText, queryByText } =
+      render(<TestFormContainer onSubmit={onSubmitMock} />);
 
     fireEvent.change(getByLabelText(/correo electrónico/i), {
       target: { value: "invalid-email" },
@@ -132,7 +137,9 @@ describe("Form Components Integration", () => {
       email: "test@example.com",
       password: "validpassword",
     };
-    const { getByLabelText, getByRole, getByText } = render(<TestFormContainer onSubmit={onSubmitMock} />);
+    const { getByLabelText, getByRole, getByText } = render(
+      <TestFormContainer onSubmit={onSubmitMock} />
+    );
 
     fireEvent.change(getByLabelText(/correo electrónico/i), {
       target: { value: testData.email },

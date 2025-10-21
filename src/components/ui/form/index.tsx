@@ -16,6 +16,10 @@ import { FormFieldContext, FormItemContext } from "@/contexts/formContext";
 import { useFormField } from "@/hooks/useFormField";
 import { cn } from "@/lib/styles/utils";
 
+type IsBackgroundDark = {
+  isBackgroundDark?: boolean;
+};
+
 const Form = FormProvider;
 
 const FormField = <
@@ -48,18 +52,20 @@ function FormItem({ className, ...props }: ComponentProps<"div">) {
 function FormLabel({
   isBackgroundDark,
   ...props
-}: Omit<ComponentProps<typeof LabelPrimitive.Root>, "className"> & {
-  isBackgroundDark?: boolean;
-}) {
+}: Omit<ComponentProps<typeof LabelPrimitive.Root>, "className"> &
+  IsBackgroundDark) {
   const { error, formItemId } = useFormField();
 
   return (
     <Label
       data-slot="form-label"
       data-error={!!error}
-      className={`${
-        isBackgroundDark ? "text-neutral-base-200" : "text-neutral-base-900"
-      } ${cn("data-[error=true]:text-semantic-error-500")}`}
+      className={cn(
+        "data-[error=true]:text-semantic-error-500",
+        `${
+          isBackgroundDark ? "text-neutral-base-200" : "text-neutral-base-900"
+        }`
+      )}
       htmlFor={formItemId}
       {...props}
     />
@@ -88,9 +94,7 @@ function FormControl({ ...props }: ComponentProps<typeof Slot>) {
 function FormDescription({
   isBackgroundDark,
   ...props
-}: Omit<ComponentProps<"p">, "className"> & {
-  isBackgroundDark?: boolean;
-}) {
+}: Omit<ComponentProps<"p">, "className"> & IsBackgroundDark) {
   const { formDescriptionId } = useFormField();
 
   return (
@@ -105,7 +109,10 @@ function FormDescription({
   );
 }
 
-function FormMessage({ className, ...props }: ComponentProps<"p">) {
+function FormMessage({
+  isBackgroundDark,
+  ...props
+}: Omit<ComponentProps<"p">, "className"> & IsBackgroundDark) {
   const { error, formMessageId } = useFormField();
   const body = error ? String(error?.message ?? "") : props.children;
 
@@ -117,7 +124,13 @@ function FormMessage({ className, ...props }: ComponentProps<"p">) {
     <p
       data-slot="form-message"
       id={formMessageId}
-      className={cn("text-semantic-error-500 text-sm", className)}
+      data-error={!!error}
+      className={cn(
+        "data-[error=true]:text-semantic-error-500",
+        `${
+          isBackgroundDark ? "text-neutral-base-200" : "text-neutral-base-900"
+        }`
+      )}
       {...props}
     >
       {body}
@@ -133,5 +146,4 @@ export {
   FormItem,
   FormLabel,
   FormMessage,
-  useFormField,
 };
