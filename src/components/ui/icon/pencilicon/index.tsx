@@ -1,16 +1,8 @@
-import { cva } from "class-variance-authority";
+
 
 import { cn } from "@/lib/styles/utils";
-
-type IconSize = "small" | "medium" | "large";
-
-type IconColor = "default" | "whatsapp" | "warning" | "danger" | "white" | "black";
-
-
-interface IconProps {
-    size?: IconSize,
-    variant?: IconColor
-}
+import { IconProps } from "@/types/iconsinterface"
+import { iconVariants } from "@/types/iconvariants";
 
 
 export const PencilIcon = ({
@@ -18,45 +10,14 @@ export const PencilIcon = ({
     size,
 }: IconProps) => {
 
-    const buttonVariants = cva(
-        "",
-        {
-            variants: {
-                variant: {
-                    default:
-                        "stroke-brand-primary-500 ",
-                    white:
-                        "stroke-white",
-                    black:
-                        "stroke-black",
-                    outlineInverted:
-                        "stroke-neutral-base-200",
-                    whatsapp:
-                        "stroke-semantic-success-500",
-                    warning:
-                        "stroke-semantic-warning-500",
-                    danger:
-                        "stroke-semantic-error-500",
-                },
-                size: {
-                    small: "w-1.5 h-1.5",
-                    medium: "w-2.5 h-2.5",
-                    large: "w-3.5 h-3.5",
-                },
-            },
-            defaultVariants: {
-                variant: "default",
-                size: "small",
-            },
-        }
-    );
+
 
     return (
         <svg
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={cn(buttonVariants({
+            className={cn(iconVariants({
                 variant,
                 size
             }))}
