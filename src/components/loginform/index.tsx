@@ -14,32 +14,19 @@ import {
   FormMessage,
   Input,
 } from "@/components/ui";
-
-const FORM_SCHEMA = z.object({
-  username: z.email({
-    message: "Ingresa una dirección de correo electrónico válida.",
-  }),
-  password: z
-    .string()
-    .min(6, {
-      message: "La contraseña debe tener al menos 6 caracteres.",
-    })
-    .max(100, {
-      message: "La contraseña no puede tener más de 100 caracteres.",
-    }),
-});
+import { logInFormSchema } from "@/lib/auth/definitions";
 
 export function LoginForm() {
-  const form = useForm<z.infer<typeof FORM_SCHEMA>>({
-    resolver: zodResolver(FORM_SCHEMA),
+  const form = useForm<z.infer<typeof logInFormSchema>>({
+    resolver: zodResolver(logInFormSchema),
     defaultValues: {
       username: "",
       password: "",
     },
   });
 
-  function onSubmit(values: z.infer<typeof FORM_SCHEMA>) {
-    console.log(values);
+  function onSubmit(values: z.infer<typeof logInFormSchema>) {
+    console.log(values); // TODO: improve this function
   }
 
   return (
