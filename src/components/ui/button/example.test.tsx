@@ -59,8 +59,7 @@ describe("ExampleButton", () => {
   });
 
   it("renders danger button", () => {
-    const { getByText, debug } = render(<ExampleButton />);
-    debug();
+    const { getByText } = render(<ExampleButton />);
     const button = getByText("danger");
     fireEvent.click(button);
     expect(button).toBeInTheDocument();
