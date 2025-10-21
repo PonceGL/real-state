@@ -46,10 +46,10 @@ function FormItem({ className, ...props }: ComponentProps<"div">) {
 }
 
 function FormLabel({
-  isDark,
+  isBackgroundDark,
   ...props
 }: Omit<ComponentProps<typeof LabelPrimitive.Root>, "className"> & {
-  isDark?: boolean;
+  isBackgroundDark?: boolean;
 }) {
   const { error, formItemId } = useFormField();
 
@@ -58,8 +58,8 @@ function FormLabel({
       data-slot="form-label"
       data-error={!!error}
       className={`${
-        isDark ? "text-neutral-base-200" : "text-neutral-base-900"
-      } ${cn("data-[error=true]:text-destructive")}`}
+        isBackgroundDark ? "text-neutral-base-200" : "text-neutral-base-900"
+      } ${cn("data-[error=true]:text-semantic-error-500")}`}
       htmlFor={formItemId}
       {...props}
     />
@@ -85,14 +85,21 @@ function FormControl({ ...props }: ComponentProps<typeof Slot>) {
   );
 }
 
-function FormDescription({ className, ...props }: ComponentProps<"p">) {
+function FormDescription({
+  isBackgroundDark,
+  ...props
+}: Omit<ComponentProps<"p">, "className"> & {
+  isBackgroundDark?: boolean;
+}) {
   const { formDescriptionId } = useFormField();
 
   return (
     <p
       data-slot="form-description"
       id={formDescriptionId}
-      className={cn("text-muted-foreground text-sm", className)}
+      className={`${
+        isBackgroundDark ? "text-neutral-base-200" : "text-neutral-base-900"
+      } text-sm`}
       {...props}
     />
   );
@@ -110,7 +117,7 @@ function FormMessage({ className, ...props }: ComponentProps<"p">) {
     <p
       data-slot="form-message"
       id={formMessageId}
-      className={cn("text-destructive text-sm", className)}
+      className={cn("text-semantic-error-500 text-sm", className)}
       {...props}
     >
       {body}

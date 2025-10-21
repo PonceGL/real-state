@@ -44,7 +44,7 @@ export function LoginForm({ isInDarkBackground }: LoginFormProps) {
           name="username"
           render={({ field }) => (
             <FormItem>
-              <FormLabel isDark={isInDarkBackground}>
+              <FormLabel isBackgroundDark={isInDarkBackground}>
                 Correo Electrónico
               </FormLabel>
               <FormControl>
@@ -55,7 +55,7 @@ export function LoginForm({ isInDarkBackground }: LoginFormProps) {
                   {...field}
                 />
               </FormControl>
-              <FormMessage className="text-semantic-error-500" />
+              <FormMessage />
             </FormItem>
           )}
         />
@@ -64,7 +64,9 @@ export function LoginForm({ isInDarkBackground }: LoginFormProps) {
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel isDark={isInDarkBackground}>Contraseña</FormLabel>
+              <FormLabel isBackgroundDark={isInDarkBackground}>
+                Contraseña
+              </FormLabel>
               <FormControl>
                 <Input
                   type="password"
@@ -73,7 +75,7 @@ export function LoginForm({ isInDarkBackground }: LoginFormProps) {
                   {...field}
                 />
               </FormControl>
-              <FormMessage className="text-semantic-error-500" />
+              <FormMessage />
             </FormItem>
           )}
         />
