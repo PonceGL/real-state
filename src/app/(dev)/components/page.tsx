@@ -30,7 +30,7 @@ export default function ComponentsPage() {
           <LoginForm />
         </Wrapper>
         <Wrapper isDarkBackground>
-          <LoginForm />
+          <LoginForm isInDarkBackground />
         </Wrapper>
       </div>
     </main>

@@ -16,7 +16,11 @@ import {
 } from "@/components/ui";
 import { logInFormSchema } from "@/lib/auth/definitions";
 
-export function LoginForm() {
+interface LoginFormProps {
+  isInDarkBackground?: boolean;
+}
+
+export function LoginForm({ isInDarkBackground }: LoginFormProps) {
   const form = useForm<z.infer<typeof logInFormSchema>>({
     resolver: zodResolver(logInFormSchema),
     defaultValues: {
@@ -33,18 +37,21 @@ export function LoginForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="w-full max-w-96 p-5 mx-auto space-y-8 gap-4 border-2 border-neutral-base-600 rounded-lg"
+        className="w-full max-w-96 p-5 space-y-8"
       >
         <FormField
           control={form.control}
           name="username"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Correo Electrónico</FormLabel>
+              <FormLabel isDark={isInDarkBackground}>
+                Correo Electrónico
+              </FormLabel>
               <FormControl>
                 <Input
                   type="email"
                   placeholder="tunombre@ejemplo.com"
+                  variant={isInDarkBackground ? "inverted" : "default"}
                   {...field}
                 />
               </FormControl>
@@ -57,9 +64,14 @@ export function LoginForm() {
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Contraseña</FormLabel>
+              <FormLabel isDark={isInDarkBackground}>Contraseña</FormLabel>
               <FormControl>
-                <Input type="password" placeholder="********" {...field} />
+                <Input
+                  type="password"
+                  placeholder="********"
+                  variant={isInDarkBackground ? "inverted" : "default"}
+                  {...field}
+                />
               </FormControl>
               <FormMessage className="text-semantic-error-500" />
             </FormItem>

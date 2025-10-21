@@ -46,16 +46,20 @@ function FormItem({ className, ...props }: ComponentProps<"div">) {
 }
 
 function FormLabel({
-  className,
+  isDark,
   ...props
-}: ComponentProps<typeof LabelPrimitive.Root>) {
+}: Omit<ComponentProps<typeof LabelPrimitive.Root>, "className"> & {
+  isDark?: boolean;
+}) {
   const { error, formItemId } = useFormField();
 
   return (
     <Label
       data-slot="form-label"
       data-error={!!error}
-      className={cn("data-[error=true]:text-destructive", className)}
+      className={`${
+        isDark ? "text-neutral-base-200" : "text-neutral-base-900"
+      } ${cn("data-[error=true]:text-destructive")}`}
       htmlFor={formItemId}
       {...props}
     />
