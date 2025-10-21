@@ -1,4 +1,5 @@
 import { ExampleButton } from "@/components/ui/button/example";
+import MountainIcon from "@/components/ui/icon/mountain";
 import { PencilIcon } from "@/components/ui/icon/pencilicon";
 import { ExampleInput } from "@/components/ui/input/example";
 import { Wrapper } from "@/components/wrapper";
@@ -22,7 +23,8 @@ export default function ComponentsPage() {
         </Wrapper>
         <Wrapper isDarkBackground>
           <ExampleInput />
-          <PencilIcon />
+          <PencilIcon size="large" variant="danger" />
+          <MountainIcon size="large" variant="danger" />
         </Wrapper>
       </div>
     </main>

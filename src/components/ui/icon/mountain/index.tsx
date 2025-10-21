@@ -1,23 +1,21 @@
-import React from "react";
+import { cn } from "@/lib/styles/utils";
+import { IconProps } from "@/types/iconsinterface";
+import { iconVariants } from "@/types/iconvariants";
 
 const MountainIcon = ({
-    width = 24,
-    height = 24,
-    color = "#1C2434",
-    className = ""
-}) => {
+    size,
+    variant,
+}: IconProps) => {
     return (
         <svg
-            width={width}
-            height={height}
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={className}
+            className={cn(iconVariants({ size, variant }))}
         >
             <path
                 d="M8 3L12 11L17 6L22 21H2L8 3Z"
-                stroke={color}
+                stroke={variant}
                 strokeLinecap="round"
                 strokeLinejoin="round"
             />
