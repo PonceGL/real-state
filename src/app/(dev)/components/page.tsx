@@ -1,5 +1,6 @@
 import { LoginForm } from "@/components/loginform";
 import { ExampleButton } from "@/components/ui/button/example";
+import { MedalIcon } from "@/components/ui/icon/medalicon";
 import { MenuIcon } from "@/components/ui/icon/menuicon";
 import { MountainIcon } from "@/components/ui/icon/mountain";
 import { PencilIcon } from "@/components/ui/icon/pencilicon";
@@ -33,6 +34,9 @@ export default function ComponentsPage() {
           <MenuIcon size="medium" variant="danger" />
           <MenuIcon size="medium" variant="black" />
           <MenuIcon size="medium" variant="default" />
+          <MedalIcon size="large" variant="danger" />
+          <MedalIcon size="large" variant="whatsapp" />
+          <MedalIcon size="large" variant="white" />
         </Wrapper>
       </div>
       <div className="w-full p-4 flex flex-col justify-center items-center gap-4">

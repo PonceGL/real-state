@@ -1,4 +1,4 @@
-export const GrafficArrowIcon = ({
+export const GraphicArrowIcon = ({
   width = 24,
   height = 24,
   color = "black",
