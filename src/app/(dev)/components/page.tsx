@@ -1,6 +1,6 @@
 import { LoginForm } from "@/components/loginform";
 import { ExampleButton } from "@/components/ui/button/example";
-import { SearchIcon } from "@/components/ui/icon/magnifyin";
+import { LocationIcon } from "@/components/ui/icon/location";
 import { ExampleInput } from "@/components/ui/input/example";
 import { Wrapper } from "@/components/wrapper";
 
@@ -23,12 +23,12 @@ export default function ComponentsPage() {
         </Wrapper>
         <Wrapper isDarkBackground>
           <ExampleInput />
-          <SearchIcon size="large" variant="danger" />
-          <SearchIcon size="large" variant="black" />
-          <SearchIcon size="large" variant="default" />
-          <SearchIcon size="large" variant="warning" />
-          <SearchIcon size="large" variant="whatsapp" />
-          <SearchIcon size="large" variant="white" />
+          <LocationIcon size="large" variant="black" />
+          <LocationIcon size="large" variant="danger" />
+          <LocationIcon size="large" variant="default" />
+          <LocationIcon size="large" variant="warning" />
+          <LocationIcon size="large" variant="whatsapp" />
+          <LocationIcon size="large" variant="white" />
         </Wrapper>
       </div>
       <div className="w-full p-4 flex flex-col justify-center items-center gap-4">
