@@ -1,6 +1,6 @@
 import { LoginForm } from "@/components/loginform";
 import { ExampleButton } from "@/components/ui/button/example";
-import { EyeIcon } from "@/components/ui/icon/eyeicon";
+import { EmailIcon } from "@/components/ui/icon/emailicon";
 import { ExampleInput } from "@/components/ui/input/example";
 import { Wrapper } from "@/components/wrapper";
 
@@ -23,12 +23,12 @@ export default function ComponentsPage() {
         </Wrapper>
         <Wrapper isDarkBackground>
           <ExampleInput />
-          <EyeIcon size="large" variant="black" />
-          <EyeIcon size="large" variant="danger" />
-          <EyeIcon size="large" variant="default" />
-          <EyeIcon size="large" variant="warning" />
-          <EyeIcon size="large" variant="whatsapp" />
-          <EyeIcon size="large" variant="white" />
+          <EmailIcon size="large" variant="black" />
+          <EmailIcon size="large" variant="danger" />
+          <EmailIcon size="large" variant="default" />
+          <EmailIcon size="large" variant="warning" />
+          <EmailIcon size="large" variant="whatsapp" />
+          <EmailIcon size="large" variant="white" />
         </Wrapper>
       </div>
       <div className="w-full p-4 flex flex-col justify-center items-center gap-4">
