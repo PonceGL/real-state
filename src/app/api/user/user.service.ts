@@ -88,7 +88,7 @@ class UserService {
     }
   }
 
-  public async create(userData: CreateUserDto) {
+  public async create(userData: CreateUserDto): Promise<IUser> {
     try {
       const validatedData = createUserDto.parse(userData);
       await dbConnect();
