@@ -1,5 +1,6 @@
 import { LoginForm } from "@/components/loginform";
 import { ExampleButton } from "@/components/ui/button/example";
+import { MenuIcon } from "@/components/ui/icon/menuicon";
 import { MountainIcon } from "@/components/ui/icon/mountain";
 import { PencilIcon } from "@/components/ui/icon/pencilicon";
 import { ExampleInput } from "@/components/ui/input/example";
@@ -24,8 +25,14 @@ export default function ComponentsPage() {
         </Wrapper>
         <Wrapper isDarkBackground>
           <ExampleInput />
-          <PencilIcon size="large" variant="danger" />
+          <PencilIcon size="large" variant="white" />
+          <PencilIcon size="medium" variant="white" />
           <MountainIcon size="large" variant="danger" />
+          <MountainIcon size="medium" variant="white" />
+          <MountainIcon size="medium" variant="warning" />
+          <MenuIcon size="medium" variant="danger" />
+          <MenuIcon size="medium" variant="black" />
+          <MenuIcon size="medium" variant="default" />
         </Wrapper>
       </div>
       <div className="w-full p-4 flex flex-col justify-center items-center gap-4">

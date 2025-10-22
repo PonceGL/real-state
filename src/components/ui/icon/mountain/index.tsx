@@ -12,7 +12,7 @@ export const MountainIcon = ({ size, variant }: IconProps) => {
     >
       <path
         d="M8 3L12 11L17 6L22 21H2L8 3Z"
-        stroke={variant}
+        stroke="Color"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
