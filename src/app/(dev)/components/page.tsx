@@ -1,6 +1,6 @@
 import { LoginForm } from "@/components/loginform";
 import { ExampleButton } from "@/components/ui/button/example";
-import { FilterIcon } from "@/components/ui/icon/filtericon";
+import { FacebookIcon } from "@/components/ui/icon/facebook";
 import { ExampleInput } from "@/components/ui/input/example";
 import { Wrapper } from "@/components/wrapper";
 
@@ -23,12 +23,12 @@ export default function ComponentsPage() {
         </Wrapper>
         <Wrapper isDarkBackground>
           <ExampleInput />
-          <FilterIcon size="large" variant="black" />
-          <FilterIcon size="large" variant="danger" />
-          <FilterIcon size="large" variant="default" />
-          <FilterIcon size="large" variant="warning" />
-          <FilterIcon size="large" variant="whatsapp" />
-          <FilterIcon size="large" variant="white" />
+          <FacebookIcon size="large" variant="black" />
+          <FacebookIcon size="large" variant="danger" />
+          <FacebookIcon size="large" variant="default" />
+          <FacebookIcon size="large" variant="warning" />
+          <FacebookIcon size="large" variant="whatsapp" />
+          <FacebookIcon size="large" variant="white" />
         </Wrapper>
       </div>
       <div className="w-full p-4 flex flex-col justify-center items-center gap-4">
