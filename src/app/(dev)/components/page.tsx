@@ -1,6 +1,6 @@
 import { LoginForm } from "@/components/loginform";
 import { ExampleButton } from "@/components/ui/button/example";
-import { DocsIcon } from "@/components/ui/icon/docsicon";
+import { CloseIcon } from "@/components/ui/icon/close";
 import { ExampleInput } from "@/components/ui/input/example";
 import { Wrapper } from "@/components/wrapper";
 
@@ -23,12 +23,12 @@ export default function ComponentsPage() {
         </Wrapper>
         <Wrapper isDarkBackground>
           <ExampleInput />
-          <DocsIcon size="large" variant="black" />
-          <DocsIcon size="large" variant="danger" />
-          <DocsIcon size="large" variant="default" />
-          <DocsIcon size="large" variant="warning" />
-          <DocsIcon size="large" variant="whatsapp" />
-          <DocsIcon size="large" variant="white" />
+          <CloseIcon size="large" variant="black" />
+          <CloseIcon size="large" variant="danger" />
+          <CloseIcon size="large" variant="default" />
+          <CloseIcon size="large" variant="whatsapp" />
+          <CloseIcon size="large" variant="warning" />
+          <CloseIcon size="large" variant="white" />
         </Wrapper>
       </div>
       <div className="w-full p-4 flex flex-col justify-center items-center gap-4">
