@@ -1,6 +1,6 @@
 import { LoginForm } from "@/components/loginform";
 import { ExampleButton } from "@/components/ui/button/example";
-import { GraphicArrowIcon } from "@/components/ui/icon/graficarrow";
+import { FilterIcon } from "@/components/ui/icon/filtericon";
 import { ExampleInput } from "@/components/ui/input/example";
 import { Wrapper } from "@/components/wrapper";
 
@@ -23,12 +23,12 @@ export default function ComponentsPage() {
         </Wrapper>
         <Wrapper isDarkBackground>
           <ExampleInput />
-          <GraphicArrowIcon size="large" variant="black" />
-          <GraphicArrowIcon size="large" variant="danger" />
-          <GraphicArrowIcon size="large" variant="default" />
-          <GraphicArrowIcon size="large" variant="warning" />
-          <GraphicArrowIcon size="large" variant="whatsapp" />
-          <GraphicArrowIcon size="large" variant="white" />
+          <FilterIcon size="large" variant="black" />
+          <FilterIcon size="large" variant="danger" />
+          <FilterIcon size="large" variant="default" />
+          <FilterIcon size="large" variant="warning" />
+          <FilterIcon size="large" variant="whatsapp" />
+          <FilterIcon size="large" variant="white" />
         </Wrapper>
       </div>
       <div className="w-full p-4 flex flex-col justify-center items-center gap-4">
