@@ -10,69 +10,54 @@ This document outlines the coding conventions for our TypeScript, React, and Nex
 
 ## 2\. Module Imports and Exports
 
+To maintain a consistent and logical structure, this project uses the `eslint-plugin-simple-import-sort` plugin to automatically format all module imports and exports. The linter will enforce these rules, so it's important to understand how it works.
+
 ### Imports
 
-Imports must be grouped and ordered as follows. Within each group, imports should be sorted alphabetically. Always use path aliases (`@/`) for local application imports.
+The plugin automatically groups imports and sorts them alphabetically within each group. The groups are always separated by a blank line and follow this specific order:
 
-1.  **Standard library imports** (e.g., `react`, `node:fs`)
-2.  **Third-party library imports** (e.g., `zod`, `clsx`)
-3.  **Local application imports** (using `@/` alias)
+1.  **Packages**: All imports from third-party libraries (e.g., `react`, `zod`). Imports starting with `@` come first.
+2.  **Absolute / Aliased Imports**: Any import that is not a package and starts with an alias (e.g., `@/components/...`).
+3.  **Relative Imports**: Imports from other files within the same module, starting with `../` (further away) or `./` (closer).
+4.  **Side-effect Imports**: Any module imported solely for its side effects, like a global CSS file. This group always goes last.
 
-**✅ Correct Example:**
+**Example of Auto-Sorting in Action:**
+
+If you write this unsorted code:
 
 ```typescript
-import { useState } from "react";
-
-import { clsx } from "clsx";
-import { z } from "zod";
-
-import { Button } from "@/components/ui/button";
-import { logger } from "@/lib/logger";
+import { style } from './style';
+import { Button } from '@/components/button';
+import { OtherComponent } from '../other-component';
+import React from 'react';
+import './globals.css';
+import { z } from 'zod';
 ```
 
-**❌ Incorrect Example:**
+When you save, the linter will automatically reformat it to:
 
 ```typescript
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { z } from "zod";
-import { logger } from "@/lib/logger";
-import { clsx } from "clsx";
+import React from 'react';
+import { z } from 'zod';
+
+import { Button } from '@/components/button';
+
+import { OtherComponent } from '../other-component';
+import { style } from './style';
+
+import './globals.css';
 ```
 
 ### Exports
 
-Named Exports: All components, functions, classes, hooks, types, and interfaces must use named exports.
+For files that re-export modules (like an `index.ts` barrel file), the plugin enforces a simple **alphabetical sort order** based on the file path.
 
-Default Exports: The export default statement is only permitted for Page components inside page.tsx files, as required by the Next.js 15 App Router.
-
-**✅ Correct Component Export:**
+**✅ Correct Sorted Exports:**
 
 ```typescript
-// src/components/ui/button.tsx
-export const Button = ({ ...props }) => {
-  // ...
-};
-```
-
-o
-
-```typescript
-// src/components/ui/button.tsx
-const Button = ({ ...props }) => {
-  // ...
-};
-
-export { Button };
-```
-
-**✅ Correct Next.js Page Export:**
-
-```typescript
-// src/app/(public)/about/page.tsx
-export default function AboutPage() {
-  // ...
-}
+export * from './button'; // 'b'
+export * from './card';   // 'c'
+export * from './input';  // 'i'
 ```
 
 ---

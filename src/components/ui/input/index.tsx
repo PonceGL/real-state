@@ -5,12 +5,7 @@ import { DetailedHTMLProps, InputHTMLAttributes } from "react";
 import { cn } from "@/lib/styles/utils";
 
 
-type InputVariant =
-  | "default"
-  | "inverted"
-  | "outlineInverted"
-  | "warning"
-  | "danger";
+type InputVariant = "default" | "inverted" | "warning" | "danger";
 
 type InputType =
   | "email"
@@ -32,7 +27,7 @@ type HtmlInputProps = DetailedHTMLProps<
   HTMLInputElement
 >;
 
-type InputProps = Omit<HtmlInputProps, "type" | "size"> & {
+type InputProps = Omit<HtmlInputProps, "type" | "size" | "className"> & {
   type?: InputType;
   variant?: InputVariant;
   size?: InputSize;
@@ -46,9 +41,7 @@ const inputVariants = cva(
         default:
           "border-neutral-base-600 text-neutral-base-600 focus:border-brand-primary-500 focus:text-neutral-base-800",
         inverted:
-          "bg-neutral-base-50 border-neutral-base-50 text-brand-primary-500 focus:bg-brand-primary-100 focus:border-brand-primary-100",
-        outlineInverted:
-          "border-neutral-base-200 text-neutral-base-200 hover:border-neutral-base-200 focus:border-neutral-base-600 focus:text-neutral-base-600",
+          "border-neutral-base-200 text-neutral-base-200 hover:border-neutral-base-200 focus:border-neutral-base-600 focus:text-neutral-base-200",
         warning:
           "bg-semantic-warning-500 border-semantic-warning-500 text-black hover:bg-semantic-warning-400 hover:border-semantic-warning-400 focus:bg-semantic-warning-100 focus:border-semantic-warning-100 focus:text-semantic-warning-500",
         danger:
