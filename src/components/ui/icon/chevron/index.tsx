@@ -1,21 +1,18 @@
-export const ChevronRightIcon = ({
-  width = 24,
-  height = 24,
-  color = "#1C2434",
-  className = "",
-}) => {
+import { iconVariants } from "@/lib/styles/iconVariants";
+import { cn } from "@/lib/styles/utils";
+import { IconProps } from "@/types/icons";
+
+export const ChevronRightIcon = ({ size, variant }: IconProps) => {
   return (
     <svg
-      width={width}
-      height={height}
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      className={cn(iconVariants({ size, variant }))}
     >
       <path
         d="M9 18L15 12L9 6"
-        stroke={color}
+        stroke="Color"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
