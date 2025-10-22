@@ -1,6 +1,6 @@
 import { iconVariants } from "@/lib/styles/iconVariants";
 import { cn } from "@/lib/styles/utils";
-import { IconProps } from "@/types/iconsinterface";
+import { IconProps } from "@/types/icons";
 
 export const PencilIcon = ({ variant, size }: IconProps) => {
   return (

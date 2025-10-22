@@ -1,6 +1,6 @@
 import { LoginForm } from "@/components/loginform";
 import { ExampleButton } from "@/components/ui/button/example";
-import MountainIcon from "@/components/ui/icon/mountain";
+import { MountainIcon } from "@/components/ui/icon/mountain";
 import { PencilIcon } from "@/components/ui/icon/pencilicon";
 import { ExampleInput } from "@/components/ui/input/example";
 import { Wrapper } from "@/components/wrapper";

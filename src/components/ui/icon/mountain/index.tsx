@@ -1,8 +1,8 @@
 import { iconVariants } from "@/lib/styles/iconVariants";
 import { cn } from "@/lib/styles/utils";
-import { IconProps } from "@/types/iconsinterface";
+import { IconProps } from "@/types/icons";
 
-const MountainIcon = ({ size, variant }: IconProps) => {
+export const MountainIcon = ({ size, variant }: IconProps) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -19,5 +19,3 @@ const MountainIcon = ({ size, variant }: IconProps) => {
     </svg>
   );
 };
-
-export default MountainIcon;
