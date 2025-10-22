@@ -1,9 +1,6 @@
 import { LoginForm } from "@/components/loginform";
 import { ExampleButton } from "@/components/ui/button/example";
-import { MedalIcon } from "@/components/ui/icon/medalicon";
-import { MenuIcon } from "@/components/ui/icon/menuicon";
-import { MountainIcon } from "@/components/ui/icon/mountain";
-import { PencilIcon } from "@/components/ui/icon/pencilicon";
+import { SearchIcon } from "@/components/ui/icon/magnifyin";
 import { ExampleInput } from "@/components/ui/input/example";
 import { Wrapper } from "@/components/wrapper";
 
@@ -26,17 +23,12 @@ export default function ComponentsPage() {
         </Wrapper>
         <Wrapper isDarkBackground>
           <ExampleInput />
-          <PencilIcon size="large" variant="white" />
-          <PencilIcon size="medium" variant="white" />
-          <MountainIcon size="large" variant="danger" />
-          <MountainIcon size="medium" variant="white" />
-          <MountainIcon size="medium" variant="warning" />
-          <MenuIcon size="medium" variant="danger" />
-          <MenuIcon size="medium" variant="black" />
-          <MenuIcon size="medium" variant="default" />
-          <MedalIcon size="large" variant="danger" />
-          <MedalIcon size="large" variant="whatsapp" />
-          <MedalIcon size="large" variant="white" />
+          <SearchIcon size="large" variant="danger" />
+          <SearchIcon size="large" variant="black" />
+          <SearchIcon size="large" variant="default" />
+          <SearchIcon size="large" variant="warning" />
+          <SearchIcon size="large" variant="whatsapp" />
+          <SearchIcon size="large" variant="white" />
         </Wrapper>
       </div>
       <div className="w-full p-4 flex flex-col justify-center items-center gap-4">
