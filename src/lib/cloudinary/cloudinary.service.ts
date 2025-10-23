@@ -18,7 +18,7 @@ class CloudinaryService {
   private static username: string = CLOUDINARY_API_KEY;
   private static password: string = CLOUDINARY_API_SECRET;
 
-  private static getBasicAuth() {
+  public getBasicAuth() {
     const credentials = Buffer.from(
       `${CloudinaryService.username}:${CloudinaryService.password}`
     ).toString("base64");
@@ -30,7 +30,7 @@ class CloudinaryService {
       method: "get",
       url: `${CloudinaryService.URL}/resources/image?prefix=${folder}&type=upload`,
       headers: {
-        Authorization: CloudinaryService.getBasicAuth(),
+        Authorization: this.getBasicAuth(),
       },
     };
 
@@ -56,7 +56,7 @@ class CloudinaryService {
       method: "post",
       url: `${CloudinaryService.URL}/image/upload`,
       headers: {
-        Authorization: CloudinaryService.getBasicAuth(),
+        Authorization: this.getBasicAuth(),
       },
       data: data,
     };
@@ -77,7 +77,7 @@ class CloudinaryService {
       method: "delete",
       url: `${CloudinaryService.URL}/resources`,
       headers: {
-        Authorization: CloudinaryService.getBasicAuth(),
+        Authorization: this.getBasicAuth(),
       },
       data: data,
     };

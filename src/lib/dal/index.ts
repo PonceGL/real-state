@@ -7,8 +7,9 @@ import { cache } from "react";
 
 import { env } from "@/config/env";
 import { JWT_ALGORITHM } from "@/constants/auth";
-import { httpClient } from "@/lib/http/axiosAdapter";
 import { GetUserByEmailResponse } from "@/types/http";
+
+import { authHttpClient } from "../http/sessionAuthHttpClientDecorator";
 
 export const verifySession = cache(async () => {
   const cookie = (await cookies()).get("session")?.value;
@@ -30,18 +31,13 @@ export const verifySession = cache(async () => {
 
 export const getUser = cache(async () => {
   try {
-    const { token, session } = await verifySession();
+    const { session } = await verifySession();
     if (!session) return null;
 
-    const { data } = await httpClient.post<GetUserByEmailResponse>({
+    const { data } = await authHttpClient.post<GetUserByEmailResponse>({
       path: "/api/user/email",
       data: {
         email: session.email,
-      },
-      config: {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
       },
     });
 
