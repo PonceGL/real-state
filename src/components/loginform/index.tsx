@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import z from "zod";
 
+import { login } from "@/actions/auth";
 import {
   Button,
   Form,
@@ -14,6 +15,7 @@ import {
   FormMessage,
   Input,
 } from "@/components/ui";
+import { useFormAction } from "@/hooks/useFormAction";
 import { logInFormSchema } from "@/lib/auth/definitions";
 
 interface LoginFormProps {
@@ -29,14 +31,17 @@ export function LoginForm({ isInDarkBackground }: LoginFormProps) {
     },
   });
 
-  function onSubmit(values: z.infer<typeof logInFormSchema>) {
-    console.log(values); // TODO: improve this function
-  }
+  const { execute, isPending, error } = useFormAction({
+    action: login,
+    onError: () => {
+      form.reset();
+    },
+  });
 
   return (
     <Form {...form}>
       <form
-        onSubmit={form.handleSubmit(onSubmit)}
+        onSubmit={form.handleSubmit(execute)}
         className="w-full max-w-96 p-5 space-y-8"
       >
         <FormField
@@ -79,8 +84,14 @@ export function LoginForm({ isInDarkBackground }: LoginFormProps) {
             </FormItem>
           )}
         />
-        <Button type="submit" text="Enviar" />
+        <Button type="submit" text="Enviar" disabled={isPending} />
       </form>
+      {error &&
+        !isPending && ( // TODO: Mejorar la forma de mostrar errores
+          <div className="p-3 bg-red-100 text-red-700 border border-red-300 rounded-md">
+            {error}
+          </div>
+        )}
     </Form>
   );
 }
