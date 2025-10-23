@@ -1,6 +1,7 @@
 export const Logo = () => {
   return (
     <svg
+      data-testid="logo-svg"
       width="100%"
       height="auto"
       viewBox="0 0 500 476"
