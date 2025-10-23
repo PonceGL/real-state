@@ -1,7 +1,13 @@
 
 type IconSize = "small" | "medium" | "large";
 
-type IconColor = "default" | "whatsapp" | "warning" | "danger" | "white" | "black";
+type IconColor =
+  | "default"
+  | "success"
+  | "warning"
+  | "danger"
+  | "white"
+  | "black";
 
 
 
