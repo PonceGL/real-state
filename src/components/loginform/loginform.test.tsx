@@ -1,7 +1,12 @@
 import { fireEvent, render, waitFor } from "@testing-library/react";
-import React from "react";
+
+import { login } from "@/actions/auth";
 
 import { LoginForm } from "./index";
+
+jest.mock("@/actions/auth", () => ({
+  login: jest.fn(),
+}));
 
 beforeEach(() => {
   jest.spyOn(console, "log").mockImplementation(() => {});
@@ -49,9 +54,11 @@ describe("LoginForm", () => {
     });
   });
 
-  // TODO: improve this test
-  test("submits form with valid data", async () => {
-    const { getByLabelText, getByRole } = render(<LoginForm />);
+  test("submits form with invalid data", async () => {
+    (login as jest.Mock).mockReturnValue({
+      error: "Ocurrió un error intente más tarde",
+    });
+    const { getByLabelText, getByRole, getByText } = render(<LoginForm />);
     fireEvent.change(getByLabelText(/Correo Electrónico/i), {
       target: { value: "user@example.com" },
     });
@@ -59,11 +66,32 @@ describe("LoginForm", () => {
       target: { value: "securePassword" },
     });
     fireEvent.click(getByRole("button", { name: /Enviar/i }));
+
     await waitFor(() => {
-      expect(console.log).toHaveBeenCalledWith({
-        username: "user@example.com",
-        password: "securePassword",
-      });
+      expect(login).toHaveBeenCalled();
+    });
+    await waitFor(() => {
+      expect(
+        getByText(/Ocurrió un error intente más tarde/i)
+      ).toBeInTheDocument();
+    });
+  });
+
+  test("submits form with valid data", async () => {
+    (login as jest.Mock).mockReturnValue({
+      error: null,
+    });
+    const { getByLabelText, getByRole, queryByText } = render(<LoginForm />);
+    fireEvent.change(getByLabelText(/Correo Electrónico/i), {
+      target: { value: "user@example.com" },
+    });
+    fireEvent.change(getByLabelText(/Contraseña/i), {
+      target: { value: "securePassword" },
+    });
+    fireEvent.click(getByRole("button", { name: /Enviar/i }));
+
+    await waitFor(() => {
+      expect(queryByText(/Ocurrió un error intente más tarde/i)).toBeNull();
     });
   });
 });
