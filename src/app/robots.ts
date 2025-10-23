@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 
 import { siteConfig } from "@/config/site";
+import { ADMIN_DASHBOARD, LOGIN } from "@/constants/routes";
 
 export default function robots(): MetadataRoute.Robots {
   const sitemapUrl = `${siteConfig.url}/sitemap.xml`;
@@ -12,10 +13,10 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
 
       disallow: [
-        "/dashboard/",
+        ADMIN_DASHBOARD,
         "/admin/",
         "/perfil/",
-        "/login",
+        LOGIN,
         "/registro",
         "/api/",
       ],
