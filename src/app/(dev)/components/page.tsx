@@ -1,3 +1,4 @@
+import { ExampleIcons } from "@/components/icons/example";
 import { LoginForm } from "@/components/loginform";
 import { ExampleButton } from "@/components/ui/button/example";
 import { ExampleInput } from "@/components/ui/input/example";
@@ -31,6 +32,15 @@ export default function ComponentsPage() {
         </Wrapper>
         <Wrapper isDarkBackground>
           <LoginForm isInDarkBackground />
+        </Wrapper>
+      </div>
+      <div className="w-full p-4 flex flex-col justify-center items-center gap-4 text-amber-300">
+        <h3 className="w-full text-left text-3xl font-bold">Icon Form</h3>
+        <Wrapper>
+          <ExampleIcons />
+        </Wrapper>
+        <Wrapper isDarkBackground>
+          <ExampleIcons />
         </Wrapper>
       </div>
     </main>

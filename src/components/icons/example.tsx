@@ -1,19 +1,27 @@
-import { FacebookIcon } from "./facebook";
-import { MedalIcon } from "./medalicon";
-import { MenuIcon } from "./menuicon";
-import { MountainIcon } from "./mountain";
-import { PencilIcon } from "./pencilicon";
+import {
+  BuildingIcon,
+  CalculatorIcon,
+  FacebookIcon,
+  MenuIcon,
+  MountainIcon,
+  PencilIcon,
+  SearchIcon,
+  WhatsAppIcon,
+} from "@/components/icons/index";
 
 export function ExampleIcons() {
-    return(
-        <>
-            <div className="w-full ">
-                <PencilIcon/>
-                <MountainIcon/>
-                <MenuIcon/>
-                <MedalIcon/>
-                <FacebookIcon/>
-            </div>
-        </>
-    )
+  return (
+    <>
+      <div className="w-full flex flex-row">
+        <FacebookIcon />
+        <BuildingIcon />
+        <CalculatorIcon />
+        <SearchIcon />
+        <PencilIcon />
+        <MountainIcon />
+        <MenuIcon />
+        <WhatsAppIcon />
+      </div>
+    </>
+  );
 }
