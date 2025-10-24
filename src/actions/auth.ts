@@ -2,7 +2,7 @@
 import { AxiosError } from "axios";
 import { redirect } from "next/navigation";
 
-import { ADMIN_DASHBOARD } from "@/constants/routes";
+import { ADMIN_DASHBOARD, API } from "@/constants/routes";
 import { logInFormSchema } from "@/lib/auth/definitions";
 import { httpClient } from "@/lib/http/axiosAdapter";
 import { createSession } from "@/lib/session";
@@ -27,7 +27,7 @@ export async function login(
 
   try {
     const { data } = await httpClient.post<LoginResponse>({
-      path: "/api/auth/login",
+      path: API.AUTH.LOGIN,
       data: {
         email: username,
         password: password,

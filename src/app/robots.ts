@@ -13,10 +13,10 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
 
       disallow: [
-        ADMIN_DASHBOARD,
+        `${ADMIN_DASHBOARD}/`,
         "/admin/",
         "/perfil/",
-        LOGIN,
+        `${LOGIN}/`,
         "/registro",
         "/api/",
       ],
