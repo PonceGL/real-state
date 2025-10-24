@@ -7,6 +7,7 @@ import { cache } from "react";
 
 import { env } from "@/config/env";
 import { JWT_ALGORITHM } from "@/constants/auth";
+import { API, LOGIN } from "@/constants/routes";
 import { GetUserByEmailResponse } from "@/types/http";
 
 import { authHttpClient } from "../http/sessionAuthHttpClientDecorator";
@@ -23,7 +24,7 @@ export const verifySession = cache(async () => {
   });
 
   if (!payload) {
-    redirect("/login");
+    redirect(LOGIN);
   }
 
   return { token: cookie, session: payload };
@@ -35,7 +36,7 @@ export const getUser = cache(async () => {
     if (!session) return null;
 
     const { data } = await authHttpClient.post<GetUserByEmailResponse>({
-      path: "/api/user/email",
+      path: API.USER.EMAIL,
       data: {
         email: session.email,
       },
