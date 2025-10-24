@@ -63,33 +63,33 @@ export function ExampleIcons() {
         <TreeIcon />
       </div>
       <div className="w-full flex flex-row">
-        <Icon name="BuildingIcon" variant="danger" />
-        <Icon name="CalculatorIcon" variant="danger" />
-        <Icon name="CheckCircleIcon" variant="danger" />
-        <Icon name="ChevronRightIcon" variant="danger" />
-        <Icon name="ClockIcon" variant="danger" />
-        <Icon name="CloseIcon" variant="danger" />
-        <Icon name="DocsIcon" variant="danger" />
-        <Icon name="EmailIcon" variant="danger" />
-        <Icon name="EyeIcon" variant="danger" />
-        <Icon name="FacebookIcon" variant="danger" />
-        <Icon name="FilterIcon" variant="danger" />
-        <Icon name="GraphicArrowIcon" variant="danger" />
-        <Icon name="HandHeartIcon" variant="danger" />
-        <Icon name="HomeIcon" variant="danger" />
-        <Icon name="LocationIcon" variant="danger" />
-        <Icon name="MedalIcon" variant="danger" />
-        <Icon name="MenuIcon" variant="danger" />
-        <Icon name="MountainIcon" variant="danger" />
-        <Icon name="PencilIcon" variant="danger" />
-        <Icon name="PhoneIcon" variant="danger" />
-        <Icon name="SearchIcon" variant="danger" />
-        <Icon name="SendIcon" variant="danger" />
-        <Icon name="ShieldIcon" variant="danger" />
-        <Icon name="SquareIcon" variant="danger" />
-        <Icon name="TreeIcon" variant="danger" />
-        <Icon name="UsersIcon" variant="danger" />
-        <Icon name="WhatsAppIcon" variant="danger" />
+        <Icon name="BuildingIcon" variant="danger" size="large" />
+        <Icon name="Calculator" variant="danger" size="large" />
+        <Icon name="CheckCircleIcon" variant="danger" size="large" />
+        <Icon name="ChevronRightIcon" variant="danger" size="large" />
+        <Icon name="ClockIcon" variant="danger" size="large" />
+        <Icon name="CloseIcon" variant="danger" size="large" />
+        <Icon name="DocsIcon" variant="danger" size="large" />
+        <Icon name="EmailIcon" variant="danger" size="large" />
+        <Icon name="EyeIcon" variant="danger" size="large" />
+        <Icon name="FacebookIcon" variant="danger" size="large" />
+        <Icon name="FilterIcon" variant="danger" size="large" />
+        <Icon name="GraphicArrowIcon" variant="danger" size="large" />
+        <Icon name="HandHeartIcon" variant="danger" size="large" />
+        <Icon name="HomeIcon" variant="danger" size="large" />
+        <Icon name="LocationIcon" variant="danger" size="large" />
+        <Icon name="MedalIcon" variant="danger" size="large" />
+        <Icon name="MenuIcon" variant="danger" size="large" />
+        <Icon name="MountainIcon" variant="danger" size="large" />
+        <Icon name="PencilIcon" variant="danger" size="large" />
+        <Icon name="PhoneIcon" variant="danger" size="large" />
+        <Icon name="SearchIcon" variant="danger" size="large" />
+        <Icon name="SendIcon" variant="danger" size="large" />
+        <Icon name="ShieldIcon" variant="danger" size="large" />
+        <Icon name="SquareIcon" variant="danger" size="large" />
+        <Icon name="TreeIcon" variant="danger" size="large" />
+        <Icon name="UsersIcon" variant="danger" size="large" />
+        <Icon name="WhatsAppIcon" variant="danger" size="large" />
       </div>
     </>
   );

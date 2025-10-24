@@ -31,7 +31,7 @@ import { IconProps } from "@/types/icons";
 
 const iconMap = {
   BuildingIcon: BuildingIcon,
-  CalculatorIcon: CalculatorIcon,
+  Calculator: CalculatorIcon,
   CheckCircleIcon: CheckCircleIcon,
   ChevronRightIcon: ChevronRightIcon,
   ClockIcon: ClockIcon,
