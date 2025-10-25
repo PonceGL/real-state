@@ -12,9 +12,9 @@ export const iconVariants = cva("", {
       danger: "text-semantic-error-500",
     },
     size: {
-      small: "w-3.5 h-3.5",
-      medium: "w-6 h-6",
-      large: "w-9 h-9",
+      small: "size-3.5",
+      medium: "size-6",
+      large: "size-9",
     },
   },
   defaultVariants: {

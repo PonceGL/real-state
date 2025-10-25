@@ -32,33 +32,33 @@ export function ExampleIcons() {
   return (
     <>
       <div className="w-full flex flex-wrap text-fuchsia-500">
-        <ChevronRightIcon size="small" />
-        <GraphicArrowIcon size="small" />
-        <CheckCircleIcon size="small" />
-        <FacebookIcon size="small" />
-        <BuildingIcon size="small" />
-        <CalculatorIcon size="small" />
-        <SearchIcon size="small" />
-        <PencilIcon size="small" />
-        <MountainIcon size="small" />
-        <MenuIcon size="small" />
-        <WhatsAppIcon size="small" />
-        <UsersIcon size="small" />
-        <ClockIcon size="small" />
-        <CloseIcon size="small" />
-        <DocsIcon size="small" />
-        <EmailIcon size="small" />
-        <EyeIcon size="small" />
-        <FilterIcon size="small" />
-        <HandHeartIcon size="small" />
-        <HomeIcon size="small" />
-        <LocationIcon size="small" />
-        <MedalIcon size="small" />
-        <PhoneIcon size="small" />
-        <SendIcon size="small" />
-        <ShieldIcon size="small" />
-        <SquareIcon size="small" />
-        <TreeIcon size="small" />
+        <ChevronRightIcon size="large" />
+        <GraphicArrowIcon size="large" />
+        <CheckCircleIcon size="large" />
+        <FacebookIcon size="large" />
+        <BuildingIcon size="large" />
+        <CalculatorIcon size="large" />
+        <SearchIcon size="large" />
+        <PencilIcon size="large" />
+        <MountainIcon size="large" />
+        <MenuIcon size="large" />
+        <WhatsAppIcon size="large" />
+        <UsersIcon size="large" />
+        <ClockIcon size="large" />
+        <CloseIcon size="large" />
+        <DocsIcon size="large" />
+        <EmailIcon size="large" />
+        <EyeIcon size="large" />
+        <FilterIcon size="large" />
+        <HandHeartIcon size="large" />
+        <HomeIcon size="large" />
+        <LocationIcon size="large" />
+        <MedalIcon size="large" />
+        <PhoneIcon size="large" />
+        <SendIcon size="large" />
+        <ShieldIcon size="large" />
+        <SquareIcon size="large" />
+        <TreeIcon size="large" />
       </div>
     </>
   );
