@@ -14,12 +14,12 @@ import {
   HandHeartIcon,
   HomeIcon,
   LocationIcon,
+  MagnifyinIcon,
   MedalIcon,
   MenuIcon,
   MountainIcon,
   PencilIcon,
   PhoneIcon,
-  SearchIcon,
   SendIcon,
   ShieldIcon,
   SquareIcon,
@@ -37,7 +37,7 @@ export function ExampleIcons() {
         <FacebookIcon />
         <BuildingIcon />
         <CalculatorIcon />
-        <SearchIcon />
+        <MagnifyinIcon />
         <PencilIcon />
         <MountainIcon />
         <MenuIcon />
@@ -83,7 +83,7 @@ export function ExampleIcons() {
         <Icon name="MountainIcon" variant="danger" size="large" />
         <Icon name="PencilIcon" variant="danger" size="large" />
         <Icon name="PhoneIcon" variant="danger" size="large" />
-        <Icon name="SearchIcon" variant="danger" size="large" />
+        <Icon name="MagnifyinIcon" variant="danger" size="large" />
         <Icon name="SendIcon" variant="danger" size="large" />
         <Icon name="ShieldIcon" variant="danger" size="large" />
         <Icon name="SquareIcon" variant="danger" size="large" />
