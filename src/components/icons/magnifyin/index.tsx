@@ -2,7 +2,7 @@ import { iconVariants } from "@/lib/styles/iconVariants";
 import { cn } from "@/lib/styles/utils";
 import { IconProps } from "@/types/icons";
 
-export const SearchIcon = ({ size, variant }: IconProps) => {
+export const MagnifyinIcon = ({ size, variant }: IconProps) => {
   return (
     <svg
       viewBox="0 0 24 24"
