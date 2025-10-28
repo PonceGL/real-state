@@ -10,8 +10,6 @@ import {
   EyeIcon,
   FacebookIcon,
   FilterIcon,
-  GraphicArrowIcon,
-  HandHeartIcon,
   HomeIcon,
   LocationIcon,
   MagnifyinIcon,
@@ -30,7 +28,6 @@ import {
 import { IconProps } from "@/types/icons";
 
 const ICON_MAP = {
-  GraphicArrowIcon,
   BuildingIcon,
   CalculatorIcon,
   CheckCircleIcon,
@@ -42,7 +39,6 @@ const ICON_MAP = {
   EyeIcon,
   FacebookIcon,
   FilterIcon,
-  HandHeartIcon,
   HomeIcon,
   LocationIcon,
   MedalIcon,

@@ -323,64 +323,6 @@ export function ExampleIcons() {
       </div>
 
       <div className="w-full p-2 grid grid-cols-6 grid-rows-3 gap-2">
-        <Icon name="GraphicArrowIcon" variant="black" size="large" />
-        <Icon name="GraphicArrowIcon" variant="danger" size="large" />
-        <Icon name="GraphicArrowIcon" variant="default" size="large" />
-        <Icon name="GraphicArrowIcon" variant="success" size="large" />
-        <Icon name="GraphicArrowIcon" variant="warning" size="large" />
-        <div className="p-0.5 bg-amber-950 flex justify-center items-center">
-          <Icon name="GraphicArrowIcon" variant="white" size="large" />
-        </div>
-
-        <Icon name="GraphicArrowIcon" variant="black" size="medium" />
-        <Icon name="GraphicArrowIcon" variant="danger" size="medium" />
-        <Icon name="GraphicArrowIcon" variant="default" size="medium" />
-        <Icon name="GraphicArrowIcon" variant="success" size="medium" />
-        <Icon name="GraphicArrowIcon" variant="warning" size="medium" />
-        <div className="p-0.5 bg-amber-950 flex justify-center items-center">
-          <Icon name="GraphicArrowIcon" variant="white" size="medium" />
-        </div>
-
-        <Icon name="GraphicArrowIcon" variant="black" size="small" />
-        <Icon name="GraphicArrowIcon" variant="danger" size="small" />
-        <Icon name="GraphicArrowIcon" variant="default" size="small" />
-        <Icon name="GraphicArrowIcon" variant="success" size="small" />
-        <Icon name="GraphicArrowIcon" variant="warning" size="small" />
-        <div className="p-0.5 bg-amber-950 flex justify-center items-center">
-          <Icon name="GraphicArrowIcon" variant="white" size="small" />
-        </div>
-      </div>
-
-      <div className="w-full p-2 grid grid-cols-6 grid-rows-3 gap-2">
-        <Icon name="HandHeartIcon" variant="black" size="large" />
-        <Icon name="HandHeartIcon" variant="danger" size="large" />
-        <Icon name="HandHeartIcon" variant="default" size="large" />
-        <Icon name="HandHeartIcon" variant="success" size="large" />
-        <Icon name="HandHeartIcon" variant="warning" size="large" />
-        <div className="p-0.5 bg-amber-950 flex justify-center items-center">
-          <Icon name="HandHeartIcon" variant="white" size="large" />
-        </div>
-
-        <Icon name="HandHeartIcon" variant="black" size="medium" />
-        <Icon name="HandHeartIcon" variant="danger" size="medium" />
-        <Icon name="HandHeartIcon" variant="default" size="medium" />
-        <Icon name="HandHeartIcon" variant="success" size="medium" />
-        <Icon name="HandHeartIcon" variant="warning" size="medium" />
-        <div className="p-0.5 bg-amber-950 flex justify-center items-center">
-          <Icon name="HandHeartIcon" variant="white" size="medium" />
-        </div>
-
-        <Icon name="HandHeartIcon" variant="black" size="small" />
-        <Icon name="HandHeartIcon" variant="danger" size="small" />
-        <Icon name="HandHeartIcon" variant="default" size="small" />
-        <Icon name="HandHeartIcon" variant="success" size="small" />
-        <Icon name="HandHeartIcon" variant="warning" size="small" />
-        <div className="p-0.5 bg-amber-950 flex justify-center items-center">
-          <Icon name="HandHeartIcon" variant="white" size="small" />
-        </div>
-      </div>
-
-      <div className="w-full p-2 grid grid-cols-6 grid-rows-3 gap-2">
         <Icon name="HomeIcon" variant="black" size="large" />
         <Icon name="HomeIcon" variant="danger" size="large" />
         <Icon name="HomeIcon" variant="default" size="large" />
