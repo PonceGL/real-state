@@ -1,6 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 import z from "zod";
 
@@ -15,6 +16,7 @@ import {
   FormMessage,
   Input,
 } from "@/components/ui";
+import { FORGOT_PASSWORD } from "@/constants/routes";
 import { useFormAction } from "@/hooks/useFormAction";
 import { logInFormSchema } from "@/lib/auth/definitions";
 
@@ -42,7 +44,7 @@ export function LoginForm({ isInDarkBackground }: LoginFormProps) {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(execute)}
-        className="w-full max-w-96 p-5 space-y-8"
+        className="w-full max-w-96 space-y-8"
       >
         <FormField
           control={form.control}
@@ -57,6 +59,8 @@ export function LoginForm({ isInDarkBackground }: LoginFormProps) {
                   type="email"
                   placeholder="tunombre@ejemplo.com"
                   variant={isInDarkBackground ? "inverted" : "default"}
+                  autoComplete="off"
+                  autoCorrect="off"
                   {...field}
                 />
               </FormControl>
@@ -77,14 +81,24 @@ export function LoginForm({ isInDarkBackground }: LoginFormProps) {
                   type="password"
                   placeholder="********"
                   variant={isInDarkBackground ? "inverted" : "default"}
+                  autoComplete="off"
+                  autoCorrect="off"
                   {...field}
                 />
               </FormControl>
               <FormMessage />
+              <div className="w-full text-right">
+                <Link
+                  href={FORGOT_PASSWORD}
+                  className="text-sm text-blue-600 transition-all duration-300 hover:underline"
+                >
+                  Olvidé mi contraseña
+                </Link>
+              </div>
             </FormItem>
           )}
         />
-        <Button type="submit" text="Enviar" disabled={isPending} />
+        <Button type="submit" text="Entrar" disabled={isPending} />
       </form>
       {error &&
         !isPending && ( // TODO: Mejorar la forma de mostrar errores
