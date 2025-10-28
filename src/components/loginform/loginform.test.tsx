@@ -17,7 +17,7 @@ describe("LoginForm", () => {
     const { getByLabelText, getByRole } = render(<LoginForm />);
     expect(getByLabelText(/Correo Electrónico/i)).toBeInTheDocument();
     expect(getByLabelText(/Contraseña/i)).toBeInTheDocument();
-    expect(getByRole("button", { name: /Enviar/i })).toBeInTheDocument();
+    expect(getByRole("button", { name: /Entrar/i })).toBeInTheDocument();
   });
 
   test("shows error for short password", async () => {
@@ -28,7 +28,7 @@ describe("LoginForm", () => {
     fireEvent.change(getByLabelText(/Contraseña/i), {
       target: { value: "123" },
     });
-    fireEvent.click(getByRole("button", { name: /Enviar/i }));
+    fireEvent.click(getByRole("button", { name: /Entrar/i }));
     await waitFor(() => {
       expect(
         getByText(/La contraseña debe tener al menos 6 caracteres./i)
@@ -46,7 +46,7 @@ describe("LoginForm", () => {
     fireEvent.change(getByLabelText(/Contraseña/i), {
       target: { value: "a".repeat(51) },
     });
-    fireEvent.click(getByRole("button", { name: /Enviar/i }));
+    fireEvent.click(getByRole("button", { name: /Entrar/i }));
     await waitFor(() => {
       expect(
         getByText(/La contraseña no puede tener más de 50 caracteres./i)
@@ -65,7 +65,7 @@ describe("LoginForm", () => {
     fireEvent.change(getByLabelText(/Contraseña/i), {
       target: { value: "securePassword" },
     });
-    fireEvent.click(getByRole("button", { name: /Enviar/i }));
+    fireEvent.click(getByRole("button", { name: /Entrar/i }));
 
     await waitFor(() => {
       expect(login).toHaveBeenCalled();
@@ -88,7 +88,7 @@ describe("LoginForm", () => {
     fireEvent.change(getByLabelText(/Contraseña/i), {
       target: { value: "securePassword" },
     });
-    fireEvent.click(getByRole("button", { name: /Enviar/i }));
+    fireEvent.click(getByRole("button", { name: /Entrar/i }));
 
     await waitFor(() => {
       expect(queryByText(/Ocurrió un error intente más tarde/i)).toBeNull();

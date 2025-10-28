@@ -2,6 +2,7 @@ import { AxiosError, AxiosRequestHeaders } from "axios";
 import { redirect } from "next/navigation";
 
 import { login } from "@/actions/auth";
+import { ADMIN_DASHBOARD } from "@/constants/routes";
 import { logInFormSchema } from "@/lib/auth/definitions";
 import { httpClient } from "@/lib/http/axiosAdapter";
 import { createSession } from "@/lib/session";
@@ -58,7 +59,7 @@ describe("login", () => {
     });
     await login(formData);
     expect(createSession).toHaveBeenCalledWith("token");
-    expect(redirect).toHaveBeenCalledWith("/dashboard");
+    expect(redirect).toHaveBeenCalledWith(ADMIN_DASHBOARD);
   });
 
   it("should handle AxiosError with status 400 and custom message", async () => {
@@ -73,7 +74,9 @@ describe("login", () => {
       status: 400,
       statusText: "Bad Request",
       headers: {},
-      config: { headers: { "Content-Type": "application/json" } as AxiosRequestHeaders },
+      config: {
+        headers: { "Content-Type": "application/json" } as AxiosRequestHeaders,
+      },
     };
     (httpClient.post as jest.Mock).mockRejectedValue(error);
     const result = await login(formData);
@@ -92,7 +95,9 @@ describe("login", () => {
       status: 400,
       statusText: "Bad Request",
       headers: {},
-      config: { headers: { "Content-Type": "application/json" } as AxiosRequestHeaders },
+      config: {
+        headers: { "Content-Type": "application/json" } as AxiosRequestHeaders,
+      },
     };
     (httpClient.post as jest.Mock).mockRejectedValue(error);
     const result = await login(formData);
