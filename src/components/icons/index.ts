@@ -9,6 +9,8 @@ export * from "@/components/icons/email";
 export * from "@/components/icons/eye";
 export * from "@/components/icons/facebook";
 export * from "@/components/icons/filter";
+export * from "@/components/icons/graficArrow";
+export * from "@/components/icons/handHeart";
 export * from "@/components/icons/home";
 export * from "@/components/icons/location";
 export * from "@/components/icons/magnifyin";
