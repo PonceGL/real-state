@@ -35,7 +35,7 @@ export default function ComponentsPage() {
         </Wrapper>
       </div>
       <div className="w-full p-4 flex flex-col justify-center items-center gap-4 text-amber-300">
-        <h3 className="w-full text-left text-3xl font-bold">Icon Form</h3>
+        <h3 className="w-full text-left text-3xl font-bold">Icon</h3>
         <Wrapper>
           <ExampleIcons />
         </Wrapper>

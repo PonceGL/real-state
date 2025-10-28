@@ -29,44 +29,56 @@ import {
 } from "@/components/icons/index";
 import { IconProps } from "@/types/icons";
 
-const iconMap = {
-  BuildingIcon: BuildingIcon,
-  Calculator: CalculatorIcon,
-  CheckCircleIcon: CheckCircleIcon,
-  ChevronRightIcon: ChevronRightIcon,
-  ClockIcon: ClockIcon,
-  CloseIcon: CloseIcon,
-  DocsIcon: DocsIcon,
-  EmailIcon: EmailIcon,
-  EyeIcon: EyeIcon,
-  FacebookIcon: FacebookIcon,
-  FilterIcon: FilterIcon,
-  GraphicArrowIcon: GraphicArrowIcon,
-  HandHeartIcon: HandHeartIcon,
-  HomeIcon: HomeIcon,
-  LocationIcon: LocationIcon,
-  MedalIcon: MedalIcon,
-  MenuIcon: MenuIcon,
-  MountainIcon: MountainIcon,
-  PencilIcon: PencilIcon,
-  PhoneIcon: PhoneIcon,
-  MagnifyinIcon: MagnifyinIcon,
-  SendIcon: SendIcon,
-  ShieldIcon: ShieldIcon,
-  SquareIcon: SquareIcon,
-  TreeIcon: TreeIcon,
-  UsersIcon: UsersIcon,
-  WhatsAppIcon: WhatsAppIcon,
+const ICON_MAP = {
+  GraphicArrowIcon,
+  BuildingIcon,
+  CalculatorIcon,
+  CheckCircleIcon,
+  ChevronRightIcon,
+  ClockIcon,
+  CloseIcon,
+  DocsIcon,
+  EmailIcon,
+  EyeIcon,
+  FacebookIcon,
+  FilterIcon,
+  HandHeartIcon,
+  HomeIcon,
+  LocationIcon,
+  MedalIcon,
+  MenuIcon,
+  MountainIcon,
+  PencilIcon,
+  PhoneIcon,
+  MagnifyinIcon,
+  SendIcon,
+  ShieldIcon,
+  SquareIcon,
+  TreeIcon,
+  UsersIcon,
+  WhatsAppIcon,
 };
 
-type IconName = keyof typeof iconMap;
+export type IconName = keyof typeof ICON_MAP;
 
-interface NameIcons extends IconProps {
+interface IconsProps extends IconProps {
   name: IconName;
 }
 
-export function Icon({ name, ...rest }: NameIcons) {
-  const SelectdIcon = iconMap[name];
+/**
+ * Renderiza un ícono dinámicamente basado en su nombre.
+ *
+ * @param {IconsProps} props - Propiedades para el componente Icon.
+ * @param {IconName} props.name - El nombre del ícono a renderizar.
+ * @param {IconSize} props.size - Es opcional poner alguno de estos tamaños small medium large.
+ * @param {IconColor} props.variant - Es opcional poner alguno de estos colores default success warning danger white black.
+ * @returns {JSX.Element} El componente del ícono seleccionado.
+ *
+ * @example
+ * <Icon name="HomeIcon" size="large" variant="success" />
+ */
+export function Icon({ name, ...rest }: IconsProps) {
+  const SelectedIcon = ICON_MAP[name];
 
-  return <SelectdIcon {...rest} />;
+  return <SelectedIcon {...rest} />;
 }
