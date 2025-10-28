@@ -26,7 +26,7 @@ import {
   TreeIcon,
   UsersIcon,
   WhatsAppIcon,
-} from "@/components/icons/index";
+} from "@/components/icons";
 import { IconProps } from "@/types/icons";
 
 const ICON_MAP = {
