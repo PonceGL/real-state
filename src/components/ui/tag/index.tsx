@@ -14,6 +14,7 @@ type TagsVariant =
 type TagSize = "default" | "defaultCapsule" | "defaultSquare";
 
 interface TagsProps {
+  text: string;
   variant?: TagsVariant;
   size?: TagSize;
 }
@@ -47,6 +48,6 @@ const tagsVariant = cva(
   }
 );
 
-export function TagComponent({ size, variant }: TagsProps) {
-  return <span className={cn(tagsVariant({ size, variant }))}>Nueva</span>;
+export function TagComponent({ size, variant, text }: TagsProps) {
+  return <span className={cn(tagsVariant({ size, variant }))}>{text}</span>;
 }
