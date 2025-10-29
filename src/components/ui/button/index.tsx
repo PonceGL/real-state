@@ -120,7 +120,7 @@ function Button({
   rightIcon,
 }: ButtonProps) {
   const styles = useMemo(() => {
-    return cn(buttonVariants({ variant, size }));
+    return buttonVariants({ variant, size });
   }, [variant, size]);
 
   const iconVariant: IconColor = useMemo(() => {
@@ -138,9 +138,7 @@ function Button({
       {!link ? (
         <button
           type={type}
-          className={`${styles} ${
-            disabled ? "opacity-50 cursor-not-allowed" : ""
-          }`}
+          className={cn(styles, disabled && "opacity-50 cursor-not-allowed")}
           onClick={onClick}
           disabled={disabled}
         >
