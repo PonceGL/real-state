@@ -124,10 +124,13 @@ function Button({
   }, [variant, size]);
 
   const iconVariant: IconColor = useMemo(() => {
-    if (variant === "outline" || variant === "inverted") return "default";
-    if (variant === "outlineInverted") return "gray";
-    if (variant === "warning") return "black";
-    return "white";
+    const variantMap: Partial<Record<ButtonVariant, IconColor>> = {
+      outline: "default",
+      inverted: "default",
+      outlineInverted: "gray",
+      warning: "black",
+    };
+    return (variant && variantMap[variant]) || "white";
   }, [variant]);
 
   return (
