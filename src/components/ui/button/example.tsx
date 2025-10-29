@@ -82,7 +82,7 @@ export function ExampleButton() {
             variant="inverted"
             onClick={() => printVariant("inverted")}
             text="inverted"
-            rightIcon="MagnifyinIcon"
+            rightIcon="MagnifyingIcon"
           />
           <Button
             variant="outlineInverted"

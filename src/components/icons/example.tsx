@@ -524,29 +524,29 @@ export function ExampleIcons() {
       </div>
 
       <div className="w-full p-2 grid grid-cols-6 grid-rows-3 place-items-center gap-2">
-        <Icon name="MagnifyinIcon" variant="black" size="large" />
-        <Icon name="MagnifyinIcon" variant="danger" size="large" />
-        <Icon name="MagnifyinIcon" variant="default" size="large" />
-        <Icon name="MagnifyinIcon" variant="success" size="large" />
-        <Icon name="MagnifyinIcon" variant="warning" size="large" />
+        <Icon name="MagnifyingIcon" variant="black" size="large" />
+        <Icon name="MagnifyingIcon" variant="danger" size="large" />
+        <Icon name="MagnifyingIcon" variant="default" size="large" />
+        <Icon name="MagnifyingIcon" variant="success" size="large" />
+        <Icon name="MagnifyingIcon" variant="warning" size="large" />
 
-        <Icon name="MagnifyinIcon" variant="white" size="large" />
+        <Icon name="MagnifyingIcon" variant="white" size="large" />
 
-        <Icon name="MagnifyinIcon" variant="black" size="medium" />
-        <Icon name="MagnifyinIcon" variant="danger" size="medium" />
-        <Icon name="MagnifyinIcon" variant="default" size="medium" />
-        <Icon name="MagnifyinIcon" variant="success" size="medium" />
-        <Icon name="MagnifyinIcon" variant="warning" size="medium" />
+        <Icon name="MagnifyingIcon" variant="black" size="medium" />
+        <Icon name="MagnifyingIcon" variant="danger" size="medium" />
+        <Icon name="MagnifyingIcon" variant="default" size="medium" />
+        <Icon name="MagnifyingIcon" variant="success" size="medium" />
+        <Icon name="MagnifyingIcon" variant="warning" size="medium" />
 
-        <Icon name="MagnifyinIcon" variant="white" size="medium" />
+        <Icon name="MagnifyingIcon" variant="white" size="medium" />
 
-        <Icon name="MagnifyinIcon" variant="black" size="small" />
-        <Icon name="MagnifyinIcon" variant="danger" size="small" />
-        <Icon name="MagnifyinIcon" variant="default" size="small" />
-        <Icon name="MagnifyinIcon" variant="success" size="small" />
-        <Icon name="MagnifyinIcon" variant="warning" size="small" />
+        <Icon name="MagnifyingIcon" variant="black" size="small" />
+        <Icon name="MagnifyingIcon" variant="danger" size="small" />
+        <Icon name="MagnifyingIcon" variant="default" size="small" />
+        <Icon name="MagnifyingIcon" variant="success" size="small" />
+        <Icon name="MagnifyingIcon" variant="warning" size="small" />
 
-        <Icon name="MagnifyinIcon" variant="white" size="small" />
+        <Icon name="MagnifyingIcon" variant="white" size="small" />
       </div>
 
       <div className="w-full p-2 grid grid-cols-6 grid-rows-3 place-items-center gap-2">
