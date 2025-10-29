@@ -3,7 +3,8 @@ import { cva } from "class-variance-authority";
 import Link, { LinkProps } from "next/link";
 import { useMemo } from "react";
 
-import { Icon, IconName } from "@/components/ui/icon";
+import { Content } from "@/components/ui/button/content";
+import { IconName } from "@/components/ui/icon";
 import { cn } from "@/lib/styles/utils";
 import { IconColor } from "@/types/icons";
 
@@ -31,7 +32,7 @@ interface ButtonProps {
 }
 
 const buttonVariants = cva(
-  "px-2.5 py-3 flex justify-center items-center gap-1 whitespace-nowrap text-sm font-medium border-2 outline-none rounded-lg transition duration-300 hover:shadow focus:outline-none active:outline-none active:shadow-xl",
+  "px-2.5 py-3 flex justify-center items-center gap-2 whitespace-nowrap text-sm font-medium border-2 outline-none rounded-lg transition duration-300 hover:shadow focus:outline-none active:outline-none active:shadow-xl",
   {
     variants: {
       variant: {
@@ -140,17 +141,21 @@ function Button({
           onClick={onClick}
           disabled={disabled}
         >
-          {leftIcon && (
-            <Icon name={leftIcon} variant={iconVariant} size="small" />
-          )}
-          {text}
-          {rightIcon && (
-            <Icon name={rightIcon} variant={iconVariant} size="small" />
-          )}
+          <Content
+            text={text}
+            leftIcon={leftIcon}
+            rightIcon={rightIcon}
+            iconVariant={iconVariant}
+          />
         </button>
       ) : (
         <Link href={link} className={styles}>
-          {text}
+          <Content
+            text={text}
+            leftIcon={leftIcon}
+            rightIcon={rightIcon}
+            iconVariant={iconVariant}
+          />
         </Link>
       )}
     </>

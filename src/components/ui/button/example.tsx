@@ -66,7 +66,12 @@ export function ExampleButton() {
             text="default fit"
             leftIcon="EyeIcon"
           />
-          <Button link="/about" text="Is Link" />
+          <Button
+            link="/about"
+            text="Is Link"
+            leftIcon="EyeIcon"
+            rightIcon="ChevronRightIcon"
+          />
           <Button
             variant="outline"
             onClick={() => printVariant("outline")}
