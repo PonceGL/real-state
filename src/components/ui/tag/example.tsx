@@ -8,6 +8,7 @@ export function ExampleTag() {
         <TagComponent size="defaultCapsule" variant="default" text="Nueva" />
         <TagComponent size="defaultCapsule" variant="warning" text="Nueva" />
         <TagComponent size="defaultCapsule" variant="inverted" text="Nueva" />
+        <TagComponent size="defaultCapsule" variant="inverted" text="Casa" />
         <TagComponent
           size="defaultCapsule"
           variant="outlineInverted"

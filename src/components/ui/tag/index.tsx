@@ -16,7 +16,7 @@ type TagSize = "default" | "defaultCapsule" | "defaultSquare";
 interface TagsProps {
   text: string;
   variant?: TagsVariant;
-  size?: TagSize;
+  size: TagSize;
 }
 
 const tagsVariant = cva(
