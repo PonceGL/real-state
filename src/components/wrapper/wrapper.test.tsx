@@ -19,8 +19,8 @@ describe("Wrapper", () => {
       </Wrapper>
     );
     const wrapperDiv = screen.getByText("Dark Mode").closest("div");
-    expect(wrapperDiv).toHaveClass("bg-neutral-base-900");
-    expect(wrapperDiv).not.toHaveClass("bg-white");
+    expect(wrapperDiv).toHaveClass("bg-zinc-900/80");
+    expect(wrapperDiv).not.toHaveClass("bg-zinc-200/80");
   });
 
   it("applies white background when isDarkBackground is false or undefined", () => {
@@ -30,7 +30,7 @@ describe("Wrapper", () => {
       </Wrapper>
     );
     const wrapperDiv = screen.getByText("Light Mode").closest("div");
-    expect(wrapperDiv).toHaveClass("bg-white");
-    expect(wrapperDiv).not.toHaveClass("bg-neutral-base-900");
+    expect(wrapperDiv).toHaveClass("bg-zinc-200/80");
+    expect(wrapperDiv).not.toHaveClass("bg-zinc-900/80");
   });
 });

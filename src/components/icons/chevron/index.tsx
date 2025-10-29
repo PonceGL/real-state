@@ -11,7 +11,7 @@ export const ChevronRightIcon = ({ size, variant }: IconProps) => {
       className={cn(iconVariants({ size, variant }))}
     >
       <path
-        d="M9 18L15 12L9 6"
+        d="m7 22 10-10L7 2"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"

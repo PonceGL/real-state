@@ -1,9 +1,11 @@
 "use client";
 import { cva } from "class-variance-authority";
 import Link, { LinkProps } from "next/link";
+import { useMemo } from "react";
 
+import { Icon, IconName } from "@/components/ui/icon";
 import { cn } from "@/lib/styles/utils";
-
+import { IconColor } from "@/types/icons";
 
 type ButtonVariant =
   | "default"
@@ -24,6 +26,8 @@ interface ButtonProps {
   link?: LinkProps["href"];
   onClick?: () => void;
   disabled?: boolean;
+  leftIcon?: IconName;
+  rightIcon?: IconName;
 }
 
 const buttonVariants = cva(
@@ -111,24 +115,41 @@ function Button({
   variant,
   size,
   disabled,
+  leftIcon,
+  rightIcon,
 }: ButtonProps) {
+  const styles = useMemo(() => {
+    return cn(buttonVariants({ variant, size }));
+  }, [variant, size]);
+
+  const iconVariant: IconColor = useMemo(() => {
+    if (variant === "outline" || variant === "inverted") return "default";
+    if (variant === "outlineInverted") return "gray";
+    if (variant === "warning") return "black";
+    return "white";
+  }, [variant]);
+
   return (
     <>
       {!link ? (
         <button
           type={type}
-          className={`${cn(buttonVariants({ variant, size }))} ${
+          className={`${styles} ${
             disabled ? "opacity-50 cursor-not-allowed" : ""
           }`}
           onClick={onClick}
           disabled={disabled}
         >
-          {/*  TODO: aqui van los iconos */}
+          {leftIcon && (
+            <Icon name={leftIcon} variant={iconVariant} size="small" />
+          )}
           {text}
-          {/*  TODO: aqui van los iconos */}
+          {rightIcon && (
+            <Icon name={rightIcon} variant={iconVariant} size="small" />
+          )}
         </button>
       ) : (
-        <Link href={link} className={cn(buttonVariants({ variant, size }))}>
+        <Link href={link} className={styles}>
           {text}
         </Link>
       )}

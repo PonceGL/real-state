@@ -4,63 +4,64 @@ import { ExampleButton } from "@/components/ui/button/example";
 
 describe("ExampleButton", () => {
   it("calls printVariant on button click", () => {
-    const { getByText } = render(<ExampleButton />);
-    const defaultBtn = getByText("default");
+    const { queryAllByText } = render(<ExampleButton />);
+    const defaultBtn = queryAllByText("default")[0];
+
     fireEvent.click(defaultBtn);
     expect(defaultBtn).toBeInTheDocument();
   });
 
   it("calls printVariant on button fit click", () => {
-    const { getByText } = render(<ExampleButton />);
-    const defaultBtn = getByText("default fit");
+    const { queryAllByText } = render(<ExampleButton />);
+    const defaultBtn = queryAllByText("default fit")[0];
     fireEvent.click(defaultBtn);
     expect(defaultBtn).toBeInTheDocument();
   });
 
   it("renders link button", () => {
-    const { getByText } = render(<ExampleButton />);
-    const button = getByText("Is Link");
+    const { queryAllByText } = render(<ExampleButton />);
+    const button = queryAllByText("Is Link")[0];
     expect(button).toBeInTheDocument();
   });
 
   it("renders outline button", () => {
-    const { getByText } = render(<ExampleButton />);
-    const button = getByText("outline");
+    const { queryAllByText } = render(<ExampleButton />);
+    const button = queryAllByText("outline")[0];
     fireEvent.click(button);
     expect(button).toBeInTheDocument();
   });
 
   it("renders inverted button", () => {
-    const { getByText } = render(<ExampleButton />);
-    const button = getByText("inverted");
+    const { queryAllByText } = render(<ExampleButton />);
+    const button = queryAllByText("inverted")[0];
     fireEvent.click(button);
     expect(button).toBeInTheDocument();
   });
 
   it("renders outlineInverted button", () => {
-    const { getByText } = render(<ExampleButton />);
-    const button = getByText("outlineInverted");
+    const { queryAllByText } = render(<ExampleButton />);
+    const button = queryAllByText("outlineInverted")[0];
     fireEvent.click(button);
     expect(button).toBeInTheDocument();
   });
 
   it("renders whatsapp button", () => {
-    const { getByText } = render(<ExampleButton />);
-    const button = getByText("whatsapp");
+    const { queryAllByText } = render(<ExampleButton />);
+    const button = queryAllByText("whatsapp")[0];
     fireEvent.click(button);
     expect(button).toBeInTheDocument();
   });
 
   it("renders warning button", () => {
-    const { getByText } = render(<ExampleButton />);
-    const button = getByText("warning");
+    const { queryAllByText } = render(<ExampleButton />);
+    const button = queryAllByText("warning")[0];
     fireEvent.click(button);
     expect(button).toBeInTheDocument();
   });
 
   it("renders danger button", () => {
-    const { getByText } = render(<ExampleButton />);
-    const button = getByText("danger");
+    const { queryAllByText } = render(<ExampleButton />);
+    const button = queryAllByText("danger")[0];
     fireEvent.click(button);
     expect(button).toBeInTheDocument();
   });
