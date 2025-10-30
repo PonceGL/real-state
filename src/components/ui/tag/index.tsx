@@ -1,50 +1,61 @@
 import { cva } from "class-variance-authority";
 
-import { IconName } from "@/components/ui/icon";
+import { Icon, IconName } from "@/components/ui/icon";
 import { cn } from "@/lib/styles/utils";
 
-type TagVariants =
-  | "default"
-  | "outline"
-  | "inverted"
-  | "outlineInverted"
+export type TagColors =
+  | "primary"
+  | "black"
+  | "white"
+  | "gray"
   | "success"
   | "warning"
   | "danger";
 
-type TagSize = "default" | "defaultCapsule" | "defaultSquare";
+export type TagVariants = "capsule" | "square";
 
 interface TagProps {
   text: string;
-  size: TagSize;
+  color: TagColors;
+  isOutline?: boolean;
+  isFit?: boolean;
   variant?: TagVariants;
-  leftIcon?: IconName;
+  iconName?: IconName;
 }
 
 const tagVariants = cva(
-  "inline-flex items-center gap-1 whitespace-nowrap text-sm font-medium border-2",
+  "flex justify-center items-center h-fit w-fit truncate max-w-52 gap-1 border-2",
   {
     variants: {
       variant: {
-        default: "bg-brand-primary-500 border-brand-primary-500 text-white",
-        outline: "bg-black border-black text-white",
-        inverted: "bg-neutral-base-200 border-neutral-base-200 text-black",
-        outlineInverted: "border-neutral-base-200 text-black",
+        capsule: "rounded-3xl",
+        square: "rounded-md",
+      },
+      color: {
+        primary: "bg-brand-primary-500 border-brand-primary-500 text-white",
+        black: "bg-black border-black text-white",
+        white: "border-neutral-base-200 text-black",
+        gray: "bg-neutral-base-200 border-neutral-base-200 text-black",
         success:
           "bg-semantic-success-500 border-semantic-success-500 text-white",
         warning:
           "bg-semantic-warning-500 border-semantic-warning-500 text-white",
         danger: "bg-semantic-error-500 border-semantic-error-500 text-white",
       },
-      size: {
-        default: "px-1 py-1",
-        defaultCapsule: " rounded-3xl",
-        defaultSquare: " rounded-md",
+      isOutline: {
+        filled: "",
+        outline: "bg-transparent",
+      },
+      isFit: {
+        full: "py-1 px-3.5",
+        fit: "py-0.5 px-1.5",
       },
     },
     defaultVariants: {
-      variant: "default",
-      size: "default",
+      variant: "capsule",
+      color: "primary",
+      isOutline: "filled",
+      isFit: "full",
     },
   }
 );
@@ -61,10 +72,26 @@ const tagVariants = cva(
  * @example
  * <TagComponent size="defaultCapsule" variant="success" text="Nuevo" />
  */
-export function TagComponent({ size, variant, text, leftIcon }: TagProps) {
+export function Tag({
+  variant,
+  text,
+  iconName,
+  color,
+  isOutline,
+  isFit,
+}: TagProps) {
   return (
-    <span className={cn(tagVariants({ size, variant }))}>
-      {leftIcon}
+    <span
+      className={cn(
+        tagVariants({
+          variant,
+          color,
+          isOutline: isOutline ? "outline" : "filled",
+          isFit: isFit ? "fit" : "full",
+        })
+      )}
+    >
+      {iconName && <Icon name={iconName} size="small" />}
       {text}
     </span>
   );

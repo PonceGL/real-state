@@ -28,7 +28,7 @@ export function Wrapper({ isDarkBackground, children }: WrapperProps) {
         isDarkBackground ? "bg-neutral-base-900" : "bg-white"
       }`}
     >
-      <section className="w-full max-w-96 mx-auto flex flex-col justify-center items-center gap-2">
+      <section className="w-full mx-auto flex flex-col justify-center items-center gap-2">
         {children}
       </section>
     </div>
