@@ -1,9 +1,12 @@
 "use client";
 import { cva } from "class-variance-authority";
 import Link, { LinkProps } from "next/link";
+import { useMemo } from "react";
 
+import { Content } from "@/components/ui/button/content";
+import { IconName } from "@/components/ui/icon";
 import { cn } from "@/lib/styles/utils";
-
+import { IconColor } from "@/types/icons";
 
 type ButtonVariant =
   | "default"
@@ -24,10 +27,12 @@ interface ButtonProps {
   link?: LinkProps["href"];
   onClick?: () => void;
   disabled?: boolean;
+  leftIcon?: IconName;
+  rightIcon?: IconName;
 }
 
 const buttonVariants = cva(
-  "px-2.5 py-3 flex justify-center items-center gap-1 whitespace-nowrap text-sm font-medium border-2 outline-none rounded-lg transition duration-300 hover:shadow focus:outline-none active:outline-none active:shadow-xl",
+  "px-2.5 py-3 flex justify-center items-center gap-2 whitespace-nowrap text-sm font-medium border-2 outline-none rounded-lg transition duration-300 hover:shadow focus:outline-none active:outline-none active:shadow-xl",
   {
     variants: {
       variant: {
@@ -111,25 +116,47 @@ function Button({
   variant,
   size,
   disabled,
+  leftIcon,
+  rightIcon,
 }: ButtonProps) {
+  const styles = useMemo(() => {
+    return buttonVariants({ variant, size });
+  }, [variant, size]);
+
+  const iconVariant: IconColor = useMemo(() => {
+    const variantMap: Partial<Record<ButtonVariant, IconColor>> = {
+      outline: "default",
+      inverted: "default",
+      outlineInverted: "gray",
+      warning: "black",
+    };
+    return (variant && variantMap[variant]) || "white";
+  }, [variant]);
+
   return (
     <>
       {!link ? (
         <button
           type={type}
-          className={`${cn(buttonVariants({ variant, size }))} ${
-            disabled ? "opacity-50 cursor-not-allowed" : ""
-          }`}
+          className={cn(styles, disabled && "opacity-50 cursor-not-allowed")}
           onClick={onClick}
           disabled={disabled}
         >
-          {/*  TODO: aqui van los iconos */}
-          {text}
-          {/*  TODO: aqui van los iconos */}
+          <Content
+            text={text}
+            leftIcon={leftIcon}
+            rightIcon={rightIcon}
+            iconVariant={iconVariant}
+          />
         </button>
       ) : (
-        <Link href={link} className={cn(buttonVariants({ variant, size }))}>
-          {text}
+        <Link href={link} className={styles}>
+          <Content
+            text={text}
+            leftIcon={leftIcon}
+            rightIcon={rightIcon}
+            iconVariant={iconVariant}
+          />
         </Link>
       )}
     </>

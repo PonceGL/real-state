@@ -5,6 +5,7 @@ export const iconVariants = cva("", {
     variant: {
       default: "text-brand-primary-500",
       white: "text-white",
+      gray: "text-neutral-base-200",
       black: "text-black",
       success: "text-semantic-success-500",
       warning: "text-semantic-warning-500",
