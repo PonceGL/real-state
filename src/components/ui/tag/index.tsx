@@ -1,8 +1,9 @@
 import { cva } from "class-variance-authority";
 
+import { IconName } from "@/components/ui/icon";
 import { cn } from "@/lib/styles/utils";
 
-type TagsVariant =
+type TagVariants =
   | "default"
   | "outline"
   | "inverted"
@@ -13,22 +14,22 @@ type TagsVariant =
 
 type TagSize = "default" | "defaultCapsule" | "defaultSquare";
 
-interface TagsProps {
+interface TagProps {
   text: string;
-  variant?: TagsVariant;
   size: TagSize;
+  variant?: TagVariants;
+  leftIcon?: IconName;
 }
 
-const tagsVariant = cva(
-  "flex justify-center items-center gap-1 whitespace-nowrap text-sm font-medium border-2",
+const tagVariants = cva(
+  "inline-flex items-center gap-1 whitespace-nowrap text-sm font-medium border-2",
   {
     variants: {
       variant: {
         default: "bg-brand-primary-500 border-brand-primary-500 text-white",
         outline: "bg-black border-black text-white",
-        inverted:
-          "bg-neutral-base-200 border-neutral-base-200 text-black border-2",
-        outlineInverted: "border-neutral-base-200 text-black border-2",
+        inverted: "bg-neutral-base-200 border-neutral-base-200 text-black",
+        outlineInverted: "border-neutral-base-200 text-black",
         success:
           "bg-semantic-success-500 border-semantic-success-500 text-white",
         warning:
@@ -36,9 +37,9 @@ const tagsVariant = cva(
         danger: "bg-semantic-error-500 border-semantic-error-500 text-white",
       },
       size: {
-        default: "w-19 h-6 rounded-3xl",
-        defaultCapsule: "w-19 h-6 rounded-3xl",
-        defaultSquare: "w-16 h-7 rounded-md",
+        default: "px-1 py-1",
+        defaultCapsule: " rounded-3xl",
+        defaultSquare: " rounded-md",
       },
     },
     defaultVariants: {
@@ -48,6 +49,23 @@ const tagsVariant = cva(
   }
 );
 
-export function TagComponent({ size, variant, text }: TagsProps) {
-  return <span className={cn(tagsVariant({ size, variant }))}>{text}</span>;
+/**
+ * Muestra una etiqueta de texto con diferentes estilos y tamaños.
+ *
+ * @param {TagsProps} props Las propiedades para el componente Tag.
+ * @param {TagSize} props.size El tamaño de la etiqueta.
+ * @param {TagsVariant} [props.variant="default"] La variante de color y estilo de la etiqueta.
+ * @param {string} props.text El texto a mostrar en la etiqueta.
+ * @returns {JSX.Element} El componente de etiqueta renderizado.
+ *
+ * @example
+ * <TagComponent size="defaultCapsule" variant="success" text="Nuevo" />
+ */
+export function TagComponent({ size, variant, text, leftIcon }: TagProps) {
+  return (
+    <span className={cn(tagVariants({ size, variant }))}>
+      {leftIcon}
+      {text}
+    </span>
+  );
 }
