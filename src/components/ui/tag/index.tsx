@@ -43,44 +43,44 @@ const tagVariants = cva(
         danger: "bg-semantic-error-500 border-semantic-error-500 text-white",
       },
       isOutline: {
-        filled: "",
-        outline: "bg-transparent",
+        false: "",
+        true: "bg-transparent",
       },
       isFit: {
-        full: "py-1 px-3.5",
-        fit: "py-0.5 px-1.5",
+        false: "py-1 px-3.5",
+        true: "py-0.5 px-1.5",
       },
     },
     defaultVariants: {
       variant: "capsule",
       color: "primary",
-      isOutline: "filled",
-      isFit: "full",
+      isOutline: false,
+      isFit: false,
     },
     compoundVariants: [
       {
         color: "primary",
-        isOutline: "outline",
+        isOutline: true,
         className: "text-brand-primary-500",
       },
       {
         color: "black",
-        isOutline: "outline",
+        isOutline: true,
         className: "text-black",
       },
       {
         color: "success",
-        isOutline: "outline",
+        isOutline: true,
         className: "text-semantic-success-500",
       },
       {
         color: "warning",
-        isOutline: "outline",
+        isOutline: true,
         className: "text-semantic-warning-500",
       },
       {
         color: "danger",
-        isOutline: "outline",
+        isOutline: true,
         className: "text-semantic-error-500",
       },
     ],
@@ -113,8 +113,8 @@ export function Tag({
         tagVariants({
           variant,
           color,
-          isOutline: isOutline ? "outline" : "filled",
-          isFit: isFit ? "fit" : "full",
+          isOutline,
+          isFit,
         })
       )}
     >

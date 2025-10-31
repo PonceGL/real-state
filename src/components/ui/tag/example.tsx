@@ -21,7 +21,12 @@ export function ExampleTag() {
         <Fragment key={color}>
           {TAG_VARIANTS.map((variant) => (
             <Fragment key={`${variant}-${color}`}>
-              <Tag text={variant} color={color} variant={variant} />
+              <Tag
+                text={variant}
+                color={color}
+                variant={variant}
+                iconName="BuildingIcon"
+              />
               <Tag text={variant} color={color} variant={variant} isOutline />
               <Tag text={variant} color={color} variant={variant} isFit />
             </Fragment>
