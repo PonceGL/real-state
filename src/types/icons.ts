@@ -1,5 +1,5 @@
 type IconSize = "small" | "medium" | "large";
-type IconColor =
+export type IconColor =
   | "default"
   | "success"
   | "warning"
