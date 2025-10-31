@@ -13,7 +13,7 @@ export * from "@/components/icons/graficArrow";
 export * from "@/components/icons/handHeart";
 export * from "@/components/icons/home";
 export * from "@/components/icons/location";
-export * from "@/components/icons/magnifyin";
+export * from "@/components/icons/magnifying";
 export * from "@/components/icons/medal";
 export * from "@/components/icons/menu";
 export * from "@/components/icons/mountain";

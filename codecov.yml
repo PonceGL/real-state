@@ -22,3 +22,6 @@ comment:
   layout: "header, reach, diff, flags, tree, footer"
   behavior: default
   require_changes: true
+
+ignore:
+  - "**/*.example.*"

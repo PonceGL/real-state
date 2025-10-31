@@ -11,10 +11,11 @@ export const CloseIcon = ({ size, variant }: IconProps) => {
       className={cn(iconVariants({ size, variant }))}
     >
       <path
-        d="M22 2L2 22M2 2L22 22"
+        d="M21 4 4 21M4 4l17 17"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth={2}
       />
     </svg>
   );
