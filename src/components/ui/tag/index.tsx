@@ -32,7 +32,7 @@ const tagVariants = cva(
         square: "rounded-md",
       },
       color: {
-        primary: "bg-brand-primary-500 border-brand-primary-500 text-white",
+        primary: "bg-brand-primary-500 border-brand-primary-500 text-white ",
         black: "bg-black border-black text-white",
         white: "border-neutral-base-200 text-black",
         gray: "bg-neutral-base-200 border-neutral-base-200 text-black",
@@ -57,6 +57,33 @@ const tagVariants = cva(
       isOutline: "filled",
       isFit: "full",
     },
+    compoundVariants: [
+      {
+        color: "primary",
+        isOutline: "outline",
+        className: "text-brand-primary-500",
+      },
+      {
+        color: "black",
+        isOutline: "outline",
+        className: "text-black",
+      },
+      {
+        color: "success",
+        isOutline: "outline",
+        className: "text-semantic-success-500",
+      },
+      {
+        color: "warning",
+        isOutline: "outline",
+        className: "text-semantic-warning-500",
+      },
+      {
+        color: "danger",
+        isOutline: "outline",
+        className: "text-semantic-error-500",
+      },
+    ],
   }
 );
 
