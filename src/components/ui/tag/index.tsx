@@ -1,7 +1,9 @@
 import { cva } from "class-variance-authority";
+import { useMemo } from "react";
 
 import { Icon, IconName } from "@/components/ui/icon";
 import { cn } from "@/lib/styles/utils";
+import { IconColor } from "@/types/icons";
 
 export type TagColors =
   | "primary"
@@ -34,7 +36,7 @@ const tagVariants = cva(
       color: {
         primary: "bg-brand-primary-500 border-brand-primary-500 text-white ",
         black: "bg-black border-black text-white",
-        white: "border-neutral-base-200 text-black",
+        white: "border-neutral-base-200 text-neutral-base-200",
         gray: "bg-neutral-base-200 border-neutral-base-200 text-black",
         success:
           "bg-semantic-success-500 border-semantic-success-500 text-white",
@@ -46,9 +48,13 @@ const tagVariants = cva(
         false: "",
         true: "bg-transparent",
       },
+      hasIcon: {
+        true: "grid grid-cols-[10%_90%] grid-rows-1 gap-2",
+        false: "flex justify-center items-center",
+      },
       isFit: {
-        false: "py-1 px-3.5",
-        true: "py-0.5 px-1.5",
+        false: "py-0.5 px-3.5",
+        true: "py-0.5 px-1.5  flex justify-center items-center",
       },
     },
     defaultVariants: {
@@ -62,6 +68,11 @@ const tagVariants = cva(
         color: "primary",
         isOutline: true,
         className: "text-brand-primary-500",
+      },
+      {
+        color: "white",
+        isOutline: true,
+        className: "text-neutral-base-200",
       },
       {
         color: "black",
@@ -107,19 +118,31 @@ export function Tag({
   isOutline,
   isFit,
 }: TagProps) {
+  const iconColor = useMemo(() => {
+    if (color === "primary" && isOutline) return "default";
+    if (color === "primary") return "white";
+
+    return variant;
+  }, [color, isOutline, variant]);
+
   return (
-    <span
+    <div
       className={cn(
         tagVariants({
           variant,
           color,
           isOutline,
           isFit,
+          hasIcon: !!iconName,
         })
       )}
     >
-      {iconName && <Icon name={iconName} size="small" />}
-      {text}
-    </span>
+      {!isFit && iconName && (
+        <i className="w-full h-full flex justify-center items-center">
+          <Icon name={iconName} variant={iconColor as IconColor} size="small" />
+        </i>
+      )}
+      <p className="w-full text-sm leading-none truncate">{text}</p>
+    </div>
   );
 }
