@@ -1,11 +1,12 @@
 import { Fragment } from "react";
 
 import { Icon, IconName } from "@/components/ui/icon";
-import { IconColor, IconSize } from "@/types/icons";
+import { BrandColor } from "@/types/brand";
+import { IconSize } from "@/types/icons";
 
-const SIZES: IconSize[] = ["large", "medium", "small"];
-const VARIANTS: IconColor[] = [
-  "default",
+const SIZES: IconSize[] = ["small", "medium", "large"];
+const VARIANTS: BrandColor[] = [
+  "primary",
   "white",
   "success",
   "warning",
