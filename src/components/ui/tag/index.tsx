@@ -26,7 +26,7 @@ interface TagProps {
 }
 
 const tagVariants = cva(
-  "flex justify-center items-center h-fit w-fit truncate max-w-52  gap-1 border-2",
+  "flex justify-center items-center h-fit w-fit truncate max-w-52 gap-1 border-2",
   {
     variants: {
       variant: {
@@ -53,8 +53,8 @@ const tagVariants = cva(
         false: "flex justify-center items-center",
       },
       isFit: {
-        false: "py-1 px-3.5",
-        true: "py-1 px-1.5  flex justify-center items-center",
+        false: "py-0.5 px-3.5",
+        true: "py-0.5 px-1.5  flex justify-center items-center",
       },
     },
     defaultVariants: {
@@ -142,7 +142,7 @@ export function Tag({
           <Icon name={iconName} variant={iconColor as IconColor} size="small" />
         </i>
       )}
-      <p className="w-full text-sm leading-none">{text}</p>
+      <p className="w-full text-sm leading-none truncate">{text}</p>
     </div>
   );
 }
