@@ -71,7 +71,7 @@ interface IconsProps extends IconProps {
  * @param {IconsProps} props - Propiedades para el componente Icon.
  * @param {IconName} props.name - El nombre del ícono a renderizar.
  * @param {IconSize} props.size - Es opcional poner alguno de estos tamaños small medium large.
- * @param {BrandColor} props.variant - Es opcional poner alguno de estos colores default success warning danger white black.
+ * @param {BrandColor} props.variant - Es opcional poner alguno de estos colores primary success warning danger white black.
  * @returns {JSX.Element} El componente del ícono seleccionado.
  *
  * @example
