@@ -53,8 +53,8 @@ const tagVariants = cva(
         false: "flex justify-center items-center",
       },
       isFit: {
-        false: "py-0.5 px-3.5",
-        true: "py-0.5 px-1.5  flex justify-center items-center",
+        false: "pb-0.5 pt-0 px-3.5",
+        true: "pb-0.5 pt-0 px-1.5  flex justify-center items-center",
       },
     },
     defaultVariants: {
