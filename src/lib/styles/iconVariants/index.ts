@@ -3,7 +3,7 @@ import { cva } from "class-variance-authority";
 export const iconVariants = cva("", {
   variants: {
     variant: {
-      default: "text-brand-primary-500",
+      primary: "text-brand-primary-500",
       white: "text-white",
       gray: "text-neutral-base-200",
       black: "text-black",
@@ -18,7 +18,7 @@ export const iconVariants = cva("", {
     },
   },
   defaultVariants: {
-    variant: "default",
+    variant: "primary",
     size: "small",
   },
 });
