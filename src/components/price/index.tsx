@@ -1,21 +1,22 @@
 interface PriceProps {
-  number: number;
-  isUSD?: boolean;
+  value: number;
+  currenType?: currencyType;
+  countrysType?: countryType;
 }
 
-export function Price({ number, isUSD = false }: PriceProps) {
-  const currencyText: string = isUSD ? "USD" : "MXN";
-  const locale = isUSD ? "en-US" : "es-MX";
-  const currencySymbol = isUSD ? "USD" : "MXN";
+type currencyType = "USD" | "MXN" | "EUR";
+type countryType = "es-US" | "es-MX" | "de-DE";
 
-  const formattedNumber = number.toLocaleString(locale, {
+export function Price({ value, currenType, countrysType }: PriceProps) {
+  const formattedNumber = new Intl.NumberFormat(countrysType, {
     style: "currency",
-    currency: currencySymbol,
-  });
+    currency: currenType,
+  }).format(value);
 
   return (
     <h1>
-      {currencyText} {formattedNumber}
+      {currenType}
+      {formattedNumber}
     </h1>
   );
 }
