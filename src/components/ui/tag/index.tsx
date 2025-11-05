@@ -3,7 +3,7 @@ import { useMemo } from "react";
 
 import { Icon, IconName } from "@/components/ui/icon";
 import { cn } from "@/lib/styles/utils";
-import { IconColor } from "@/types/icons";
+import { BrandColor } from "@/types/brand";
 
 export type TagColors =
   | "primary"
@@ -119,7 +119,7 @@ export function Tag({
   isFit,
 }: TagProps) {
   const iconColor = useMemo(() => {
-    if (color === "primary" && isOutline) return "default";
+    if (color === "primary" && isOutline) return "primary";
     if (color === "primary") return "white";
 
     return variant;
@@ -139,7 +139,11 @@ export function Tag({
     >
       {!isFit && iconName && (
         <i className="w-full h-full flex justify-center items-center">
-          <Icon name={iconName} variant={iconColor as IconColor} size="small" />
+          <Icon
+            name={iconName}
+            variant={iconColor as BrandColor}
+            size="small"
+          />
         </i>
       )}
       <p className="w-full text-sm leading-4.5 truncate">{text}</p>

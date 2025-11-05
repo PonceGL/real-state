@@ -1,13 +1,13 @@
 import { memo } from "react";
 
 import { Icon, IconName } from "@/components/ui/icon";
-import { IconColor } from "@/types/icons";
+import { BrandColor } from "@/types/brand";
 
 interface ContentProps {
   text: string;
   leftIcon?: IconName;
   rightIcon?: IconName;
-  iconVariant: IconColor;
+  iconVariant: BrandColor;
 }
 
 export const Content = memo(function Content({

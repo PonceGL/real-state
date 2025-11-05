@@ -1,11 +1,12 @@
 import { Fragment } from "react";
 
 import { Icon, IconName } from "@/components/ui/icon";
-import { IconColor, IconSize } from "@/types/icons";
+import { BrandColor } from "@/types/brand";
+import { IconSize } from "@/types/icons";
 
-const SIZES: IconSize[] = ["large", "medium", "small"];
-const VARIANTS: IconColor[] = [
-  "default",
+const ICON_SIZES: IconSize[] = ["small", "medium", "large"];
+const ICON_VARIANTS: BrandColor[] = [
+  "primary",
   "white",
   "success",
   "warning",
@@ -14,7 +15,7 @@ const VARIANTS: IconColor[] = [
   "black",
 ];
 
-const ICONS_VARIANTS: IconName[] = [
+const ICONS_NAMES: IconName[] = [
   "GraphicArrowIcon",
   "BuildingIcon",
   "CalculatorIcon",
@@ -48,15 +49,15 @@ export function ExampleIcons() {
   return (
     <div className="w-full flex flex-col">
       <Fragment>
-        {ICONS_VARIANTS.map((icon) => (
+        {ICONS_NAMES.map((icon) => (
           <div
             key={icon}
             className="w-full my-8 p-2 grid grid-cols-7 grid-rows-3 place-items-center gap-4"
           >
             <Fragment>
-              {SIZES.map((size) => (
+              {ICON_SIZES.map((size) => (
                 <Fragment key={`${icon}-${size}`}>
-                  {VARIANTS.map((variant) => (
+                  {ICON_VARIANTS.map((variant) => (
                     <Icon
                       key={`${icon}-${size}-${variant}`}
                       name={icon}
