@@ -6,10 +6,10 @@ import { useMemo } from "react";
 import { Content } from "@/components/ui/button/content";
 import { IconName } from "@/components/ui/icon";
 import { cn } from "@/lib/styles/utils";
-import { IconColor } from "@/types/icons";
+import { BrandColor } from "@/types/brand";
 
 type ButtonVariant =
-  | "default"
+  | "primary"
   | "outline"
   | "inverted"
   | "outlineInverted"
@@ -36,7 +36,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default:
+        primary:
           "bg-brand-primary-500 border-brand-primary-500 text-white hover:bg-brand-primary-400 hover:border-brand-primary-400 active:bg-brand-primary-250 active:border-brand-primary-250",
         outline:
           "border-brand-primary-500 text-brand-primary-500 hover:border-brand-primary-400 active:border-brand-primary-250 active:text-brand-primary-250",
@@ -57,7 +57,7 @@ const buttonVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "default",
+      variant: "primary",
       size: "default",
     },
   }
@@ -123,10 +123,10 @@ function Button({
     return buttonVariants({ variant, size });
   }, [variant, size]);
 
-  const iconVariant: IconColor = useMemo(() => {
-    const variantMap: Partial<Record<ButtonVariant, IconColor>> = {
-      outline: "default",
-      inverted: "default",
+  const iconVariant: BrandColor = useMemo(() => {
+    const variantMap: Partial<Record<ButtonVariant, BrandColor>> = {
+      outline: "primary",
+      inverted: "primary",
       outlineInverted: "gray",
       warning: "black",
     };
