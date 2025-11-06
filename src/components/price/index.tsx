@@ -1,13 +1,17 @@
-interface PriceProps {
+export interface PriceProp {
   value: number;
   currenType?: currencyType;
   countrysType?: countryType;
 }
 
-type currencyType = "USD" | "MXN" | "EUR";
-type countryType = "es-US" | "es-MX" | "de-DE";
+export type currencyType = "USD" | "MXN" | "EUR";
+export type countryType = "es-US" | "es-MX" | "de-DE";
 
-export function Price({ value, currenType, countrysType }: PriceProps) {
+export function Price({
+  value,
+  currenType = "MXN",
+  countrysType = "es-MX",
+}: PriceProp) {
   const formattedNumber = new Intl.NumberFormat(countrysType, {
     style: "currency",
     currency: currenType,
@@ -15,8 +19,7 @@ export function Price({ value, currenType, countrysType }: PriceProps) {
 
   return (
     <h1>
-      {currenType}
-      {formattedNumber}
+      {formattedNumber} {currenType}
     </h1>
   );
 }
