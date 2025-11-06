@@ -23,7 +23,7 @@ import {
 } from "@/lib/httpErrors";
 import { dbConnect } from "@/lib/mongodb";
 
-class UserService {
+export class UserService {
   public async getAll(): Promise<IUser[]> {
     try {
       await dbConnect();

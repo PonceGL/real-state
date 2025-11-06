@@ -8,6 +8,7 @@ import {
   IPatchRequest,
   IPostRequest,
   IPutRequest,
+  IRequest,
 } from "@/types/contracts/httpClient";
 
 /**
@@ -118,8 +119,17 @@ export class BasicAuthHttpClientDecorator implements IHttpClient {
     const authConfig = this.mergeAuthConfig(config);
     return this.httpClient.delete<T>({ path, config: authConfig });
   }
+
+  async request<T>(request: IRequest): Promise<T> {
+    const authConfig = this.mergeAuthConfig(request.config);
+
+    return this.httpClient.request<T>({
+      ...request,
+      config: authConfig,
+    });
+  }
 }
 
-export const thirdPartyHttpClient = new BasicAuthHttpClientDecorator(
+export const basicAuthHttpClient = new BasicAuthHttpClientDecorator(
   baseHttpClient
 );
