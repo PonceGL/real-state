@@ -1,17 +1,31 @@
-import { IconName } from "../icon";
-import { Tag } from "../tag";
+import { Icon, IconName } from "../icon";
 
-interface KeyInfoProp{
-    value: number;
-    label:string;
-    iconName?: IconName
+interface KeyInfoProp {
+  value: number;
+  label: string;
+  iconName?: IconName;
 }
 
-export function KeyInfo ({iconName,label,value}:KeyInfoProp) {
-    return <div className="flex flex-col items-center">
-        <h1 className="text-brand-primary-500 font-bold">{value}</h1>
-        <span>{iconName}</span>
-        <h3>{label}</h3>
-        <Tag text="Jardin Pequeño" color="success"/>
+/**
+ * Muestra una pieza clave de información, como un valor numérico y una etiqueta.
+ *
+ * @param {KeyInfoProps} props Las propiedades para el componente.
+ * @param {number} props.value El valor numérico a mostrar.
+ * @param {string} props.label La etiqueta descriptiva para el valor.
+ * @param {IconName} [props.iconName] El nombre del ícono a mostrar opcionalmente.
+ * @returns {JSX.Element} El componente de información clave.
+ *
+ * @example
+ * <KeyInfo label="Recámaras" value={3} />
+ */
+export function KeyInfo({ iconName, label, value }: KeyInfoProp) {
+  return (
+    <div className="grid grid-cols-[auto_1fr] gap-0.5 items-center">
+      {iconName && <Icon name={iconName} size="medium" />}
+      <div className="flex flex-col items-start gap-0">
+        <p className="text-xl text-neutral-base-400">{label}</p>
+        <p className="text-xl font-bold text-black">{value} M²</p>
+      </div>
     </div>
+  );
 }
