@@ -1,6 +1,6 @@
-import { Icon, IconName } from "../icon";
+import { Icon, IconName } from "@/components/ui/icon";
 
-interface KeyInfoProp {
+export interface KeyInfoProps {
   value: number;
   label: string;
   iconName?: IconName;
@@ -18,10 +18,10 @@ interface KeyInfoProp {
  * @example
  * <KeyInfo label="Recámaras" value={3} />
  */
-export function KeyInfo({ iconName, label, value }: KeyInfoProp) {
+export function KeyInfo({ iconName, label, value }: KeyInfoProps) {
   return (
     <div className="grid grid-cols-[auto_1fr] gap-0.5 items-center">
-      {iconName && <Icon name={iconName} size="medium" />}
+      {iconName && <Icon name={iconName} size="large" />}
       <div className="flex flex-col items-start gap-0">
         <p className="text-xl text-neutral-base-400">{label}</p>
         <p className="text-xl font-bold text-black">{value} M²</p>

@@ -1,12 +1,20 @@
-import { KeyInfo } from "@/components/ui/keyInfo";
+import { Fragment } from "react";
 
-export function ExampleKeyInfo(){
-    return (
-      <div className="grid grid-cols-4 gap-4">
-        <KeyInfo label="Terreno" value={220} iconName="SquareIcon" />
-        <KeyInfo label="Construcción" value={185} iconName="HomeIcon" />
-        <KeyInfo label="Terreno" value={250} iconName="SquareIcon" />
-        <KeyInfo label="Construcción" value={220} iconName="HomeIcon" />
-      </div>
-    );
+import { KeyInfo, KeyInfoProps } from "@/components/ui/keyInfo";
+
+const KEY_INFO_PROPS: KeyInfoProps[] = [
+  { value: 220, label: "Terreno", iconName: "SquareIcon" },
+  { value: 185, label: "Construcción", iconName: "HomeIcon" },
+];
+
+export function ExampleKeyInfo() {
+  return (
+    <div className="grid grid-cols-4 gap-4">
+      {KEY_INFO_PROPS.map((keyInfo) => (
+        <Fragment key={keyInfo.label + keyInfo.value + keyInfo.iconName}>
+          <KeyInfo {...keyInfo} />
+        </Fragment>
+      ))}
+    </div>
+  );
 }
