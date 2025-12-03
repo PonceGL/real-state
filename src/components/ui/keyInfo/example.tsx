@@ -4,7 +4,9 @@ import { KeyInfo, KeyInfoProps } from "@/components/ui/keyInfo";
 
 const KEY_INFO_PROPS: KeyInfoProps[] = [
   { value: 220, label: "Terreno", iconName: "SquareIcon" },
-  { value: 185, label: "Construcción", iconName: "HomeIcon" },
+  { value: 185, label: "Construcción", iconName: "BuildingIcon" },
+  { value: 230, label: "Dormitorios", iconName: "ClockIcon" },
+  { value: 185, label: "Baños", iconName: "BuildingIcon" },
 ];
 
 export function ExampleKeyInfo() {
