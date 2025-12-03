@@ -1,8 +1,7 @@
 import { Fragment } from "react";
 
+import { IconName } from "@/components/ui/icon";
 import { Tag, TagColors, TagVariants } from "@/components/ui/tag";
-
-import { IconName } from "../icon";
 
 const TAG_COLORS: TagColors[] = [
   "primary",
