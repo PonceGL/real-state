@@ -9,6 +9,25 @@ export interface AddressesProps {
   textColor: TextUrlColors;
 }
 
+/**
+ * Renderiza un enlace a una dirección en Google Maps con un ícono.
+ *
+ * @param {AddressesProps} props - Las propiedades para el componente.
+ * @param {string} props.addresses - La dirección física completa para generar el enlace de Google Maps.
+ * @param {string} props.linkText - El texto que se mostrará en el enlace.
+ * @param {IconName} props.icon - El nombre del ícono a mostrar junto al enlace.
+ * @param {TextUrlColors} props.textColor - El color del texto del enlace y del ícono ('white' o 'black').
+ * @returns {JSX.Element} El componente de dirección renderizado.
+ *
+ * @example
+ * <Addresses
+ *   addresses="1600 Amphitheatre Parkway, Mountain View, CA"
+ *   linkText="Oficinas de Google"
+ *   icon="LocationIcon"
+ *   textColor="black"
+ * />
+ */
+
 export const Addresses = ({
   addresses,
   linkText,
@@ -33,7 +52,7 @@ export const Addresses = ({
         href={mapUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={`${dynamicTextColorClass}`}
+        className={dynamicTextColorClass}
       >
         {linkText}
       </a>

@@ -20,8 +20,8 @@ const ADDRESSES_VARIANTS: AddressesProps[] = [
 export const ExampleAddresses = () => {
   return (
     <div className="flex flex-col gap-4">
-      {ADDRESSES_VARIANTS.map((item, index) => (
-        <Addresses key={index} {...item} />
+      {ADDRESSES_VARIANTS.map((item) => (
+        <Addresses key={item.linkText} {...item} />
       ))}
     </div>
   );
