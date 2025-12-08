@@ -1,4 +1,5 @@
 import { Icon, IconName } from "@/components/ui/icon";
+import { GOOGLE_MAPS_BASE_URL } from "@/constants/googleMapsBaseUrl";
 
 export type TextUrlColors = "white" | "black";
 
@@ -36,7 +37,7 @@ export const Addresses = ({
 }: AddressesProps) => {
   const encodedAddresses = encodeURIComponent(addresses);
 
-  const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodedAddresses}`;
+  const mapUrl = `${GOOGLE_MAPS_BASE_URL}${encodedAddresses}`;
 
   const colorClassMap = {
     black: "text-black",
