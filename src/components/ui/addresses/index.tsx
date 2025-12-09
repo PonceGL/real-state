@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Icon, IconName } from "@/components/ui/icon";
 import { GOOGLE_MAPS_BASE_URL } from "@/constants/googleMapsBaseUrl";
 
@@ -49,14 +51,14 @@ export const Addresses = ({
   return (
     <div className="flex items-center gap-2 ">
       <Icon name={icon} size="medium" variant={textColor} />
-      <a
+      <Link
         href={mapUrl}
         target="_blank"
         rel="noopener noreferrer"
         className={dynamicTextColorClass}
       >
         {linkText}
-      </a>
+      </Link>
     </div>
   );
 };
