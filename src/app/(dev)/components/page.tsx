@@ -1,6 +1,7 @@
 import { ExampleIcons } from "@/components/icons/example";
 import { LoginForm } from "@/components/loginform";
 import { ExampleButton } from "@/components/ui/button/example";
+import { ExampleHighlight } from "@/components/ui/highlight/example";
 import { ExampleInput } from "@/components/ui/input/example";
 import { ExampleTag } from "@/components/ui/tag/example";
 import { Wrapper } from "@/components/wrapper";
@@ -51,6 +52,15 @@ export default function ComponentsPage() {
         </Wrapper>
         <Wrapper isDarkBackground>
           <ExampleTag />
+        </Wrapper>
+      </div>
+      <div className="w-full p-4 flex flex-col justify-center items-center gap-4">
+        <h3 className="w-full text-left text-3xl font-bold">Highlight</h3>
+        <Wrapper>
+          <ExampleHighlight />
+        </Wrapper>
+        <Wrapper isDarkBackground>
+          <ExampleHighlight />
         </Wrapper>
       </div>
     </main>
