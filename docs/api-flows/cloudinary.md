@@ -102,3 +102,4 @@ Para usarla, es necesario configurar un entorno en Postman con las siguientes va
 - [Documentación de la Admin API](https://cloudinary.com/documentation/admin_api)
 - [Subidas no autenticadas (unsigned)](https://cloudinary.com/documentation/upload_images#unauthenticated_requests)
 - [Colección oficial de Postman de Cloudinary](https://cloudinary.com/documentation/using_cloudinary_postman_collections#run_a_collection)
+- [Documentation Resources](https://cloudinary.com/documentation/admin_api#resources)
