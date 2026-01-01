@@ -33,10 +33,10 @@
 
    ```bash
    # Iniciar MongoDB, PostgreSQL y N8N
-   ## QA 
-   yarn qa:services:up
    # Dev
    yarn dev:services:up
+   ## QA 
+   yarn qa:services:up
    ```
 
 5. **Ejecutar la aplicación**:
