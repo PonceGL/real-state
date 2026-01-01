@@ -8,6 +8,7 @@ import {
   IPatchRequest,
   IPostRequest,
   IPutRequest,
+  IRequest,
 } from "@/types/contracts/httpClient";
 
 /**
@@ -120,6 +121,15 @@ export class SessionAuthHttpClientDecorator implements IHttpClient {
   async delete<T>({ path, config }: IDeleteRequest): Promise<T> {
     const authConfig = await this.mergeAuthConfig(config);
     return this.httpClient.delete<T>({ path, config: authConfig });
+  }
+
+  async request<T>(request: IRequest): Promise<T> {
+    const authConfig = await this.mergeAuthConfig(request.config);
+
+    return this.httpClient.request<T>({
+      ...request,
+      config: authConfig,
+    });
   }
 }
 

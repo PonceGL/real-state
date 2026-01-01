@@ -28,7 +28,7 @@ import {
 import { dbConnect } from "@/lib/mongodb";
 import { PROPERTY_POPULATE_FIELDS } from "@/types/property";
 
-class PropertyService {
+export class PropertyService {
   public async getAll(
     populateFields: PROPERTY_POPULATE_FIELDS[] = []
   ): Promise<IProperty[]> {
