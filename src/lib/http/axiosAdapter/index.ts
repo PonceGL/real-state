@@ -15,6 +15,7 @@ import {
   IPatchRequest,
   IPostRequest,
   IPutRequest,
+  IRequest,
 } from "@/types/contracts/httpClient";
 
 /**
@@ -99,6 +100,19 @@ export class AxiosAdapter implements IHttpClient {
     const axiosConfig = this.transformConfig(config);
     const response = await this.axiosInstance.delete<T>(path, axiosConfig);
     return this.handleResponse<T>(response);
+  }
+
+  async request<T>({ path, method, data, config }: IRequest): Promise<T> {
+    const axiosConfig = this.transformConfig(config);
+
+    const response = await this.axiosInstance.request<T>({
+      url: path,
+      method: method,
+      data: data,
+      ...axiosConfig,
+    });
+
+    return this.handleResponse(response);
   }
 }
 

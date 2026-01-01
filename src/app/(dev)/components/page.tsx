@@ -1,5 +1,6 @@
 import { ExampleIcons } from "@/components/icons/example";
 import { LoginForm } from "@/components/loginform";
+import { ExamplePrice } from "@/components/price/example";
 import { ExampleAddresses } from "@/components/ui/addresses/example";
 import { ExampleButton } from "@/components/ui/button/example";
 import { ExampleInput } from "@/components/ui/input/example";
@@ -61,6 +62,13 @@ export default function ComponentsPage() {
         </Wrapper>
         <Wrapper isDarkBackground>
           <ExampleAddresses />
+          </Wrapper>
+        <h3 className="w-full text-left text-3xl font-bold">Price</h3>
+        <Wrapper>
+          <ExamplePrice />
+        </Wrapper>
+        <Wrapper isDarkBackground>
+          <ExamplePrice />
         </Wrapper>
       </div>
     </main>

@@ -22,7 +22,7 @@ import {
 import { dbConnect } from "@/lib/mongodb";
 import { UploadImageSucces } from "@/types/cloudinary/image";
 
-class ImageService {
+export class ImageService {
   public async getAll(): Promise<IImage[]> {
     try {
       await dbConnect();
@@ -191,7 +191,7 @@ class ImageService {
     return { cloudinaryImage };
   }
 
-  private async saveImageToDB(imageData: CreateImageDto): Promise<IImage> {
+  public async saveImageToDB(imageData: CreateImageDto): Promise<IImage> {
     createImageDto.parse(imageData);
 
     await dbConnect();
