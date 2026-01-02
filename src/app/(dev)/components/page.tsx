@@ -1,6 +1,7 @@
 import { ExampleIcons } from "@/components/icons/example";
 import { LoginForm } from "@/components/loginform";
 import { ExamplePrice } from "@/components/price/example";
+import { ExampleAddresses } from "@/components/ui/addresses/example";
 import { ExampleButton } from "@/components/ui/button/example";
 import { ExampleInput } from "@/components/ui/input/example";
 import { ExampleTag } from "@/components/ui/tag/example";
@@ -55,6 +56,13 @@ export default function ComponentsPage() {
         </Wrapper>
       </div>
       <div className="w-full p-4 flex flex-col justify-center items-center gap-4">
+        <h3 className="w-full text-left text-3xl font-bold">Addresses</h3>
+        <Wrapper>
+          <ExampleAddresses />
+        </Wrapper>
+        <Wrapper isDarkBackground>
+          <ExampleAddresses />
+          </Wrapper>
         <h3 className="w-full text-left text-3xl font-bold">Price</h3>
         <Wrapper>
           <ExamplePrice />
